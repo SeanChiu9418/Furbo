@@ -1,0 +1,403 @@
+	.text
+	.syntax unified
+	.eabi_attribute	67, "2.09"	@ Tag_conformance
+	.cpu	cortex-m23
+	.eabi_attribute	6, 16	@ Tag_CPU_arch
+	.eabi_attribute	7, 77	@ Tag_CPU_arch_profile
+	.eabi_attribute	8, 0	@ Tag_ARM_ISA_use
+	.eabi_attribute	9, 3	@ Tag_THUMB_ISA_use
+	.eabi_attribute	34, 0	@ Tag_CPU_unaligned_access
+	.eabi_attribute	17, 1	@ Tag_ABI_PCS_GOT_use
+	.eabi_attribute	20, 2	@ Tag_ABI_FP_denormal
+	.eabi_attribute	21, 0	@ Tag_ABI_FP_exceptions
+	.eabi_attribute	23, 1	@ Tag_ABI_FP_number_model
+	.eabi_attribute	24, 1	@ Tag_ABI_align_needed
+	.eabi_attribute	25, 1	@ Tag_ABI_align_preserved
+	.eabi_attribute	38, 1	@ Tag_ABI_FP_16bit_format
+	.eabi_attribute	18, 2	@ Tag_ABI_PCS_wchar_t
+	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
+	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
+	.file	"MyMCU_SYS.c"
+	.file	1 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Src/MyMCU_SYS.c"
+	.hidden	MySYS_GetSYSClock       @ -- Begin function MySYS_GetSYSClock
+	.globl	MySYS_GetSYSClock
+	.p2align	2
+	.type	MySYS_GetSYSClock,%function
+	.code	16                      @ @MySYS_GetSYSClock
+	.thumb_func
+MySYS_GetSYSClock:
+.Lfunc_begin0:
+	.loc	1 13 0                  @ ../MYx/Src/MyMCU_SYS.c:13:0
+	.fnstart
+	.cfi_sections .debug_frame
+	.cfi_startproc
+@ %bb.0:
+	.loc	1 21 13 prologue_end    @ ../MYx/Src/MyMCU_SYS.c:21:13
+	ldr	r0, __arm_cp.0_0
+	ldr	r0, [r0]
+	.loc	1 21 11 is_stmt 0       @ ../MYx/Src/MyMCU_SYS.c:21:11
+	ldr	r1, __arm_cp.0_1
+	str	r0, [r1]
+	.loc	1 26 1 is_stmt 1        @ ../MYx/Src/MyMCU_SYS.c:26:1
+	bx	lr
+.Ltmp0:
+	.p2align	2
+@ %bb.1:
+	.loc	1 0 1 is_stmt 0         @ ../MYx/Src/MyMCU_SYS.c:0:1
+__arm_cp.0_0:
+	.long	SystemCoreClock
+.Lcpi_end0:
+	.size	__arm_cp.0_0, .Lcpi_end0-__arm_cp.0_0
+__arm_cp.0_1:
+	.long	SysClock
+.Lcpi_end1:
+	.size	__arm_cp.0_1, .Lcpi_end1-__arm_cp.0_1
+.Lfunc_end0:
+	.size	MySYS_GetSYSClock, .Lfunc_end0-MySYS_GetSYSClock
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	My_usDelay              @ -- Begin function My_usDelay
+	.globl	My_usDelay
+	.p2align	2
+	.type	My_usDelay,%function
+	.code	16                      @ @My_usDelay
+	.thumb_func
+My_usDelay:
+.Lfunc_begin1:
+	.loc	1 29 0 is_stmt 1        @ ../MYx/Src/MyMCU_SYS.c:29:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#12
+	sub	sp, #12
+	.cfi_def_cfa_offset 12
+	str	r0, [sp, #8]
+.Ltmp1:
+	.loc	1 31 12 prologue_end    @ ../MYx/Src/MyMCU_SYS.c:31:12
+	ldr	r0, [sp, #8]
+	.loc	1 31 23 is_stmt 0       @ ../MYx/Src/MyMCU_SYS.c:31:23
+	ldr	r1, __arm_cp.1_0
+	ldr	r1, [r1]
+	ldr	r2, __arm_cp.1_1
+	.loc	1 31 31                 @ ../MYx/Src/MyMCU_SYS.c:31:31
+	sdiv	r1, r1, r2
+	.loc	1 31 15                 @ ../MYx/Src/MyMCU_SYS.c:31:15
+	muls	r1, r0, r1
+	.loc	1 31 6                  @ ../MYx/Src/MyMCU_SYS.c:31:6
+	str	r1, [sp, #4]
+	movs	r0, #0
+.Ltmp2:
+	.loc	1 33 9 is_stmt 1        @ ../MYx/Src/MyMCU_SYS.c:33:9
+	str	r0, [sp]
+	.loc	1 33 7 is_stmt 0        @ ../MYx/Src/MyMCU_SYS.c:33:7
+	b	.LBB1_1
+.LBB1_1:                                @ =>This Inner Loop Header: Depth=1
+.Ltmp3:
+	.loc	1 33 14                 @ ../MYx/Src/MyMCU_SYS.c:33:14
+	ldr	r0, [sp]
+	.loc	1 33 18                 @ ../MYx/Src/MyMCU_SYS.c:33:18
+	ldr	r1, [sp, #4]
+.Ltmp4:
+	.loc	1 33 2                  @ ../MYx/Src/MyMCU_SYS.c:33:2
+	cmp	r0, r1
+	bge	.LBB1_4
+	b	.LBB1_2
+.LBB1_2:                                @   in Loop: Header=BB1_1 Depth=1
+.Ltmp5:
+	.loc	1 37 3 is_stmt 1        @ ../MYx/Src/MyMCU_SYS.c:37:3
+	nop
+	b	.LBB1_3
+.LBB1_3:                                @   in Loop: Header=BB1_1 Depth=1
+	.loc	1 33 24                 @ ../MYx/Src/MyMCU_SYS.c:33:24
+	ldr	r0, [sp]
+	adds	r0, r0, #1
+	str	r0, [sp]
+	.loc	1 33 2 is_stmt 0        @ ../MYx/Src/MyMCU_SYS.c:33:2
+	b	.LBB1_1
+.Ltmp6:
+.LBB1_4:
+	.loc	1 39 1 is_stmt 1        @ ../MYx/Src/MyMCU_SYS.c:39:1
+	add	sp, #12
+	bx	lr
+.Ltmp7:
+	.p2align	2
+@ %bb.5:
+	.loc	1 0 1 is_stmt 0         @ ../MYx/Src/MyMCU_SYS.c:0:1
+__arm_cp.1_0:
+	.long	SysClock
+.Lcpi_end2:
+	.size	__arm_cp.1_0, .Lcpi_end2-__arm_cp.1_0
+__arm_cp.1_1:
+	.long	1000000                 @ 0xf4240
+.Lcpi_end3:
+	.size	__arm_cp.1_1, .Lcpi_end3-__arm_cp.1_1
+.Lfunc_end1:
+	.size	My_usDelay, .Lfunc_end1-My_usDelay
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	My_SysTickInit          @ -- Begin function My_SysTickInit
+	.globl	My_SysTickInit
+	.p2align	1
+	.type	My_SysTickInit,%function
+	.code	16                      @ @My_SysTickInit
+	.thumb_func
+My_SysTickInit:
+.Lfunc_begin2:
+	.loc	1 42 0 is_stmt 1        @ ../MYx/Src/MyMCU_SYS.c:42:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.loc	1 48 1 prologue_end     @ ../MYx/Src/MyMCU_SYS.c:48:1
+	bx	lr
+.Ltmp8:
+.Lfunc_end2:
+	.size	My_SysTickInit, .Lfunc_end2-My_SysTickInit
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	SysClock                @ @SysClock
+	.type	SysClock,%object
+	.section	.bss.SysClock,"aw",%nobits
+	.globl	SysClock
+	.p2align	2
+SysClock:
+.LSysClock$local:
+	.long	0                       @ 0x0
+	.size	SysClock, 4
+
+	.section	.debug_str,"MS",%progbits,1
+.Linfo_string0:
+	.asciz	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]" @ string offset=0
+.Linfo_string1:
+	.asciz	"../MYx/Src\\MyMCU_SYS.c" @ string offset=55
+.Linfo_string2:
+	.asciz	"C:\\Work\\Keil WorkSpace\\Furbo\\Keil" @ string offset=78
+.Linfo_string3:
+	.asciz	"SysClock"              @ string offset=112
+.Linfo_string4:
+	.asciz	"int"                   @ string offset=121
+.Linfo_string5:
+	.asciz	"MySYS_GetSYSClock"     @ string offset=125
+.Linfo_string6:
+	.asciz	"My_usDelay"            @ string offset=143
+.Linfo_string7:
+	.asciz	"My_SysTickInit"        @ string offset=154
+.Linfo_string8:
+	.asciz	"us"                    @ string offset=169
+.Linfo_string9:
+	.asciz	"Cnt"                   @ string offset=172
+.Linfo_string10:
+	.asciz	"i"                     @ string offset=176
+	.section	.debug_abbrev,"",%progbits
+	.byte	1                       @ Abbreviation Code
+	.byte	17                      @ DW_TAG_compile_unit
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	37                      @ DW_AT_producer
+	.byte	14                      @ DW_FORM_strp
+	.byte	19                      @ DW_AT_language
+	.byte	5                       @ DW_FORM_data2
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	16                      @ DW_AT_stmt_list
+	.byte	6                       @ DW_FORM_data4
+	.byte	27                      @ DW_AT_comp_dir
+	.byte	14                      @ DW_FORM_strp
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	2                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	3                       @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	4                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	5                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	6                       @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	7                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	0                       @ EOM(3)
+	.section	.debug_info,"",%progbits
+.Lcu_begin0:
+	.long	.Ldebug_info_end0-.Ldebug_info_start0 @ Length of Unit
+.Ldebug_info_start0:
+	.short	3                       @ DWARF version number
+	.long	.debug_abbrev           @ Offset Into Abbrev. Section
+	.byte	4                       @ Address Size (in bytes)
+	.byte	1                       @ Abbrev [1] 0xb:0x97 DW_TAG_compile_unit
+	.long	.Linfo_string0          @ DW_AT_producer
+	.short	1                       @ DW_AT_language
+	.long	.Linfo_string1          @ DW_AT_name
+	.long	.Lline_table_start0     @ DW_AT_stmt_list
+	.long	.Linfo_string2          @ DW_AT_comp_dir
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	2                       @ Abbrev [2] 0x26:0x12 DW_TAG_variable
+	.long	.Linfo_string3          @ DW_AT_name
+	.long	56                      @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	1                       @ DW_AT_decl_file
+	.byte	10                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	SysClock
+	.byte	3                       @ Abbrev [3] 0x38:0x7 DW_TAG_base_type
+	.long	.Linfo_string4          @ DW_AT_name
+	.byte	5                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	4                       @ Abbrev [4] 0x3f:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end0             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string5          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	12                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	5                       @ Abbrev [5] 0x51:0x3e DW_TAG_subprogram
+	.long	.Lfunc_begin1           @ DW_AT_low_pc
+	.long	.Lfunc_end1             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string6          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	28                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	6                       @ Abbrev [6] 0x64:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string8          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	28                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	7                       @ Abbrev [7] 0x72:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string9          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	31                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	7                       @ Abbrev [7] 0x80:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string10         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	31                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	4                       @ Abbrev [4] 0x8f:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin2           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string7          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	41                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	0                       @ End Of Children Mark
+.Ldebug_info_end0:
+	.ident	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]"
+	.section	".note.GNU-stack","",%progbits
+	.eabi_attribute	30, 6	@ Tag_ABI_optimization_goals
+	.ARM_attribute	16, 1	@ Tag_AV_eba
+	.section	.debug_line,"",%progbits
+.Lline_table_start0:
