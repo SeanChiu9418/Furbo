@@ -1,0 +1,20 @@
+--cpu=Cortex-M23
+".\objects\system_m251.o"
+".\objects\startup_m251.o"
+".\objects\clk.o"
+".\objects\retarget.o"
+".\objects\sys.o"
+".\objects\uart.o"
+".\objects\gpio.o"
+".\objects\main.o"
+".\objects\my_func.o"
+".\objects\mydev_led.o"
+".\objects\myfunc_cli.o"
+".\objects\myfunc_cli_commands.o"
+".\objects\mymcu_gpio.o"
+".\objects\mymcu_sys.o"
+".\objects\mymcu_uart.o"
+".\objects\mydev_motor.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --symbols
+--info sizes --info totals
+--list ".\Listings\Furbo.map" -o .\Objects\Furbo.axf

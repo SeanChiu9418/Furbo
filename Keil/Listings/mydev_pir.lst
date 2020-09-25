@@ -1,0 +1,1622 @@
+	.text
+	.syntax unified
+	.eabi_attribute	67, "2.09"	@ Tag_conformance
+	.cpu	cortex-m23
+	.eabi_attribute	6, 16	@ Tag_CPU_arch
+	.eabi_attribute	7, 77	@ Tag_CPU_arch_profile
+	.eabi_attribute	8, 0	@ Tag_ARM_ISA_use
+	.eabi_attribute	9, 3	@ Tag_THUMB_ISA_use
+	.eabi_attribute	34, 0	@ Tag_CPU_unaligned_access
+	.eabi_attribute	17, 1	@ Tag_ABI_PCS_GOT_use
+	.eabi_attribute	20, 2	@ Tag_ABI_FP_denormal
+	.eabi_attribute	21, 0	@ Tag_ABI_FP_exceptions
+	.eabi_attribute	23, 1	@ Tag_ABI_FP_number_model
+	.eabi_attribute	24, 1	@ Tag_ABI_align_needed
+	.eabi_attribute	25, 1	@ Tag_ABI_align_preserved
+	.eabi_attribute	38, 1	@ Tag_ABI_FP_16bit_format
+	.eabi_attribute	18, 2	@ Tag_ABI_PCS_wchar_t
+	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
+	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
+	.file	"MyDev_PIR.c"
+	.file	1 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Src/MyDev_PIR.c"
+	.file	2 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Inc/MyMCU_GPIO.h"
+	.file	3 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Inc\\MyDev_LED.h"
+	.hidden	MyPIR_Init              @ -- Begin function MyPIR_Init
+	.globl	MyPIR_Init
+	.p2align	1
+	.type	MyPIR_Init,%function
+	.code	16                      @ @MyPIR_Init
+	.thumb_func
+MyPIR_Init:
+.Lfunc_begin0:
+	.loc	1 12 0                  @ ../MYx/Core/Src/MyDev_PIR.c:12:0
+	.fnstart
+	.cfi_sections .debug_frame
+	.cfi_startproc
+@ %bb.0:
+	.loc	1 30 1 prologue_end     @ ../MYx/Core/Src/MyDev_PIR.c:30:1
+	bx	lr
+.Ltmp0:
+.Lfunc_end0:
+	.size	MyPIR_Init, .Lfunc_end0-MyPIR_Init
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyPIR_WriterRegisterValue @ -- Begin function MyPIR_WriterRegisterValue
+	.globl	MyPIR_WriterRegisterValue
+	.p2align	1
+	.type	MyPIR_WriterRegisterValue,%function
+	.code	16                      @ @MyPIR_WriterRegisterValue
+	.thumb_func
+MyPIR_WriterRegisterValue:
+.Lfunc_begin1:
+	.loc	1 33 0                  @ ../MYx/Core/Src/MyDev_PIR.c:33:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	movs	r0, #0
+.Ltmp1:
+	.loc	1 34 11 prologue_end    @ ../MYx/Core/Src/MyDev_PIR.c:34:11
+	str	r0, [sp, #4]
+	.loc	1 36 12                 @ ../MYx/Core/Src/MyDev_PIR.c:36:12
+	ldr	r0, [sp, #4]
+	movs	r1, #192
+	.loc	1 36 20 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:36:20
+	orrs	r0, r1
+	.loc	1 36 10                 @ ../MYx/Core/Src/MyDev_PIR.c:36:10
+	str	r0, [sp, #4]
+	.loc	1 37 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:37:13
+	ldr	r0, [sp, #4]
+	.loc	1 37 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:37:21
+	lsls	r0, r0, #4
+	.loc	1 37 27                 @ ../MYx/Core/Src/MyDev_PIR.c:37:27
+	adds	r0, r0, #2
+	.loc	1 37 10                 @ ../MYx/Core/Src/MyDev_PIR.c:37:10
+	str	r0, [sp, #4]
+	.loc	1 38 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:38:13
+	ldr	r0, [sp, #4]
+	.loc	1 38 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:38:21
+	lsls	r0, r0, #2
+	.loc	1 38 27                 @ ../MYx/Core/Src/MyDev_PIR.c:38:27
+	adds	r0, r0, #1
+	.loc	1 38 10                 @ ../MYx/Core/Src/MyDev_PIR.c:38:10
+	str	r0, [sp, #4]
+	.loc	1 39 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:39:13
+	ldr	r0, [sp, #4]
+	.loc	1 39 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:39:21
+	lsls	r0, r0, #2
+	.loc	1 39 27                 @ ../MYx/Core/Src/MyDev_PIR.c:39:27
+	adds	r0, r0, #2
+	.loc	1 39 10                 @ ../MYx/Core/Src/MyDev_PIR.c:39:10
+	str	r0, [sp, #4]
+	.loc	1 40 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:40:13
+	ldr	r0, [sp, #4]
+	.loc	1 40 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:40:21
+	lsls	r0, r0, #2
+	.loc	1 40 27                 @ ../MYx/Core/Src/MyDev_PIR.c:40:27
+	adds	r0, r0, #2
+	.loc	1 40 10                 @ ../MYx/Core/Src/MyDev_PIR.c:40:10
+	str	r0, [sp, #4]
+	.loc	1 41 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:41:13
+	ldr	r0, [sp, #4]
+	.loc	1 41 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:41:21
+	lsls	r0, r0, #2
+	.loc	1 41 10                 @ ../MYx/Core/Src/MyDev_PIR.c:41:10
+	str	r0, [sp, #4]
+	.loc	1 42 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:42:13
+	ldr	r0, [sp, #4]
+	.loc	1 42 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:42:21
+	lsls	r0, r0, #2
+	.loc	1 42 27                 @ ../MYx/Core/Src/MyDev_PIR.c:42:27
+	adds	r0, r0, #2
+	.loc	1 42 10                 @ ../MYx/Core/Src/MyDev_PIR.c:42:10
+	str	r0, [sp, #4]
+	.loc	1 43 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:43:13
+	ldr	r0, [sp, #4]
+	.loc	1 43 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:43:21
+	lsls	r0, r0, #1
+	.loc	1 43 10                 @ ../MYx/Core/Src/MyDev_PIR.c:43:10
+	str	r0, [sp, #4]
+	.loc	1 44 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:44:13
+	ldr	r0, [sp, #4]
+	.loc	1 44 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:44:21
+	lsls	r0, r0, #1
+	.loc	1 44 10                 @ ../MYx/Core/Src/MyDev_PIR.c:44:10
+	str	r0, [sp, #4]
+	.loc	1 45 13 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:45:13
+	ldr	r0, [sp, #4]
+	.loc	1 45 21 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:45:21
+	lsls	r0, r0, #1
+	.loc	1 45 10                 @ ../MYx/Core/Src/MyDev_PIR.c:45:10
+	str	r0, [sp, #4]
+	.loc	1 47 14 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:47:14
+	ldr	r0, [sp, #4]
+	.loc	1 47 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:47:2
+	bl	MyPIR_Write
+	.loc	1 48 1 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:48:1
+	add	sp, #8
+	pop	{r7, pc}
+.Ltmp2:
+.Lfunc_end1:
+	.size	MyPIR_WriterRegisterValue, .Lfunc_end1-MyPIR_WriterRegisterValue
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyPIR_Write             @ -- Begin function MyPIR_Write
+	.globl	MyPIR_Write
+	.p2align	2
+	.type	MyPIR_Write,%function
+	.code	16                      @ @MyPIR_Write
+	.thumb_func
+MyPIR_Write:
+.Lfunc_begin2:
+	.loc	1 51 0                  @ ../MYx/Core/Src/MyDev_PIR.c:51:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#16
+	sub	sp, #16
+	.cfi_def_cfa_offset 24
+	str	r0, [sp, #12]
+.Ltmp3:
+	.loc	1 53 6 prologue_end     @ ../MYx/Core/Src/MyDev_PIR.c:53:6
+	ldr	r0, [sp, #12]
+	lsls	r0, r0, #7
+	str	r0, [sp, #12]
+	add	r0, sp, #8
+	movs	r1, #0
+.Ltmp4:
+	.loc	1 54 7                  @ ../MYx/Core/Src/MyDev_PIR.c:54:7
+	strb	r1, [r0]
+	.loc	1 54 6 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:54:6
+	b	.LBB2_1
+.LBB2_1:                                @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB2_14 Depth 2
+	.loc	1 0 6                   @ ../MYx/Core/Src/MyDev_PIR.c:0:6
+	add	r0, sp, #8
+.Ltmp5:
+	.loc	1 54 10                 @ ../MYx/Core/Src/MyDev_PIR.c:54:10
+	ldrb	r0, [r0]
+.Ltmp6:
+	.loc	1 54 2                  @ ../MYx/Core/Src/MyDev_PIR.c:54:2
+	cmp	r0, #24
+	bgt	.LBB2_19
+	b	.LBB2_2
+.LBB2_2:                                @   in Loop: Header=BB2_1 Depth=1
+.Ltmp7:
+	.loc	1 56 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:56:3
+	b	.LBB2_3
+.LBB2_3:                                @   in Loop: Header=BB2_1 Depth=1
+.Ltmp8:
+	.loc	1 56 3 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:56:3
+	ldr	r0, __arm_cp.2_0
+	ldrh	r1, [r0, #12]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.2_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #12]
+	mvns	r0, r0
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB2_4
+.Ltmp9:
+.LBB2_4:                                @   in Loop: Header=BB2_1 Depth=1
+	.loc	1 58 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:58:3
+	b	.LBB2_5
+.LBB2_5:                                @   in Loop: Header=BB2_1 Depth=1
+.Ltmp10:
+	.loc	1 58 3 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:58:3
+	ldr	r0, __arm_cp.2_0
+	ldrh	r1, [r0, #12]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.2_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #12]
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB2_6
+.Ltmp11:
+.LBB2_6:                                @   in Loop: Header=BB2_1 Depth=1
+	.loc	1 0 3                   @ ../MYx/Core/Src/MyDev_PIR.c:0:3
+	add	r0, sp, #12
+	.loc	1 60 6 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:60:6
+	ldrb	r0, [r0, #3]
+	lsls	r0, r0, #24
+	cmp	r0, #0
+	bpl	.LBB2_10
+	b	.LBB2_7
+.LBB2_7:                                @   in Loop: Header=BB2_1 Depth=1
+.Ltmp12:
+	.loc	1 61 4                  @ ../MYx/Core/Src/MyDev_PIR.c:61:4
+	b	.LBB2_8
+.LBB2_8:                                @   in Loop: Header=BB2_1 Depth=1
+.Ltmp13:
+	.loc	1 61 4 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:61:4
+	ldr	r0, __arm_cp.2_0
+	ldrh	r1, [r0, #12]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.2_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #12]
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB2_9
+.LBB2_9:                                @   in Loop: Header=BB2_1 Depth=1
+	b	.LBB2_13
+.Ltmp14:
+.LBB2_10:                               @   in Loop: Header=BB2_1 Depth=1
+	.loc	1 63 4 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:63:4
+	b	.LBB2_11
+.LBB2_11:                               @   in Loop: Header=BB2_1 Depth=1
+.Ltmp15:
+	.loc	1 63 4 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:63:4
+	ldr	r0, __arm_cp.2_0
+	ldrh	r1, [r0, #12]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.2_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #12]
+	mvns	r0, r0
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB2_12
+.Ltmp16:
+.LBB2_12:                               @   in Loop: Header=BB2_1 Depth=1
+	.loc	1 0 4                   @ ../MYx/Core/Src/MyDev_PIR.c:0:4
+	b	.LBB2_13
+.LBB2_13:                               @   in Loop: Header=BB2_1 Depth=1
+	add	r0, sp, #4
+	movs	r1, #0
+.Ltmp17:
+	.loc	1 65 9 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:65:9
+	strb	r1, [r0]
+	.loc	1 65 7 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:65:7
+	b	.LBB2_14
+.LBB2_14:                               @   Parent Loop BB2_1 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+	.loc	1 0 7                   @ ../MYx/Core/Src/MyDev_PIR.c:0:7
+	add	r0, sp, #4
+.Ltmp18:
+	.loc	1 65 14                 @ ../MYx/Core/Src/MyDev_PIR.c:65:14
+	ldrb	r0, [r0]
+.Ltmp19:
+	.loc	1 65 3                  @ ../MYx/Core/Src/MyDev_PIR.c:65:3
+	cmp	r0, #150
+	bgt	.LBB2_17
+	b	.LBB2_15
+.LBB2_15:                               @   in Loop: Header=BB2_14 Depth=2
+.Ltmp20:
+	.loc	1 66 4 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:66:4
+	ldr	r0, __arm_cp.2_3
+	bl	asm
+	b	.LBB2_16
+.LBB2_16:                               @   in Loop: Header=BB2_14 Depth=2
+	.loc	1 65 24                 @ ../MYx/Core/Src/MyDev_PIR.c:65:24
+	ldr	r0, [sp, #4]
+	adds	r0, r0, #1
+	add	r1, sp, #4
+	strb	r0, [r1]
+	.loc	1 65 3 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:65:3
+	b	.LBB2_14
+.Ltmp21:
+.LBB2_17:                               @   in Loop: Header=BB2_1 Depth=1
+	.loc	1 68 7 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:68:7
+	ldr	r0, [sp, #12]
+	lsls	r0, r0, #1
+	str	r0, [sp, #12]
+	.loc	1 69 2                  @ ../MYx/Core/Src/MyDev_PIR.c:69:2
+	b	.LBB2_18
+.Ltmp22:
+.LBB2_18:                               @   in Loop: Header=BB2_1 Depth=1
+	.loc	1 54 16                 @ ../MYx/Core/Src/MyDev_PIR.c:54:16
+	ldr	r0, [sp, #8]
+	adds	r0, r0, #1
+	add	r1, sp, #8
+	strb	r0, [r1]
+	.loc	1 54 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:54:2
+	b	.LBB2_1
+.Ltmp23:
+.LBB2_19:
+	.loc	1 70 2 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:70:2
+	b	.LBB2_20
+.LBB2_20:
+.Ltmp24:
+	.loc	1 70 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:70:2
+	ldr	r0, __arm_cp.2_0
+	ldrh	r1, [r0, #12]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.2_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #12]
+	mvns	r0, r0
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB2_21
+.Ltmp25:
+.LBB2_21:
+	.loc	1 0 2                   @ ../MYx/Core/Src/MyDev_PIR.c:0:2
+	add	r0, sp, #4
+	movs	r1, #0
+.Ltmp26:
+	.loc	1 72 8 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:72:8
+	strb	r1, [r0]
+	.loc	1 72 6 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:72:6
+	b	.LBB2_22
+.LBB2_22:                               @ =>This Inner Loop Header: Depth=1
+	.loc	1 0 6                   @ ../MYx/Core/Src/MyDev_PIR.c:0:6
+	add	r0, sp, #4
+.Ltmp27:
+	.loc	1 72 13                 @ ../MYx/Core/Src/MyDev_PIR.c:72:13
+	ldrb	r0, [r0]
+	ldr	r1, __arm_cp.2_2
+.Ltmp28:
+	.loc	1 72 2                  @ ../MYx/Core/Src/MyDev_PIR.c:72:2
+	cmp	r0, r1
+	bgt	.LBB2_25
+	b	.LBB2_23
+.LBB2_23:                               @   in Loop: Header=BB2_22 Depth=1
+.Ltmp29:
+	.loc	1 73 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:73:3
+	ldr	r0, __arm_cp.2_3
+	bl	asm
+	b	.LBB2_24
+.LBB2_24:                               @   in Loop: Header=BB2_22 Depth=1
+	.loc	1 72 23                 @ ../MYx/Core/Src/MyDev_PIR.c:72:23
+	ldr	r0, [sp, #4]
+	adds	r0, r0, #1
+	add	r1, sp, #4
+	strb	r0, [r1]
+	.loc	1 72 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:72:2
+	b	.LBB2_22
+.Ltmp30:
+.LBB2_25:
+	.loc	1 74 1 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:74:1
+	add	sp, #16
+	pop	{r7, pc}
+.Ltmp31:
+	.p2align	2
+@ %bb.26:
+	.loc	1 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_PIR.c:0:1
+__arm_cp.2_0:
+	.long	GPIO_Pin
+.Lcpi_end0:
+	.size	__arm_cp.2_0, .Lcpi_end0-__arm_cp.2_0
+__arm_cp.2_1:
+	.long	GPIO_Port
+.Lcpi_end1:
+	.size	__arm_cp.2_1, .Lcpi_end1-__arm_cp.2_1
+__arm_cp.2_2:
+	.long	650                     @ 0x28a
+.Lcpi_end2:
+	.size	__arm_cp.2_2, .Lcpi_end2-__arm_cp.2_2
+__arm_cp.2_3:
+	.long	.L.str
+.Lcpi_end3:
+	.size	__arm_cp.2_3, .Lcpi_end3-__arm_cp.2_3
+.Lfunc_end2:
+	.size	MyPIR_Write, .Lfunc_end2-MyPIR_Write
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyPIR_ReadDirectLink    @ -- Begin function MyPIR_ReadDirectLink
+	.globl	MyPIR_ReadDirectLink
+	.p2align	2
+	.type	MyPIR_ReadDirectLink,%function
+	.code	16                      @ @MyPIR_ReadDirectLink
+	.thumb_func
+MyPIR_ReadDirectLink:
+.Lfunc_begin3:
+	.loc	1 78 0 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:78:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#32
+	sub	sp, #32
+	.cfi_def_cfa_offset 40
+.Ltmp32:
+	.loc	1 83 5 prologue_end     @ ../MYx/Core/Src/MyDev_PIR.c:83:5
+	b	.LBB3_1
+.LBB3_1:
+.Ltmp33:
+	.loc	1 83 5 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:83:5
+	ldr	r0, __arm_cp.3_0
+	ldrh	r1, [r0, #14]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.3_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #14]
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB3_2
+.Ltmp34:
+.LBB3_2:
+	.loc	1 0 5                   @ ../MYx/Core/Src/MyDev_PIR.c:0:5
+	movs	r0, #1
+	movs	r1, #7
+	.loc	1 84 5 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:84:5
+	bl	MyGPIO_SetPinModeOUtput_PIR
+	movs	r1, #0
+.Ltmp35:
+	.loc	1 86 8                  @ ../MYx/Core/Src/MyDev_PIR.c:86:8
+	str	r1, [sp, #24]
+	.loc	1 86 6 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:86:6
+	b	.LBB3_3
+.LBB3_3:                                @ =>This Inner Loop Header: Depth=1
+.Ltmp36:
+	.loc	1 86 13                 @ ../MYx/Core/Src/MyDev_PIR.c:86:13
+	ldr	r0, [sp, #24]
+.Ltmp37:
+	.loc	1 86 2                  @ ../MYx/Core/Src/MyDev_PIR.c:86:2
+	cmp	r0, #150
+	bgt	.LBB3_6
+	b	.LBB3_4
+.LBB3_4:                                @   in Loop: Header=BB3_3 Depth=1
+.Ltmp38:
+	.loc	1 87 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:87:3
+	ldr	r0, __arm_cp.3_4
+	bl	asm
+	b	.LBB3_5
+.LBB3_5:                                @   in Loop: Header=BB3_3 Depth=1
+	.loc	1 86 23                 @ ../MYx/Core/Src/MyDev_PIR.c:86:23
+	ldr	r0, [sp, #24]
+	adds	r0, r0, #1
+	str	r0, [sp, #24]
+	.loc	1 86 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:86:2
+	b	.LBB3_3
+.Ltmp39:
+.LBB3_6:
+	.loc	1 0 2                   @ ../MYx/Core/Src/MyDev_PIR.c:0:2
+	movw	r0, #16384
+	.loc	1 90 12 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:90:12
+	str	r0, [sp, #20]
+	.loc	1 91 15                 @ ../MYx/Core/Src/MyDev_PIR.c:91:15
+	ldr	r0, __arm_cp.3_2
+	movs	r1, #0
+	str	r1, [r0]
+.Ltmp40:
+	.loc	1 92 11                 @ ../MYx/Core/Src/MyDev_PIR.c:92:11
+	str	r1, [sp, #28]
+	.loc	1 92 10 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:92:10
+	b	.LBB3_7
+.LBB3_7:                                @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB3_15 Depth 2
+.Ltmp41:
+	.loc	1 92 15                 @ ../MYx/Core/Src/MyDev_PIR.c:92:15
+	ldr	r0, [sp, #28]
+.Ltmp42:
+	.loc	1 92 5                  @ ../MYx/Core/Src/MyDev_PIR.c:92:5
+	cmp	r0, #14
+	bgt	.LBB3_22
+	b	.LBB3_8
+.LBB3_8:                                @   in Loop: Header=BB3_7 Depth=1
+.Ltmp43:
+	.loc	1 96 6 is_stmt 1        @ ../MYx/Core/Src/MyDev_PIR.c:96:6
+	b	.LBB3_9
+.LBB3_9:                                @   in Loop: Header=BB3_7 Depth=1
+.Ltmp44:
+	.loc	1 96 6 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:96:6
+	ldr	r0, __arm_cp.3_0
+	ldrh	r1, [r0, #14]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.3_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #14]
+	mvns	r0, r0
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB3_10
+.Ltmp45:
+.LBB3_10:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 98 10 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:98:10
+	ldr	r0, [sp, #28]
+.Ltmp46:
+	.loc	1 98 10 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:98:10
+	cmp	r0, #0
+	beq	.LBB3_12
+	b	.LBB3_11
+.LBB3_11:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 0 10                  @ ../MYx/Core/Src/MyDev_PIR.c:0:10
+	movs	r0, #1
+	movs	r1, #7
+.Ltmp47:
+	.loc	1 99 10 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:99:10
+	bl	MyGPIO_SetPinModeOUtput_PIR
+	b	.LBB3_12
+.Ltmp48:
+.LBB3_12:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 102 6                 @ ../MYx/Core/Src/MyDev_PIR.c:102:6
+	b	.LBB3_13
+.LBB3_13:                               @   in Loop: Header=BB3_7 Depth=1
+.Ltmp49:
+	.loc	1 102 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:102:6
+	ldr	r0, __arm_cp.3_0
+	ldrh	r1, [r0, #14]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.3_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #14]
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB3_14
+.Ltmp50:
+.LBB3_14:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 0 6                   @ ../MYx/Core/Src/MyDev_PIR.c:0:6
+	movs	r0, #1
+	movs	r1, #7
+	.loc	1 104 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:104:6
+	bl	MyGPIO_SetPinModeInput_PIR
+	movs	r1, #0
+.Ltmp51:
+	.loc	1 106 12                @ ../MYx/Core/Src/MyDev_PIR.c:106:12
+	str	r1, [sp, #24]
+	.loc	1 106 10 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:106:10
+	b	.LBB3_15
+.LBB3_15:                               @   Parent Loop BB3_7 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+.Ltmp52:
+	.loc	1 106 17                @ ../MYx/Core/Src/MyDev_PIR.c:106:17
+	ldr	r0, [sp, #24]
+.Ltmp53:
+	.loc	1 106 6                 @ ../MYx/Core/Src/MyDev_PIR.c:106:6
+	cmp	r0, #15
+	bgt	.LBB3_18
+	b	.LBB3_16
+.LBB3_16:                               @   in Loop: Header=BB3_15 Depth=2
+.Ltmp54:
+	.loc	1 107 7 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:107:7
+	ldr	r0, __arm_cp.3_4
+	bl	asm
+	b	.LBB3_17
+.LBB3_17:                               @   in Loop: Header=BB3_15 Depth=2
+	.loc	1 106 26                @ ../MYx/Core/Src/MyDev_PIR.c:106:26
+	ldr	r0, [sp, #24]
+	adds	r0, r0, #1
+	str	r0, [sp, #24]
+	.loc	1 106 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:106:6
+	b	.LBB3_15
+.Ltmp55:
+.LBB3_18:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 110 13 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:110:13
+	ldr	r0, __arm_cp.3_1
+	ldr	r0, [r0, #4]
+	ldr	r0, [r0, #16]
+	ldr	r1, __arm_cp.3_0
+	ldrh	r1, [r1, #14]
+.Ltmp56:
+	.loc	1 110 13 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:110:13
+	tst	r0, r1
+	beq	.LBB3_20
+	b	.LBB3_19
+.LBB3_19:                               @   in Loop: Header=BB3_7 Depth=1
+.Ltmp57:
+	.loc	1 111 20 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:111:20
+	ldr	r0, [sp, #20]
+	.loc	1 111 17 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:111:17
+	ldr	r1, __arm_cp.3_2
+	ldr	r2, [r1]
+	orrs	r2, r0
+	str	r2, [r1]
+	.loc	1 111 10                @ ../MYx/Core/Src/MyDev_PIR.c:111:10
+	b	.LBB3_20
+.Ltmp58:
+.LBB3_20:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 112 18 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:112:18
+	ldr	r0, [sp, #20]
+	lsrs	r0, r0, #1
+	str	r0, [sp, #20]
+	.loc	1 113 5                 @ ../MYx/Core/Src/MyDev_PIR.c:113:5
+	b	.LBB3_21
+.Ltmp59:
+.LBB3_21:                               @   in Loop: Header=BB3_7 Depth=1
+	.loc	1 92 24                 @ ../MYx/Core/Src/MyDev_PIR.c:92:24
+	ldr	r0, [sp, #28]
+	adds	r0, r0, #1
+	str	r0, [sp, #28]
+	.loc	1 92 5 is_stmt 0        @ ../MYx/Core/Src/MyDev_PIR.c:92:5
+	b	.LBB3_7
+.Ltmp60:
+.LBB3_22:
+	.loc	1 0 5                   @ ../MYx/Core/Src/MyDev_PIR.c:0:5
+	movs	r0, #1
+	lsls	r0, r0, #24
+	.loc	1 116 17 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:116:17
+	str	r0, [sp, #16]
+	.loc	1 117 17                @ ../MYx/Core/Src/MyDev_PIR.c:117:17
+	ldr	r0, __arm_cp.3_3
+	movs	r1, #0
+	str	r1, [r0]
+.Ltmp61:
+	.loc	1 119 11                @ ../MYx/Core/Src/MyDev_PIR.c:119:11
+	str	r1, [sp, #28]
+	.loc	1 119 10 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:119:10
+	b	.LBB3_23
+.LBB3_23:                               @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB3_29 Depth 2
+.Ltmp62:
+	.loc	1 119 15                @ ../MYx/Core/Src/MyDev_PIR.c:119:15
+	ldr	r0, [sp, #28]
+.Ltmp63:
+	.loc	1 119 5                 @ ../MYx/Core/Src/MyDev_PIR.c:119:5
+	cmp	r0, #24
+	bgt	.LBB3_36
+	b	.LBB3_24
+.LBB3_24:                               @   in Loop: Header=BB3_23 Depth=1
+.Ltmp64:
+	.loc	1 123 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:123:6
+	b	.LBB3_25
+.LBB3_25:                               @   in Loop: Header=BB3_23 Depth=1
+.Ltmp65:
+	.loc	1 123 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:123:6
+	ldr	r0, __arm_cp.3_0
+	ldrh	r1, [r0, #14]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.3_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #14]
+	mvns	r0, r0
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB3_26
+.Ltmp66:
+.LBB3_26:                               @   in Loop: Header=BB3_23 Depth=1
+	.loc	1 0 6                   @ ../MYx/Core/Src/MyDev_PIR.c:0:6
+	movs	r0, #1
+	movs	r1, #7
+	.loc	1 125 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:125:6
+	bl	MyGPIO_SetPinModeOUtput_PIR
+	.loc	1 127 6                 @ ../MYx/Core/Src/MyDev_PIR.c:127:6
+	b	.LBB3_27
+.LBB3_27:                               @   in Loop: Header=BB3_23 Depth=1
+.Ltmp67:
+	.loc	1 127 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:127:6
+	ldr	r0, __arm_cp.3_0
+	ldrh	r1, [r0, #14]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.3_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #14]
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB3_28
+.Ltmp68:
+.LBB3_28:                               @   in Loop: Header=BB3_23 Depth=1
+	.loc	1 0 6                   @ ../MYx/Core/Src/MyDev_PIR.c:0:6
+	movs	r0, #1
+	movs	r1, #7
+	.loc	1 129 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:129:6
+	bl	MyGPIO_SetPinModeInput_PIR
+	movs	r1, #0
+.Ltmp69:
+	.loc	1 131 12                @ ../MYx/Core/Src/MyDev_PIR.c:131:12
+	str	r1, [sp, #24]
+	.loc	1 131 10 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:131:10
+	b	.LBB3_29
+.LBB3_29:                               @   Parent Loop BB3_23 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+.Ltmp70:
+	.loc	1 131 17                @ ../MYx/Core/Src/MyDev_PIR.c:131:17
+	ldr	r0, [sp, #24]
+.Ltmp71:
+	.loc	1 131 6                 @ ../MYx/Core/Src/MyDev_PIR.c:131:6
+	cmp	r0, #15
+	bgt	.LBB3_32
+	b	.LBB3_30
+.LBB3_30:                               @   in Loop: Header=BB3_29 Depth=2
+.Ltmp72:
+	.loc	1 132 7 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:132:7
+	ldr	r0, __arm_cp.3_4
+	bl	asm
+	b	.LBB3_31
+.LBB3_31:                               @   in Loop: Header=BB3_29 Depth=2
+	.loc	1 131 26                @ ../MYx/Core/Src/MyDev_PIR.c:131:26
+	ldr	r0, [sp, #24]
+	adds	r0, r0, #1
+	str	r0, [sp, #24]
+	.loc	1 131 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:131:6
+	b	.LBB3_29
+.Ltmp73:
+.LBB3_32:                               @   in Loop: Header=BB3_23 Depth=1
+	.loc	1 135 13 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:135:13
+	ldr	r0, __arm_cp.3_1
+	ldr	r0, [r0, #4]
+	ldr	r0, [r0, #16]
+	ldr	r1, __arm_cp.3_0
+	ldrh	r1, [r1, #14]
+.Ltmp74:
+	.loc	1 135 13 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:135:13
+	tst	r0, r1
+	beq	.LBB3_34
+	b	.LBB3_33
+.LBB3_33:                               @   in Loop: Header=BB3_23 Depth=1
+.Ltmp75:
+	.loc	1 136 21 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:136:21
+	ldr	r0, [sp, #16]
+	.loc	1 136 18 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:136:18
+	ldr	r1, __arm_cp.3_3
+	ldr	r2, [r1]
+	orrs	r2, r0
+	str	r2, [r1]
+	.loc	1 136 10                @ ../MYx/Core/Src/MyDev_PIR.c:136:10
+	b	.LBB3_34
+.Ltmp76:
+.LBB3_34:                               @   in Loop: Header=BB3_23 Depth=1
+	.loc	1 138 18 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:138:18
+	ldr	r0, [sp, #16]
+	lsrs	r0, r0, #1
+	str	r0, [sp, #16]
+	.loc	1 139 5                 @ ../MYx/Core/Src/MyDev_PIR.c:139:5
+	b	.LBB3_35
+.Ltmp77:
+.LBB3_35:                               @   in Loop: Header=BB3_23 Depth=1
+	.loc	1 119 24                @ ../MYx/Core/Src/MyDev_PIR.c:119:24
+	ldr	r0, [sp, #28]
+	adds	r0, r0, #1
+	str	r0, [sp, #28]
+	.loc	1 119 5 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:119:5
+	b	.LBB3_23
+.Ltmp78:
+.LBB3_36:
+	.loc	1 142 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:142:5
+	b	.LBB3_37
+.LBB3_37:
+.Ltmp79:
+	.loc	1 142 5 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:142:5
+	ldr	r0, __arm_cp.3_0
+	ldrh	r1, [r0, #14]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.3_1
+	ldr	r3, [r2, #4]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #14]
+	mvns	r0, r0
+	ldr	r1, [r2, #4]
+	str	r0, [r1, #8]
+	b	.LBB3_38
+.Ltmp80:
+.LBB3_38:
+	.loc	1 0 5                   @ ../MYx/Core/Src/MyDev_PIR.c:0:5
+	movs	r0, #1
+	movs	r1, #7
+	.loc	1 143 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:143:5
+	str	r0, [sp, #12]           @ 4-byte Spill
+	str	r1, [sp, #8]            @ 4-byte Spill
+	bl	MyGPIO_SetPinModeOUtput_PIR
+	.loc	1 144 5                 @ ../MYx/Core/Src/MyDev_PIR.c:144:5
+	ldr	r1, __arm_cp.3_4
+	str	r0, [sp, #4]            @ 4-byte Spill
+	mov	r0, r1
+	bl	asm
+	.loc	1 145 5                 @ ../MYx/Core/Src/MyDev_PIR.c:145:5
+	ldr	r1, [sp, #12]           @ 4-byte Reload
+	str	r0, [sp]                @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #8]            @ 4-byte Reload
+	bl	MyGPIO_SetPinModeInput_PIR
+	.loc	1 146 12                @ ../MYx/Core/Src/MyDev_PIR.c:146:12
+	ldr	r1, __arm_cp.3_2
+	ldr	r2, [r1]
+	ldr	r3, __arm_cp.3_5
+	ands	r2, r3
+	str	r2, [r1]
+.Ltmp81:
+	.loc	1 148 11                @ ../MYx/Core/Src/MyDev_PIR.c:148:11
+	ldr	r1, __arm_cp.3_3
+.Ltmp82:
+	.loc	1 148 9 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:148:9
+	ldrb	r1, [r1]
+	lsls	r1, r1, #25
+	lsrs	r1, r1, #30
+	cmp	r1, #0
+	bne	.LBB3_42
+	b	.LBB3_39
+.LBB3_39:
+.Ltmp83:
+	.loc	1 150 9 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:150:9
+	ldr	r0, __arm_cp.3_2
+.Ltmp84:
+	.loc	1 150 9 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:150:9
+	ldrb	r0, [r0, #1]
+	lsls	r0, r0, #26
+	cmp	r0, #0
+	bpl	.LBB3_41
+	b	.LBB3_40
+.LBB3_40:
+.Ltmp85:
+	.loc	1 151 14 is_stmt 1      @ ../MYx/Core/Src/MyDev_PIR.c:151:14
+	ldr	r0, __arm_cp.3_2
+	ldr	r1, [r0]
+	movw	r2, #16384
+	subs	r1, r1, r2
+	str	r1, [r0]
+	.loc	1 151 7 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:151:7
+	b	.LBB3_41
+.Ltmp86:
+.LBB3_41:
+	.loc	1 152 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:152:5
+	b	.LBB3_42
+.Ltmp87:
+.LBB3_42:
+	.loc	1 153 23                @ ../MYx/Core/Src/MyDev_PIR.c:153:23
+	ldr	r0, __arm_cp.3_2
+	ldr	r0, [r0]
+	.loc	1 153 15 is_stmt 0      @ ../MYx/Core/Src/MyDev_PIR.c:153:15
+	bl	int2str
+	.loc	1 153 5                 @ ../MYx/Core/Src/MyDev_PIR.c:153:5
+	bl	My_printf
+	.loc	1 155 1 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:155:1
+	add	sp, #32
+	pop	{r7, pc}
+.Ltmp88:
+	.p2align	2
+@ %bb.43:
+	.loc	1 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_PIR.c:0:1
+__arm_cp.3_0:
+	.long	GPIO_Pin
+.Lcpi_end4:
+	.size	__arm_cp.3_0, .Lcpi_end4-__arm_cp.3_0
+__arm_cp.3_1:
+	.long	GPIO_Port
+.Lcpi_end5:
+	.size	__arm_cp.3_1, .Lcpi_end5-__arm_cp.3_1
+__arm_cp.3_2:
+	.long	PIRval
+.Lcpi_end6:
+	.size	__arm_cp.3_2, .Lcpi_end6-__arm_cp.3_2
+__arm_cp.3_3:
+	.long	statcfg
+.Lcpi_end7:
+	.size	__arm_cp.3_3, .Lcpi_end7-__arm_cp.3_3
+__arm_cp.3_4:
+	.long	.L.str
+.Lcpi_end8:
+	.size	__arm_cp.3_4, .Lcpi_end8-__arm_cp.3_4
+__arm_cp.3_5:
+	.long	16383                   @ 0x3fff
+.Lcpi_end9:
+	.size	__arm_cp.3_5, .Lcpi_end9-__arm_cp.3_5
+.Lfunc_end3:
+	.size	MyPIR_ReadDirectLink, .Lfunc_end3-MyPIR_ReadDirectLink
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyPIR_ResetMotionDetect @ -- Begin function MyPIR_ResetMotionDetect
+	.globl	MyPIR_ResetMotionDetect
+	.p2align	1
+	.type	MyPIR_ResetMotionDetect,%function
+	.code	16                      @ @MyPIR_ResetMotionDetect
+	.thumb_func
+MyPIR_ResetMotionDetect:
+.Lfunc_begin4:
+	.loc	1 158 0 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:158:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.loc	1 173 1 prologue_end    @ ../MYx/Core/Src/MyDev_PIR.c:173:1
+	bx	lr
+.Ltmp89:
+.Lfunc_end4:
+	.size	MyPIR_ResetMotionDetect, .Lfunc_end4-MyPIR_ResetMotionDetect
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyPIR_GetInterrupt      @ -- Begin function MyPIR_GetInterrupt
+	.globl	MyPIR_GetInterrupt
+	.p2align	2
+	.type	MyPIR_GetInterrupt,%function
+	.code	16                      @ @MyPIR_GetInterrupt
+	.thumb_func
+MyPIR_GetInterrupt:
+.Lfunc_begin5:
+	.loc	1 177 0                 @ ../MYx/Core/Src/MyDev_PIR.c:177:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+.Ltmp90:
+	.loc	1 179 6 prologue_end    @ ../MYx/Core/Src/MyDev_PIR.c:179:6
+	ldr	r0, __arm_cp.5_0
+	ldr	r0, [r0]
+.Ltmp91:
+	.loc	1 179 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_PIR.c:179:6
+	cmp	r0, #0
+	bne	.LBB5_2
+	b	.LBB5_1
+.LBB5_1:
+	.loc	1 0 6                   @ ../MYx/Core/Src/MyDev_PIR.c:0:6
+	movs	r0, #1
+.Ltmp92:
+	.loc	1 181 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:181:3
+	bl	MyLED_Green
+	.loc	1 182 4                 @ ../MYx/Core/Src/MyDev_PIR.c:182:4
+	ldr	r0, __arm_cp.5_0
+	ldr	r1, [r0]
+	adds	r1, r1, #1
+	str	r1, [r0]
+	.loc	1 183 2                 @ ../MYx/Core/Src/MyDev_PIR.c:183:2
+	b	.LBB5_3
+.Ltmp93:
+.LBB5_2:
+	.loc	1 0 2 is_stmt 0         @ ../MYx/Core/Src/MyDev_PIR.c:0:2
+	movs	r0, #0
+.Ltmp94:
+	.loc	1 186 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_PIR.c:186:3
+	str	r0, [sp, #4]            @ 4-byte Spill
+	bl	MyLED_Green
+	.loc	1 187 4                 @ ../MYx/Core/Src/MyDev_PIR.c:187:4
+	ldr	r0, __arm_cp.5_0
+	ldr	r1, [sp, #4]            @ 4-byte Reload
+	str	r1, [r0]
+	b	.LBB5_3
+.Ltmp95:
+.LBB5_3:
+	.loc	1 190 2                 @ ../MYx/Core/Src/MyDev_PIR.c:190:2
+	bl	MyPIR_ResetMotionDetect
+	.loc	1 192 1                 @ ../MYx/Core/Src/MyDev_PIR.c:192:1
+	add	sp, #8
+	pop	{r7, pc}
+.Ltmp96:
+	.p2align	2
+@ %bb.4:
+	.loc	1 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_PIR.c:0:1
+__arm_cp.5_0:
+	.long	MyPIR_GetInterrupt.i
+.Lcpi_end10:
+	.size	__arm_cp.5_0, .Lcpi_end10-__arm_cp.5_0
+.Lfunc_end5:
+	.size	MyPIR_GetInterrupt, .Lfunc_end5-MyPIR_GetInterrupt
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	PIRval                  @ @PIRval
+	.type	PIRval,%object
+	.section	.bss.PIRval,"aw",%nobits
+	.globl	PIRval
+	.p2align	2
+PIRval:
+.LPIRval$local:
+	.long	0                       @ 0x0
+	.size	PIRval, 4
+
+	.hidden	statcfg                 @ @statcfg
+	.type	statcfg,%object
+	.section	.bss.statcfg,"aw",%nobits
+	.globl	statcfg
+	.p2align	2
+statcfg:
+.Lstatcfg$local:
+	.long	0                       @ 0x0
+	.size	statcfg, 4
+
+	.type	.L.str,%object          @ @.str
+	.section	.rodata.str1.1,"aMS",%progbits,1
+.L.str:
+	.asciz	"NOP"
+	.size	.L.str, 4
+
+	.type	MyPIR_GetInterrupt.i,%object @ @MyPIR_GetInterrupt.i
+	.section	.bss.MyPIR_GetInterrupt.i,"aw",%nobits
+	.p2align	2
+MyPIR_GetInterrupt.i:
+	.long	0                       @ 0x0
+	.size	MyPIR_GetInterrupt.i, 4
+
+	.file	4 "C:\\" "Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stdint.h"
+	.section	.debug_str,"MS",%progbits,1
+.Linfo_string0:
+	.asciz	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]" @ string offset=0
+.Linfo_string1:
+	.asciz	"../MYx/Core/Src\\MyDev_PIR.c" @ string offset=55
+.Linfo_string2:
+	.asciz	"C:\\Work\\Keil WorkSpace\\Furbo\\Keil" @ string offset=83
+.Linfo_string3:
+	.asciz	"PIRval"                @ string offset=117
+.Linfo_string4:
+	.asciz	"int"                   @ string offset=124
+.Linfo_string5:
+	.asciz	"statcfg"               @ string offset=128
+.Linfo_string6:
+	.asciz	"long unsigned int"     @ string offset=136
+.Linfo_string7:
+	.asciz	"i"                     @ string offset=154
+.Linfo_string8:
+	.asciz	"unsigned char"         @ string offset=156
+.Linfo_string9:
+	.asciz	"GPIO_Pin0"             @ string offset=170
+.Linfo_string10:
+	.asciz	"GPIO_Pin1"             @ string offset=180
+.Linfo_string11:
+	.asciz	"GPIO_Pin2"             @ string offset=190
+.Linfo_string12:
+	.asciz	"GPIO_Pin3"             @ string offset=200
+.Linfo_string13:
+	.asciz	"GPIO_Pin4"             @ string offset=210
+.Linfo_string14:
+	.asciz	"GPIO_Pin5"             @ string offset=220
+.Linfo_string15:
+	.asciz	"GPIO_Pin6"             @ string offset=230
+.Linfo_string16:
+	.asciz	"GPIO_Pin7"             @ string offset=240
+.Linfo_string17:
+	.asciz	"GPIO_Pin8"             @ string offset=250
+.Linfo_string18:
+	.asciz	"GPIO_Pin9"             @ string offset=260
+.Linfo_string19:
+	.asciz	"GPIO_Pin10"            @ string offset=270
+.Linfo_string20:
+	.asciz	"GPIO_Pin11"            @ string offset=281
+.Linfo_string21:
+	.asciz	"GPIO_Pin12"            @ string offset=292
+.Linfo_string22:
+	.asciz	"GPIO_Pin13"            @ string offset=303
+.Linfo_string23:
+	.asciz	"GPIO_Pin14"            @ string offset=314
+.Linfo_string24:
+	.asciz	"GPIO_Pin15"            @ string offset=325
+.Linfo_string25:
+	.asciz	"GPIO_PinALL"           @ string offset=336
+.Linfo_string26:
+	.asciz	"GPIO_Num_Pin"          @ string offset=348
+.Linfo_string27:
+	.asciz	"GPIO_PA"               @ string offset=361
+.Linfo_string28:
+	.asciz	"GPIO_PB"               @ string offset=369
+.Linfo_string29:
+	.asciz	"GPIO_PC"               @ string offset=377
+.Linfo_string30:
+	.asciz	"GPIO_PD"               @ string offset=385
+.Linfo_string31:
+	.asciz	"GPIO_Num_Port"         @ string offset=393
+.Linfo_string32:
+	.asciz	"LED_Off"               @ string offset=407
+.Linfo_string33:
+	.asciz	"LED_On"                @ string offset=415
+.Linfo_string34:
+	.asciz	"MyPIR_Init"            @ string offset=422
+.Linfo_string35:
+	.asciz	"MyPIR_WriterRegisterValue" @ string offset=433
+.Linfo_string36:
+	.asciz	"MyPIR_Write"           @ string offset=459
+.Linfo_string37:
+	.asciz	"MyPIR_ReadDirectLink"  @ string offset=471
+.Linfo_string38:
+	.asciz	"MyPIR_ResetMotionDetect" @ string offset=492
+.Linfo_string39:
+	.asciz	"MyPIR_GetInterrupt"    @ string offset=516
+.Linfo_string40:
+	.asciz	"Setting"               @ string offset=535
+.Linfo_string41:
+	.asciz	"unsigned int"          @ string offset=543
+.Linfo_string42:
+	.asciz	"uint32_t"              @ string offset=556
+.Linfo_string43:
+	.asciz	"data"                  @ string offset=565
+.Linfo_string44:
+	.asciz	"uint8_t"               @ string offset=570
+.Linfo_string45:
+	.asciz	"j"                     @ string offset=578
+.Linfo_string46:
+	.asciz	"d"                     @ string offset=580
+.Linfo_string47:
+	.asciz	"uibitmask"             @ string offset=582
+.Linfo_string48:
+	.asciz	"ulbitmask"             @ string offset=592
+	.section	.debug_abbrev,"",%progbits
+	.byte	1                       @ Abbreviation Code
+	.byte	17                      @ DW_TAG_compile_unit
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	37                      @ DW_AT_producer
+	.byte	14                      @ DW_FORM_strp
+	.byte	19                      @ DW_AT_language
+	.byte	5                       @ DW_FORM_data2
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	16                      @ DW_AT_stmt_list
+	.byte	6                       @ DW_FORM_data4
+	.byte	27                      @ DW_AT_comp_dir
+	.byte	14                      @ DW_FORM_strp
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	2                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	3                       @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	4                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	5                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	6                       @ Abbreviation Code
+	.byte	4                       @ DW_TAG_enumeration_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	7                       @ Abbreviation Code
+	.byte	40                      @ DW_TAG_enumerator
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	28                      @ DW_AT_const_value
+	.byte	15                      @ DW_FORM_udata
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	8                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	9                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	10                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	11                      @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	12                      @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	0                       @ EOM(3)
+	.section	.debug_info,"",%progbits
+.Lcu_begin0:
+	.long	.Ldebug_info_end0-.Ldebug_info_start0 @ Length of Unit
+.Ldebug_info_start0:
+	.short	3                       @ DWARF version number
+	.long	.debug_abbrev           @ Offset Into Abbrev. Section
+	.byte	4                       @ Address Size (in bytes)
+	.byte	1                       @ Abbrev [1] 0xb:0x215 DW_TAG_compile_unit
+	.long	.Linfo_string0          @ DW_AT_producer
+	.short	1                       @ DW_AT_language
+	.long	.Linfo_string1          @ DW_AT_name
+	.long	.Lline_table_start0     @ DW_AT_stmt_list
+	.long	.Linfo_string2          @ DW_AT_comp_dir
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end5             @ DW_AT_high_pc
+	.byte	2                       @ Abbrev [2] 0x26:0x12 DW_TAG_variable
+	.long	.Linfo_string3          @ DW_AT_name
+	.long	56                      @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	1                       @ DW_AT_decl_file
+	.byte	8                       @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	PIRval
+	.byte	3                       @ Abbrev [3] 0x38:0x7 DW_TAG_base_type
+	.long	.Linfo_string4          @ DW_AT_name
+	.byte	5                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	2                       @ Abbrev [2] 0x3f:0x12 DW_TAG_variable
+	.long	.Linfo_string5          @ DW_AT_name
+	.long	81                      @ DW_AT_type
+	.byte	1                       @ DW_AT_external
+	.byte	1                       @ DW_AT_decl_file
+	.byte	9                       @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	statcfg
+	.byte	3                       @ Abbrev [3] 0x51:0x7 DW_TAG_base_type
+	.long	.Linfo_string6          @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	4                       @ Abbrev [4] 0x58:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin5           @ DW_AT_low_pc
+	.long	.Lfunc_end5             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string39         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	176                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	5                       @ Abbrev [5] 0x6a:0x11 DW_TAG_variable
+	.long	.Linfo_string7          @ DW_AT_name
+	.long	56                      @ DW_AT_type
+	.byte	1                       @ DW_AT_decl_file
+	.byte	178                     @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	MyPIR_GetInterrupt.i
+	.byte	0                       @ End Of Children Mark
+	.byte	6                       @ Abbrev [6] 0x7c:0x75 DW_TAG_enumeration_type
+	.long	241                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	22                      @ DW_AT_decl_line
+	.byte	7                       @ Abbrev [7] 0x84:0x6 DW_TAG_enumerator
+	.long	.Linfo_string9          @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x8a:0x6 DW_TAG_enumerator
+	.long	.Linfo_string10         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x90:0x6 DW_TAG_enumerator
+	.long	.Linfo_string11         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x96:0x6 DW_TAG_enumerator
+	.long	.Linfo_string12         @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x9c:0x6 DW_TAG_enumerator
+	.long	.Linfo_string13         @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xa2:0x6 DW_TAG_enumerator
+	.long	.Linfo_string14         @ DW_AT_name
+	.byte	5                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xa8:0x6 DW_TAG_enumerator
+	.long	.Linfo_string15         @ DW_AT_name
+	.byte	6                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xae:0x6 DW_TAG_enumerator
+	.long	.Linfo_string16         @ DW_AT_name
+	.byte	7                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xb4:0x6 DW_TAG_enumerator
+	.long	.Linfo_string17         @ DW_AT_name
+	.byte	8                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xba:0x6 DW_TAG_enumerator
+	.long	.Linfo_string18         @ DW_AT_name
+	.byte	9                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xc0:0x6 DW_TAG_enumerator
+	.long	.Linfo_string19         @ DW_AT_name
+	.byte	10                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xc6:0x6 DW_TAG_enumerator
+	.long	.Linfo_string20         @ DW_AT_name
+	.byte	11                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xcc:0x6 DW_TAG_enumerator
+	.long	.Linfo_string21         @ DW_AT_name
+	.byte	12                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xd2:0x6 DW_TAG_enumerator
+	.long	.Linfo_string22         @ DW_AT_name
+	.byte	13                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xd8:0x6 DW_TAG_enumerator
+	.long	.Linfo_string23         @ DW_AT_name
+	.byte	14                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xde:0x6 DW_TAG_enumerator
+	.long	.Linfo_string24         @ DW_AT_name
+	.byte	15                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xe4:0x6 DW_TAG_enumerator
+	.long	.Linfo_string25         @ DW_AT_name
+	.byte	16                      @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0xea:0x6 DW_TAG_enumerator
+	.long	.Linfo_string26         @ DW_AT_name
+	.byte	17                      @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	3                       @ Abbrev [3] 0xf1:0x7 DW_TAG_base_type
+	.long	.Linfo_string8          @ DW_AT_name
+	.byte	8                       @ DW_AT_encoding
+	.byte	1                       @ DW_AT_byte_size
+	.byte	6                       @ Abbrev [6] 0xf8:0x27 DW_TAG_enumeration_type
+	.long	241                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	13                      @ DW_AT_decl_line
+	.byte	7                       @ Abbrev [7] 0x100:0x6 DW_TAG_enumerator
+	.long	.Linfo_string27         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x106:0x6 DW_TAG_enumerator
+	.long	.Linfo_string28         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x10c:0x6 DW_TAG_enumerator
+	.long	.Linfo_string29         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x112:0x6 DW_TAG_enumerator
+	.long	.Linfo_string30         @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x118:0x6 DW_TAG_enumerator
+	.long	.Linfo_string31         @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	6                       @ Abbrev [6] 0x11f:0x15 DW_TAG_enumeration_type
+	.long	241                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	3                       @ DW_AT_decl_file
+	.byte	15                      @ DW_AT_decl_line
+	.byte	7                       @ Abbrev [7] 0x127:0x6 DW_TAG_enumerator
+	.long	.Linfo_string32         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	7                       @ Abbrev [7] 0x12d:0x6 DW_TAG_enumerator
+	.long	.Linfo_string33         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x134:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end0             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string34         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	11                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	4                       @ Abbrev [4] 0x146:0x21 DW_TAG_subprogram
+	.long	.Lfunc_begin1           @ DW_AT_low_pc
+	.long	.Lfunc_end1             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string35         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	32                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x158:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string40         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	34                      @ DW_AT_decl_line
+	.long	514                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	10                      @ Abbrev [10] 0x167:0x3e DW_TAG_subprogram
+	.long	.Lfunc_begin2           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string36         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	50                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	11                      @ Abbrev [11] 0x17a:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	50                      @ DW_AT_decl_line
+	.long	514                     @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x188:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string7          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	52                      @ DW_AT_decl_line
+	.long	532                     @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x196:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string45         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	52                      @ DW_AT_decl_line
+	.long	532                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	4                       @ Abbrev [4] 0x1a5:0x4b DW_TAG_subprogram
+	.long	.Lfunc_begin3           @ DW_AT_low_pc
+	.long	.Lfunc_end3             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string37         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	77                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	9                       @ Abbrev [9] 0x1b7:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string7          @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	79                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x1c5:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	79                      @ DW_AT_decl_line
+	.long	56                      @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x1d3:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string47         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	80                      @ DW_AT_decl_line
+	.long	525                     @ DW_AT_type
+	.byte	9                       @ Abbrev [9] 0x1e1:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	81                      @ DW_AT_decl_line
+	.long	81                      @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x1f0:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin4           @ DW_AT_low_pc
+	.long	.Lfunc_end4             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string38         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	157                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	12                      @ Abbrev [12] 0x202:0xb DW_TAG_typedef
+	.long	525                     @ DW_AT_type
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	64                      @ DW_AT_decl_line
+	.byte	3                       @ Abbrev [3] 0x20d:0x7 DW_TAG_base_type
+	.long	.Linfo_string41         @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	12                      @ Abbrev [12] 0x214:0xb DW_TAG_typedef
+	.long	241                     @ DW_AT_type
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	62                      @ DW_AT_decl_line
+	.byte	0                       @ End Of Children Mark
+.Ldebug_info_end0:
+	.ident	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]"
+	.section	".note.GNU-stack","",%progbits
+	.eabi_attribute	30, 6	@ Tag_ABI_optimization_goals
+	.ARM_attribute	16, 1	@ Tag_AV_eba
+	.section	.debug_line,"",%progbits
+.Lline_table_start0:

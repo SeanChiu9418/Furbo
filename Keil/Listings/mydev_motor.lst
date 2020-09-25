@@ -1,0 +1,3553 @@
+	.text
+	.syntax unified
+	.eabi_attribute	67, "2.09"	@ Tag_conformance
+	.cpu	cortex-m23
+	.eabi_attribute	6, 16	@ Tag_CPU_arch
+	.eabi_attribute	7, 77	@ Tag_CPU_arch_profile
+	.eabi_attribute	8, 0	@ Tag_ARM_ISA_use
+	.eabi_attribute	9, 3	@ Tag_THUMB_ISA_use
+	.eabi_attribute	34, 0	@ Tag_CPU_unaligned_access
+	.eabi_attribute	17, 1	@ Tag_ABI_PCS_GOT_use
+	.eabi_attribute	20, 2	@ Tag_ABI_FP_denormal
+	.eabi_attribute	21, 0	@ Tag_ABI_FP_exceptions
+	.eabi_attribute	23, 1	@ Tag_ABI_FP_number_model
+	.eabi_attribute	24, 1	@ Tag_ABI_align_needed
+	.eabi_attribute	25, 1	@ Tag_ABI_align_preserved
+	.eabi_attribute	38, 1	@ Tag_ABI_FP_16bit_format
+	.eabi_attribute	18, 2	@ Tag_ABI_PCS_wchar_t
+	.eabi_attribute	26, 1	@ Tag_ABI_enum_size
+	.eabi_attribute	14, 0	@ Tag_ABI_PCS_R9_use
+	.file	"MyDev_Motor.c"
+	.file	1 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Inc/MyMCU_GPIO.h"
+	.file	2 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Inc\\MyDev_Motor.h"
+	.file	3 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Src/MyDev_Motor.c"
+	.file	4 "C:\\" "Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stdint.h"
+	.file	5 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../../Library/Nuvoton/M251_252_Series/CMSIS/Include\\core_cm23.h"
+	.hidden	MyMoto_Init             @ -- Begin function MyMoto_Init
+	.globl	MyMoto_Init
+	.p2align	2
+	.type	MyMoto_Init,%function
+	.code	16                      @ @MyMoto_Init
+	.thumb_func
+MyMoto_Init:
+.Lfunc_begin0:
+	.loc	3 20 0                  @ ../MYx/Core/Src/MyDev_Motor.c:20:0
+	.fnstart
+	.cfi_sections .debug_frame
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#48
+	sub	sp, #48
+	.cfi_def_cfa_offset 64
+.Ltmp0:
+	.loc	3 22 26 prologue_end    @ ../MYx/Core/Src/MyDev_Motor.c:22:26
+	ldr	r0, __arm_cp.0_0
+	movs	r1, #0
+	strb	r1, [r0]
+	.loc	3 23 26                 @ ../MYx/Core/Src/MyDev_Motor.c:23:26
+	strb	r1, [r0, #1]
+	.loc	3 24 26                 @ ../MYx/Core/Src/MyDev_Motor.c:24:26
+	strb	r1, [r0, #2]
+	movs	r2, #1
+	.loc	3 25 26                 @ ../MYx/Core/Src/MyDev_Motor.c:25:26
+	strb	r2, [r0, #3]
+	.loc	3 26 26                 @ ../MYx/Core/Src/MyDev_Motor.c:26:26
+	strb	r1, [r0, #4]
+	movs	r3, #2
+	.loc	3 27 26                 @ ../MYx/Core/Src/MyDev_Motor.c:27:26
+	strb	r3, [r0, #5]
+	.loc	3 28 26                 @ ../MYx/Core/Src/MyDev_Motor.c:28:26
+	strb	r1, [r0, #6]
+	movs	r4, #3
+	.loc	3 29 26                 @ ../MYx/Core/Src/MyDev_Motor.c:29:26
+	strb	r4, [r0, #7]
+	movw	r5, #360
+	.loc	3 30 23                 @ ../MYx/Core/Src/MyDev_Motor.c:30:23
+	str	r5, [r0, #12]
+	.loc	3 31 24                 @ ../MYx/Core/Src/MyDev_Motor.c:31:24
+	strb	r1, [r0, #9]
+	.loc	3 32 23                 @ ../MYx/Core/Src/MyDev_Motor.c:32:23
+	strb	r3, [r0, #8]
+	.loc	3 34 26                 @ ../MYx/Core/Src/MyDev_Motor.c:34:26
+	strb	r3, [r0, #16]
+	.loc	3 35 26                 @ ../MYx/Core/Src/MyDev_Motor.c:35:26
+	strb	r1, [r0, #17]
+	.loc	3 36 26                 @ ../MYx/Core/Src/MyDev_Motor.c:36:26
+	strb	r3, [r0, #18]
+	.loc	3 37 26                 @ ../MYx/Core/Src/MyDev_Motor.c:37:26
+	strb	r2, [r0, #19]
+	.loc	3 38 26                 @ ../MYx/Core/Src/MyDev_Motor.c:38:26
+	strb	r3, [r0, #20]
+	.loc	3 39 26                 @ ../MYx/Core/Src/MyDev_Motor.c:39:26
+	strb	r3, [r0, #21]
+	.loc	3 40 26                 @ ../MYx/Core/Src/MyDev_Motor.c:40:26
+	strb	r3, [r0, #22]
+	.loc	3 41 26                 @ ../MYx/Core/Src/MyDev_Motor.c:41:26
+	strb	r4, [r0, #23]
+	.loc	3 42 23                 @ ../MYx/Core/Src/MyDev_Motor.c:42:23
+	str	r5, [r0, #28]
+	.loc	3 43 24                 @ ../MYx/Core/Src/MyDev_Motor.c:43:24
+	strb	r1, [r0, #25]
+	.loc	3 44 23                 @ ../MYx/Core/Src/MyDev_Motor.c:44:23
+	strb	r3, [r0, #24]
+	.loc	3 52 2                  @ ../MYx/Core/Src/MyDev_Motor.c:52:2
+	mov	r0, r1
+	str	r1, [sp, #44]           @ 4-byte Spill
+	ldr	r5, [sp, #44]           @ 4-byte Reload
+	str	r2, [sp, #40]           @ 4-byte Spill
+	mov	r2, r5
+	str	r3, [sp, #36]           @ 4-byte Spill
+	str	r4, [sp, #32]           @ 4-byte Spill
+	bl	MyGPIO_WritePin
+	.loc	3 53 2                  @ ../MYx/Core/Src/MyDev_Motor.c:53:2
+	ldr	r1, [sp, #44]           @ 4-byte Reload
+	str	r0, [sp, #28]           @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #40]           @ 4-byte Reload
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 54 2                  @ ../MYx/Core/Src/MyDev_Motor.c:54:2
+	ldr	r1, [sp, #44]           @ 4-byte Reload
+	str	r0, [sp, #24]           @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 55 2                  @ ../MYx/Core/Src/MyDev_Motor.c:55:2
+	ldr	r1, [sp, #44]           @ 4-byte Reload
+	str	r0, [sp, #20]           @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #32]           @ 4-byte Reload
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 56 2                  @ ../MYx/Core/Src/MyDev_Motor.c:56:2
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	str	r0, [sp, #16]           @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #44]           @ 4-byte Reload
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 57 2                  @ ../MYx/Core/Src/MyDev_Motor.c:57:2
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	str	r0, [sp, #12]           @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #40]           @ 4-byte Reload
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 58 2                  @ ../MYx/Core/Src/MyDev_Motor.c:58:2
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	str	r0, [sp, #8]            @ 4-byte Spill
+	mov	r0, r1
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 59 2                  @ ../MYx/Core/Src/MyDev_Motor.c:59:2
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	str	r0, [sp, #4]            @ 4-byte Spill
+	mov	r0, r1
+	ldr	r1, [sp, #32]           @ 4-byte Reload
+	ldr	r2, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_WritePin
+	.loc	3 62 2                  @ ../MYx/Core/Src/MyDev_Motor.c:62:2
+	ldr	r1, [sp, #44]           @ 4-byte Reload
+	str	r0, [sp]                @ 4-byte Spill
+	mov	r0, r1
+	bl	MyGPIO_Conf2Output
+	.loc	3 63 2                  @ ../MYx/Core/Src/MyDev_Motor.c:63:2
+	ldr	r0, [sp, #44]           @ 4-byte Reload
+	ldr	r1, [sp, #40]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 64 2                  @ ../MYx/Core/Src/MyDev_Motor.c:64:2
+	ldr	r0, [sp, #44]           @ 4-byte Reload
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 65 2                  @ ../MYx/Core/Src/MyDev_Motor.c:65:2
+	ldr	r0, [sp, #44]           @ 4-byte Reload
+	ldr	r1, [sp, #32]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 66 2                  @ ../MYx/Core/Src/MyDev_Motor.c:66:2
+	ldr	r0, [sp, #36]           @ 4-byte Reload
+	ldr	r1, [sp, #44]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 67 2                  @ ../MYx/Core/Src/MyDev_Motor.c:67:2
+	ldr	r0, [sp, #36]           @ 4-byte Reload
+	ldr	r1, [sp, #40]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 68 2                  @ ../MYx/Core/Src/MyDev_Motor.c:68:2
+	ldr	r0, [sp, #36]           @ 4-byte Reload
+	ldr	r1, [sp, #36]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 69 2                  @ ../MYx/Core/Src/MyDev_Motor.c:69:2
+	ldr	r0, [sp, #36]           @ 4-byte Reload
+	ldr	r1, [sp, #32]           @ 4-byte Reload
+	bl	MyGPIO_Conf2Output
+	.loc	3 71 1                  @ ../MYx/Core/Src/MyDev_Motor.c:71:1
+	add	sp, #48
+	pop	{r4, r5, r7, pc}
+.Ltmp1:
+	.p2align	2
+@ %bb.1:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.0_0:
+	.long	STPMT
+.Lcpi_end0:
+	.size	__arm_cp.0_0, .Lcpi_end0-__arm_cp.0_0
+.Lfunc_end0:
+	.size	MyMoto_Init, .Lfunc_end0-MyMoto_Init
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPDriveEx       @ -- Begin function MyMoto_STPDriveEx
+	.globl	MyMoto_STPDriveEx
+	.p2align	2
+	.type	MyMoto_STPDriveEx,%function
+	.code	16                      @ @MyMoto_STPDriveEx
+	.thumb_func
+MyMoto_STPDriveEx:
+.Lfunc_begin1:
+	.loc	3 78 0 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:78:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, r5, r7, lr}
+	push	{r4, r5, r7, lr}
+	.cfi_def_cfa_offset 16
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.cfi_offset r5, -12
+	.cfi_offset r4, -16
+	.pad	#12
+	sub	sp, #12
+	.cfi_def_cfa_offset 28
+	mov	r2, r1
+	mov	r3, r0
+	add	r4, sp, #8
+	strb	r0, [r4]
+	add	r0, sp, #4
+	strb	r1, [r0]
+.Ltmp2:
+	.loc	3 79 10 prologue_end    @ ../MYx/Core/Src/MyDev_Motor.c:79:10
+	ldrb	r0, [r0]
+	.loc	3 79 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_Motor.c:79:2
+	cmp	r0, #3
+	str	r0, [sp]                @ 4-byte Spill
+	bls	.LBB1_1
+	b	.LBB1_42
+.LBB1_1:
+	.loc	3 0 2                   @ ../MYx/Core/Src/MyDev_Motor.c:0:2
+	ldr	r0, [sp]                @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI1_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.2:
+	.p2align	2
+.LJTI1_0:
+	b.w	.LBB1_3
+	b.w	.LBB1_12
+	b.w	.LBB1_21
+	b.w	.LBB1_30
+.LBB1_3:
+.Ltmp3:
+	.loc	3 82 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:82:3
+	b	.LBB1_4
+.LBB1_4:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp4:
+	.loc	3 82 3                  @ ../MYx/Core/Src/MyDev_Motor.c:82:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, .LCPI1_4
+	adds	r3, r2, r1
+	ldrb	r3, [r3, #1]
+	lsls	r3, r3, #1
+	ldr	r4, .LCPI1_5
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r2, r1]
+	lsls	r1, r1, #2
+	ldr	r5, .LCPI1_6
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r1, r2, r0
+	ldrb	r1, [r1, #1]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r2, r0]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_5
+.Ltmp5:
+.LBB1_5:
+	.loc	3 83 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:83:3
+	b	.LBB1_6
+.LBB1_6:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp6:
+	.loc	3 83 3                  @ ../MYx/Core/Src/MyDev_Motor.c:83:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, .LCPI1_4
+	adds	r1, r2, r1
+	ldrb	r1, [r1, #2]
+	lsls	r3, r1, #1
+	ldr	r4, .LCPI1_5
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	lsls	r1, r1, #2
+	ldr	r5, .LCPI1_6
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r0, [r0, #2]
+	lsls	r1, r0, #1
+	ldrh	r1, [r4, r1]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_7
+.Ltmp7:
+.LBB1_7:
+	.loc	3 84 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:84:3
+	b	.LBB1_8
+.LBB1_8:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp8:
+	.loc	3 84 3                  @ ../MYx/Core/Src/MyDev_Motor.c:84:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #5]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #4]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #5]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #4]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_9
+.Ltmp9:
+.LBB1_9:
+	.loc	3 85 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:85:3
+	b	.LBB1_10
+.LBB1_10:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp10:
+	.loc	3 85 3                  @ ../MYx/Core/Src/MyDev_Motor.c:85:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #7]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #6]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #7]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #6]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_11
+.Ltmp11:
+.LBB1_11:
+	.loc	3 86 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:86:3
+	b	.LBB1_51
+.LBB1_12:
+	.loc	3 89 3                  @ ../MYx/Core/Src/MyDev_Motor.c:89:3
+	b	.LBB1_13
+.LBB1_13:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp12:
+	.loc	3 89 3                  @ ../MYx/Core/Src/MyDev_Motor.c:89:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r3, r2, r1
+	ldrb	r3, [r3, #1]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r2, r1]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r1, r2, r0
+	ldrb	r1, [r1, #1]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r2, r0]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_14
+.Ltmp13:
+.LBB1_14:
+	.loc	3 90 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:90:3
+	b	.LBB1_15
+.LBB1_15:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp14:
+	.loc	3 90 3                  @ ../MYx/Core/Src/MyDev_Motor.c:90:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #3]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #2]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #3]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r0, #2]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_16
+.Ltmp15:
+.LBB1_16:
+	.loc	3 91 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:91:3
+	b	.LBB1_17
+.LBB1_17:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp16:
+	.loc	3 91 3                  @ ../MYx/Core/Src/MyDev_Motor.c:91:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #5]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #4]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #5]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r0, #4]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_18
+.Ltmp17:
+.LBB1_18:
+	.loc	3 92 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:92:3
+	b	.LBB1_19
+.LBB1_19:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp18:
+	.loc	3 92 3                  @ ../MYx/Core/Src/MyDev_Motor.c:92:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #7]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #6]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #7]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #6]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_20
+.Ltmp19:
+.LBB1_20:
+	.loc	3 93 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:93:3
+	b	.LBB1_51
+.LBB1_21:
+	.loc	3 96 3                  @ ../MYx/Core/Src/MyDev_Motor.c:96:3
+	b	.LBB1_22
+.LBB1_22:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp20:
+	.loc	3 96 3                  @ ../MYx/Core/Src/MyDev_Motor.c:96:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r3, r2, r1
+	ldrb	r3, [r3, #1]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r2, r1]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r1, r2, r0
+	ldrb	r1, [r1, #1]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r2, r0]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_23
+.Ltmp21:
+.LBB1_23:
+	.loc	3 97 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:97:3
+	b	.LBB1_24
+.LBB1_24:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp22:
+	.loc	3 97 3                  @ ../MYx/Core/Src/MyDev_Motor.c:97:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #3]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #2]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #3]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #2]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_25
+.Ltmp23:
+.LBB1_25:
+	.loc	3 98 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:98:3
+	b	.LBB1_26
+.LBB1_26:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp24:
+	.loc	3 98 3                  @ ../MYx/Core/Src/MyDev_Motor.c:98:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #5]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #4]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #5]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r0, #4]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_27
+.Ltmp25:
+.LBB1_27:
+	.loc	3 99 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_Motor.c:99:3
+	b	.LBB1_28
+.LBB1_28:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp26:
+	.loc	3 99 3                  @ ../MYx/Core/Src/MyDev_Motor.c:99:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #7]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #6]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #7]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r0, #6]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_29
+.Ltmp27:
+.LBB1_29:
+	.loc	3 100 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:100:3
+	b	.LBB1_51
+.LBB1_30:
+	.loc	3 103 3                 @ ../MYx/Core/Src/MyDev_Motor.c:103:3
+	b	.LBB1_31
+.LBB1_31:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp28:
+	.loc	3 103 3                 @ ../MYx/Core/Src/MyDev_Motor.c:103:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r3, r2, r1
+	ldrb	r3, [r3, #1]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r2, r1]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r1, r2, r0
+	ldrb	r1, [r1, #1]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r2, r0]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_32
+.Ltmp29:
+.LBB1_32:
+	.loc	3 104 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:104:3
+	b	.LBB1_33
+.LBB1_33:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp30:
+	.loc	3 104 3                 @ ../MYx/Core/Src/MyDev_Motor.c:104:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #3]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #2]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #3]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #2]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_34
+.Ltmp31:
+.LBB1_34:
+	.loc	3 105 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:105:3
+	b	.LBB1_35
+.LBB1_35:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp32:
+	.loc	3 105 3                 @ ../MYx/Core/Src/MyDev_Motor.c:105:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #5]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #4]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #5]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #4]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_36
+.Ltmp33:
+.LBB1_36:
+	.loc	3 106 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:106:3
+	b	.LBB1_37
+.LBB1_37:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp34:
+	.loc	3 106 3                 @ ../MYx/Core/Src/MyDev_Motor.c:106:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #7]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #6]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #7]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	ldrb	r0, [r0, #6]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_38
+.Ltmp35:
+.LBB1_38:
+	.loc	3 107 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:107:3
+	b	.LBB1_51
+	.p2align	2
+@ %bb.39:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+.LCPI1_4:
+	.long	STPMT
+	.p2align	2
+@ %bb.40:
+.LCPI1_5:
+	.long	GPIO_Pin
+	.p2align	2
+@ %bb.41:
+.LCPI1_6:
+	.long	GPIO_Port
+	.p2align	1
+.LBB1_42:
+	.loc	3 110 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:110:3
+	b	.LBB1_43
+.LBB1_43:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp36:
+	.loc	3 110 3                 @ ../MYx/Core/Src/MyDev_Motor.c:110:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r3, r2, r1
+	ldrb	r3, [r3, #1]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r2, r1]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r1, r2, r0
+	ldrb	r1, [r1, #1]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r2, r0]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_44
+.Ltmp37:
+.LBB1_44:
+	.loc	3 111 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:111:3
+	b	.LBB1_45
+.LBB1_45:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp38:
+	.loc	3 111 3                 @ ../MYx/Core/Src/MyDev_Motor.c:111:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #3]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #2]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #3]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #2]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_46
+.Ltmp39:
+.LBB1_46:
+	.loc	3 112 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:112:3
+	b	.LBB1_47
+.LBB1_47:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp40:
+	.loc	3 112 3                 @ ../MYx/Core/Src/MyDev_Motor.c:112:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #5]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #4]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #5]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #4]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_48
+.Ltmp41:
+.LBB1_48:
+	.loc	3 113 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:113:3
+	b	.LBB1_49
+.LBB1_49:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #8
+.Ltmp42:
+	.loc	3 113 3                 @ ../MYx/Core/Src/MyDev_Motor.c:113:3
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.1_0
+	adds	r1, r2, r1
+	ldrb	r3, [r1, #7]
+	lsls	r3, r3, #1
+	ldr	r4, __arm_cp.1_1
+	ldrh	r3, [r4, r3]
+	mvns	r3, r3
+	ldrb	r1, [r1, #6]
+	lsls	r1, r1, #2
+	ldr	r5, __arm_cp.1_2
+	ldr	r1, [r5, r1]
+	str	r3, [r1, #12]
+	ldrb	r0, [r0]
+	lsls	r0, r0, #4
+	adds	r0, r2, r0
+	ldrb	r1, [r0, #7]
+	lsls	r1, r1, #1
+	ldrh	r1, [r4, r1]
+	mvns	r1, r1
+	ldrb	r0, [r0, #6]
+	lsls	r0, r0, #2
+	ldr	r0, [r5, r0]
+	str	r1, [r0, #8]
+	b	.LBB1_50
+.Ltmp43:
+.LBB1_50:
+	.loc	3 114 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:114:3
+	b	.LBB1_51
+.Ltmp44:
+.LBB1_51:
+	.loc	3 116 1                 @ ../MYx/Core/Src/MyDev_Motor.c:116:1
+	add	sp, #12
+	pop	{r4, r5, r7, pc}
+.Ltmp45:
+	.p2align	2
+@ %bb.52:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.1_0:
+	.long	STPMT
+.Lcpi_end1:
+	.size	__arm_cp.1_0, .Lcpi_end1-__arm_cp.1_0
+__arm_cp.1_1:
+	.long	GPIO_Pin
+.Lcpi_end2:
+	.size	__arm_cp.1_1, .Lcpi_end2-__arm_cp.1_1
+__arm_cp.1_2:
+	.long	GPIO_Port
+.Lcpi_end3:
+	.size	__arm_cp.1_2, .Lcpi_end3-__arm_cp.1_2
+.Lfunc_end1:
+	.size	MyMoto_STPDriveEx, .Lfunc_end1-MyMoto_STPDriveEx
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPStartX        @ -- Begin function MyMoto_STPStartX
+	.globl	MyMoto_STPStartX
+	.p2align	2
+	.type	MyMoto_STPStartX,%function
+	.code	16                      @ @MyMoto_STPStartX
+	.thumb_func
+MyMoto_STPStartX:
+.Lfunc_begin2:
+	.loc	3 119 0 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:119:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#40
+	sub	sp, #40
+	.cfi_def_cfa_offset 48
+	mov	r1, r0
+	add	r2, sp, #36
+	strb	r0, [r2]
+	ldr	r0, __arm_cp.2_0
+.Ltmp46:
+	.loc	3 120 8 prologue_end    @ ../MYx/Core/Src/MyDev_Motor.c:120:8
+	str	r0, [sp, #32]
+	.loc	3 121 44                @ ../MYx/Core/Src/MyDev_Motor.c:121:44
+	ldrb	r0, [r2]
+	.loc	3 121 38 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:121:38
+	lsls	r0, r0, #4
+	ldr	r3, __arm_cp.2_1
+	adds	r0, r3, r0
+	.loc	3 121 48                @ ../MYx/Core/Src/MyDev_Motor.c:121:48
+	ldr	r0, [r0, #12]
+	.loc	3 121 38                @ ../MYx/Core/Src/MyDev_Motor.c:121:38
+	str	r1, [sp, #20]           @ 4-byte Spill
+	str	r2, [sp, #16]           @ 4-byte Spill
+	str	r3, [sp, #12]           @ 4-byte Spill
+	bl	__aeabi_i2f
+	.loc	3 121 54                @ ../MYx/Core/Src/MyDev_Motor.c:121:54
+	ldr	r1, [sp, #32]
+	.loc	3 121 53                @ ../MYx/Core/Src/MyDev_Motor.c:121:53
+	bl	__aeabi_fdiv
+	.loc	3 121 31                @ ../MYx/Core/Src/MyDev_Motor.c:121:31
+	bl	__aeabi_f2iz
+	.loc	3 121 11                @ ../MYx/Core/Src/MyDev_Motor.c:121:11
+	str	r0, [sp, #24]
+.Ltmp47:
+	.loc	3 123 12 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:123:12
+	ldr	r0, [sp, #16]           @ 4-byte Reload
+	ldrb	r1, [r0]
+	.loc	3 123 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:123:6
+	lsls	r1, r1, #4
+	ldr	r2, [sp, #12]           @ 4-byte Reload
+	adds	r1, r2, r1
+	.loc	3 123 16                @ ../MYx/Core/Src/MyDev_Motor.c:123:16
+	ldrb	r1, [r1, #9]
+.Ltmp48:
+	.loc	3 123 6                 @ ../MYx/Core/Src/MyDev_Motor.c:123:6
+	cmp	r1, #0
+	bne	.LBB2_9
+	b	.LBB2_1
+.LBB2_1:
+	.loc	3 0 6                   @ ../MYx/Core/Src/MyDev_Motor.c:0:6
+	movs	r0, #0
+.Ltmp49:
+	.loc	3 125 12 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:125:12
+	str	r0, [sp, #28]
+	.loc	3 125 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:125:8
+	b	.LBB2_2
+.LBB2_2:                                @ =>This Inner Loop Header: Depth=1
+.Ltmp50:
+	.loc	3 125 17                @ ../MYx/Core/Src/MyDev_Motor.c:125:17
+	ldr	r0, [sp, #28]
+	.loc	3 125 23                @ ../MYx/Core/Src/MyDev_Motor.c:125:23
+	ldr	r1, [sp, #24]
+.Ltmp51:
+	.loc	3 125 3                 @ ../MYx/Core/Src/MyDev_Motor.c:125:3
+	cmp	r0, r1
+	bge	.LBB2_8
+	b	.LBB2_3
+.LBB2_3:                                @   in Loop: Header=BB2_2 Depth=1
+	.loc	3 0 3                   @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #36
+.Ltmp52:
+	.loc	3 127 14 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:127:14
+	ldrb	r0, [r0]
+	.loc	3 127 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:127:8
+	lsls	r0, r0, #4
+	ldr	r1, __arm_cp.2_1
+	adds	r0, r1, r0
+	.loc	3 127 18                @ ../MYx/Core/Src/MyDev_Motor.c:127:18
+	ldr	r0, [r0, #12]
+.Ltmp53:
+	.loc	3 127 8                 @ ../MYx/Core/Src/MyDev_Motor.c:127:8
+	cmp	r0, #0
+	bne	.LBB2_5
+	b	.LBB2_4
+.LBB2_4:
+.Ltmp54:
+	.loc	3 129 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:129:5
+	ldr	r0, __arm_cp.2_2
+	bl	printf
+	.loc	3 130 5                 @ ../MYx/Core/Src/MyDev_Motor.c:130:5
+	b	.LBB2_8
+.Ltmp55:
+.LBB2_5:                                @   in Loop: Header=BB2_2 Depth=1
+	.loc	3 0 5 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:5
+	add	r0, sp, #36
+.Ltmp56:
+	.loc	3 134 23 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:134:23
+	ldrb	r1, [r0]
+	.loc	3 134 26 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:134:26
+	ldr	r2, [sp, #28]
+	.loc	3 134 29                @ ../MYx/Core/Src/MyDev_Motor.c:134:29
+	asrs	r3, r2, #31
+	lsrs	r3, r3, #30
+	adds	r3, r2, r3
+	movs	r4, #252
+	ands	r3, r4
+	subs	r2, r2, r3
+	.loc	3 134 5                 @ ../MYx/Core/Src/MyDev_Motor.c:134:5
+	uxtb	r2, r2
+	str	r0, [sp, #8]            @ 4-byte Spill
+	mov	r0, r1
+	mov	r1, r2
+	bl	MyMoto_STPDriveEx
+	.loc	3 135 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:135:5
+	ldr	r0, [sp, #8]            @ 4-byte Reload
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.2_1
+	adds	r1, r2, r1
+	ldrb	r1, [r1, #8]
+	movw	r2, #1000
+	muls	r2, r1, r2
+	mov	r0, r2
+	bl	CLK_SysTickLongDelay
+	b	.LBB2_6
+.Ltmp57:
+.LBB2_6:                                @   in Loop: Header=BB2_2 Depth=1
+	.loc	3 137 3                 @ ../MYx/Core/Src/MyDev_Motor.c:137:3
+	b	.LBB2_7
+.Ltmp58:
+.LBB2_7:                                @   in Loop: Header=BB2_2 Depth=1
+	.loc	3 125 45                @ ../MYx/Core/Src/MyDev_Motor.c:125:45
+	ldr	r0, [sp, #28]
+	adds	r0, r0, #1
+	str	r0, [sp, #28]
+	.loc	3 125 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:125:3
+	b	.LBB2_2
+.Ltmp59:
+.LBB2_8:
+	.loc	3 138 2 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:138:2
+	b	.LBB2_17
+.Ltmp60:
+.LBB2_9:
+	.loc	3 141 14                @ ../MYx/Core/Src/MyDev_Motor.c:141:14
+	ldr	r0, [sp, #24]
+	.loc	3 141 12 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:141:12
+	str	r0, [sp, #28]
+	.loc	3 141 8                 @ ../MYx/Core/Src/MyDev_Motor.c:141:8
+	b	.LBB2_10
+.LBB2_10:                               @ =>This Inner Loop Header: Depth=1
+.Ltmp61:
+	.loc	3 141 33                @ ../MYx/Core/Src/MyDev_Motor.c:141:33
+	ldr	r0, [sp, #28]
+.Ltmp62:
+	.loc	3 141 3                 @ ../MYx/Core/Src/MyDev_Motor.c:141:3
+	cmp	r0, #1
+	blt	.LBB2_16
+	b	.LBB2_11
+.LBB2_11:                               @   in Loop: Header=BB2_10 Depth=1
+	.loc	3 0 3                   @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #36
+.Ltmp63:
+	.loc	3 143 14 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:143:14
+	ldrb	r0, [r0]
+	.loc	3 143 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:143:8
+	lsls	r0, r0, #4
+	ldr	r1, __arm_cp.2_1
+	adds	r0, r1, r0
+	.loc	3 143 18                @ ../MYx/Core/Src/MyDev_Motor.c:143:18
+	ldr	r0, [r0, #12]
+.Ltmp64:
+	.loc	3 143 8                 @ ../MYx/Core/Src/MyDev_Motor.c:143:8
+	cmp	r0, #0
+	bne	.LBB2_13
+	b	.LBB2_12
+.LBB2_12:
+.Ltmp65:
+	.loc	3 145 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:145:5
+	ldr	r0, __arm_cp.2_2
+	bl	printf
+	.loc	3 146 5                 @ ../MYx/Core/Src/MyDev_Motor.c:146:5
+	b	.LBB2_16
+.Ltmp66:
+.LBB2_13:                               @   in Loop: Header=BB2_10 Depth=1
+	.loc	3 0 5 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:5
+	add	r0, sp, #36
+.Ltmp67:
+	.loc	3 150 23 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:150:23
+	ldrb	r1, [r0]
+	.loc	3 150 26 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:150:26
+	ldr	r2, [sp, #28]
+	.loc	3 150 29                @ ../MYx/Core/Src/MyDev_Motor.c:150:29
+	asrs	r3, r2, #31
+	lsrs	r3, r3, #30
+	adds	r3, r2, r3
+	movs	r4, #252
+	ands	r3, r4
+	subs	r2, r2, r3
+	.loc	3 150 5                 @ ../MYx/Core/Src/MyDev_Motor.c:150:5
+	uxtb	r2, r2
+	str	r0, [sp, #4]            @ 4-byte Spill
+	mov	r0, r1
+	mov	r1, r2
+	bl	MyMoto_STPDriveEx
+	.loc	3 151 5 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:151:5
+	ldr	r0, [sp, #4]            @ 4-byte Reload
+	ldrb	r1, [r0]
+	lsls	r1, r1, #4
+	ldr	r2, __arm_cp.2_1
+	adds	r1, r2, r1
+	ldrb	r1, [r1, #8]
+	movw	r2, #1000
+	muls	r2, r1, r2
+	mov	r0, r2
+	bl	CLK_SysTickLongDelay
+	b	.LBB2_14
+.Ltmp68:
+.LBB2_14:                               @   in Loop: Header=BB2_10 Depth=1
+	.loc	3 153 3                 @ ../MYx/Core/Src/MyDev_Motor.c:153:3
+	b	.LBB2_15
+.Ltmp69:
+.LBB2_15:                               @   in Loop: Header=BB2_10 Depth=1
+	.loc	3 141 45                @ ../MYx/Core/Src/MyDev_Motor.c:141:45
+	ldr	r0, [sp, #28]
+	subs	r0, r0, #1
+	str	r0, [sp, #28]
+	.loc	3 141 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:141:3
+	b	.LBB2_10
+.Ltmp70:
+.LBB2_16:
+	.loc	3 0 3                   @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	b	.LBB2_17
+.LBB2_17:
+	add	r0, sp, #36
+	.loc	3 155 20 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:155:20
+	ldrb	r0, [r0]
+	movs	r1, #4
+	.loc	3 155 2 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:155:2
+	bl	MyMoto_STPDriveEx
+	.loc	3 156 1 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:156:1
+	add	sp, #40
+	pop	{r4, pc}
+.Ltmp71:
+	.p2align	2
+@ %bb.18:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.2_0:
+	.long	1043595264              @ 0x3e340000
+.Lcpi_end4:
+	.size	__arm_cp.2_0, .Lcpi_end4-__arm_cp.2_0
+__arm_cp.2_1:
+	.long	STPMT
+.Lcpi_end5:
+	.size	__arm_cp.2_1, .Lcpi_end5-__arm_cp.2_1
+__arm_cp.2_2:
+	.long	.L.str
+.Lcpi_end6:
+	.size	__arm_cp.2_2, .Lcpi_end6-__arm_cp.2_2
+.Lfunc_end2:
+	.size	MyMoto_STPStartX, .Lfunc_end2-MyMoto_STPStartX
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.p2align	2               @ -- Begin function CLK_SysTickLongDelay
+	.type	CLK_SysTickLongDelay,%function
+	.code	16                      @ @CLK_SysTickLongDelay
+	.thumb_func
+CLK_SysTickLongDelay:
+.Lfunc_begin3:
+	.file	6 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../../Library/Nuvoton/M251_252_Series/StdDriver/inc\\clk.h"
+	.loc	6 582 0 is_stmt 1       @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:582:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	str	r0, [sp, #4]
+	ldr	r0, __arm_cp.3_0
+.Ltmp72:
+	.loc	6 586 14 prologue_end   @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:586:14
+	str	r0, [sp]
+	.loc	6 588 5                 @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:588:5
+	b	.LBB3_1
+.LBB3_1:                                @ =>This Loop Header: Depth=1
+                                        @     Child Loop BB3_5 Depth 2
+.Ltmp73:
+	.loc	6 590 13                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:590:13
+	ldr	r0, [sp, #4]
+	.loc	6 590 23 is_stmt 0      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:590:23
+	ldr	r1, [sp]
+.Ltmp74:
+	.loc	6 590 13                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:590:13
+	cmp	r0, r1
+	bls	.LBB3_3
+	b	.LBB3_2
+.LBB3_2:                                @   in Loop: Header=BB3_1 Depth=1
+.Ltmp75:
+	.loc	6 592 24 is_stmt 1      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:592:24
+	ldr	r0, [sp]
+	.loc	6 592 21 is_stmt 0      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:592:21
+	ldr	r1, [sp, #4]
+	subs	r0, r1, r0
+	str	r0, [sp, #4]
+	.loc	6 593 9 is_stmt 1       @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:593:9
+	b	.LBB3_4
+.Ltmp76:
+.LBB3_3:                                @   in Loop: Header=BB3_1 Depth=1
+	.loc	6 596 24                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:596:24
+	ldr	r0, [sp, #4]
+	.loc	6 596 22 is_stmt 0      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:596:22
+	str	r0, [sp]
+	movs	r0, #0
+	.loc	6 597 21 is_stmt 1      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:597:21
+	str	r0, [sp, #4]
+	b	.LBB3_4
+.Ltmp77:
+.LBB3_4:                                @   in Loop: Header=BB3_1 Depth=1
+	.loc	6 600 25                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:600:25
+	ldr	r0, [sp]
+	.loc	6 600 36 is_stmt 0      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:600:36
+	ldr	r1, __arm_cp.3_1
+	ldr	r1, [r1]
+	.loc	6 600 34                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:600:34
+	muls	r1, r0, r1
+	ldr	r0, __arm_cp.3_2
+	.loc	6 600 23                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:600:23
+	str	r1, [r0]
+	ldr	r0, __arm_cp.3_3
+	movs	r1, #0
+	.loc	6 601 23 is_stmt 1      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:601:23
+	str	r1, [r0]
+	ldr	r0, __arm_cp.3_4
+	movs	r1, #5
+	.loc	6 602 23                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:602:23
+	str	r1, [r0]
+	.loc	6 605 9                 @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:605:9
+	b	.LBB3_5
+.LBB3_5:                                @   Parent Loop BB3_1 Depth=1
+                                        @ =>  This Inner Loop Header: Depth=2
+	.loc	6 0 9 is_stmt 0         @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:0:9
+	ldr	r0, __arm_cp.3_4
+	.loc	6 605 26                @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:605:26
+	ldr	r0, [r0]
+	.loc	6 605 9                 @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:605:9
+	lsls	r0, r0, #15
+	cmp	r0, #0
+	bmi	.LBB3_7
+	b	.LBB3_6
+.LBB3_6:                                @   in Loop: Header=BB3_5 Depth=2
+	b	.LBB3_5
+.LBB3_7:                                @   in Loop: Header=BB3_1 Depth=1
+	.loc	6 0 9                   @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:0:9
+	ldr	r0, __arm_cp.3_4
+	movs	r1, #0
+	.loc	6 610 23 is_stmt 1      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:610:23
+	str	r1, [r0]
+	.loc	6 612 5                 @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:612:5
+	b	.LBB3_8
+.Ltmp78:
+.LBB3_8:                                @   in Loop: Header=BB3_1 Depth=1
+	.loc	6 612 14 is_stmt 0      @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:612:14
+	ldr	r0, [sp, #4]
+.Ltmp79:
+	.loc	6 612 5                 @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:612:5
+	cmp	r0, #0
+	bne	.LBB3_1
+	b	.LBB3_9
+.Ltmp80:
+.LBB3_9:
+	.loc	6 614 1 is_stmt 1       @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:614:1
+	add	sp, #8
+	bx	lr
+.Ltmp81:
+	.p2align	2
+@ %bb.10:
+	.loc	6 0 1 is_stmt 0         @ ../../Library/Nuvoton/M251_252_Series/StdDriver/inc\clk.h:0:1
+__arm_cp.3_0:
+	.long	349525                  @ 0x55555
+.Lcpi_end7:
+	.size	__arm_cp.3_0, .Lcpi_end7-__arm_cp.3_0
+__arm_cp.3_1:
+	.long	CyclesPerUs
+.Lcpi_end8:
+	.size	__arm_cp.3_1, .Lcpi_end8-__arm_cp.3_1
+__arm_cp.3_2:
+	.long	3758153748              @ 0xe000e014
+.Lcpi_end9:
+	.size	__arm_cp.3_2, .Lcpi_end9-__arm_cp.3_2
+__arm_cp.3_3:
+	.long	3758153752              @ 0xe000e018
+.Lcpi_end10:
+	.size	__arm_cp.3_3, .Lcpi_end10-__arm_cp.3_3
+__arm_cp.3_4:
+	.long	3758153744              @ 0xe000e010
+.Lcpi_end11:
+	.size	__arm_cp.3_4, .Lcpi_end11-__arm_cp.3_4
+.Lfunc_end3:
+	.size	CLK_SysTickLongDelay, .Lfunc_end3-CLK_SysTickLongDelay
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPDriver        @ -- Begin function MyMoto_STPDriver
+	.globl	MyMoto_STPDriver
+	.p2align	2
+	.type	MyMoto_STPDriver,%function
+	.code	16                      @ @MyMoto_STPDriver
+	.thumb_func
+MyMoto_STPDriver:
+.Lfunc_begin4:
+	.loc	3 159 0 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:159:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 8
+	str	r0, [sp, #4]
+.Ltmp82:
+	.loc	3 161 10 prologue_end   @ ../MYx/Core/Src/MyDev_Motor.c:161:10
+	ldr	r0, [sp, #4]
+	.loc	3 161 2 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:161:2
+	cmp	r0, #3
+	str	r0, [sp]                @ 4-byte Spill
+	bls	.LBB4_1
+	b	.LBB4_39
+.LBB4_1:
+	.loc	3 0 2                   @ ../MYx/Core/Src/MyDev_Motor.c:0:2
+	ldr	r0, [sp]                @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI4_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.2:
+	.p2align	2
+.LJTI4_0:
+	b.w	.LBB4_3
+	b.w	.LBB4_12
+	b.w	.LBB4_21
+	b.w	.LBB4_30
+.LBB4_3:
+.Ltmp83:
+	.loc	3 164 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:164:3
+	b	.LBB4_4
+.LBB4_4:
+.Ltmp84:
+	.loc	3 164 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:164:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_5
+.Ltmp85:
+.LBB4_5:
+	.loc	3 165 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:165:3
+	b	.LBB4_6
+.LBB4_6:
+.Ltmp86:
+	.loc	3 165 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:165:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #2]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #2]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_7
+.Ltmp87:
+.LBB4_7:
+	.loc	3 166 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:166:3
+	b	.LBB4_8
+.LBB4_8:
+.Ltmp88:
+	.loc	3 166 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:166:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #4]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #4]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_9
+.Ltmp89:
+.LBB4_9:
+	.loc	3 167 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:167:3
+	b	.LBB4_10
+.LBB4_10:
+.Ltmp90:
+	.loc	3 167 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:167:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #6]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #6]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_11
+.Ltmp91:
+.LBB4_11:
+	.loc	3 168 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:168:3
+	b	.LBB4_48
+.LBB4_12:
+	.loc	3 171 3                 @ ../MYx/Core/Src/MyDev_Motor.c:171:3
+	b	.LBB4_13
+.LBB4_13:
+.Ltmp92:
+	.loc	3 171 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:171:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_14
+.Ltmp93:
+.LBB4_14:
+	.loc	3 172 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:172:3
+	b	.LBB4_15
+.LBB4_15:
+.Ltmp94:
+	.loc	3 172 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:172:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #2]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #2]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_16
+.Ltmp95:
+.LBB4_16:
+	.loc	3 173 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:173:3
+	b	.LBB4_17
+.LBB4_17:
+.Ltmp96:
+	.loc	3 173 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:173:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #4]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #4]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_18
+.Ltmp97:
+.LBB4_18:
+	.loc	3 174 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:174:3
+	b	.LBB4_19
+.LBB4_19:
+.Ltmp98:
+	.loc	3 174 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:174:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #6]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #6]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_20
+.Ltmp99:
+.LBB4_20:
+	.loc	3 175 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:175:3
+	b	.LBB4_48
+.LBB4_21:
+	.loc	3 178 3                 @ ../MYx/Core/Src/MyDev_Motor.c:178:3
+	b	.LBB4_22
+.LBB4_22:
+.Ltmp100:
+	.loc	3 178 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:178:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_23
+.Ltmp101:
+.LBB4_23:
+	.loc	3 179 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:179:3
+	b	.LBB4_24
+.LBB4_24:
+.Ltmp102:
+	.loc	3 179 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:179:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #2]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #2]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_25
+.Ltmp103:
+.LBB4_25:
+	.loc	3 180 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:180:3
+	b	.LBB4_26
+.LBB4_26:
+.Ltmp104:
+	.loc	3 180 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:180:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #4]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #4]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_27
+.Ltmp105:
+.LBB4_27:
+	.loc	3 181 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:181:3
+	b	.LBB4_28
+.LBB4_28:
+.Ltmp106:
+	.loc	3 181 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:181:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #6]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #6]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_29
+.Ltmp107:
+.LBB4_29:
+	.loc	3 182 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:182:3
+	b	.LBB4_48
+.LBB4_30:
+	.loc	3 185 3                 @ ../MYx/Core/Src/MyDev_Motor.c:185:3
+	b	.LBB4_31
+.LBB4_31:
+.Ltmp108:
+	.loc	3 185 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:185:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_32
+.Ltmp109:
+.LBB4_32:
+	.loc	3 186 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:186:3
+	b	.LBB4_33
+.LBB4_33:
+.Ltmp110:
+	.loc	3 186 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:186:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #2]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #2]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_34
+.Ltmp111:
+.LBB4_34:
+	.loc	3 187 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:187:3
+	b	.LBB4_35
+.LBB4_35:
+.Ltmp112:
+	.loc	3 187 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:187:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #4]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #4]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_36
+.Ltmp113:
+.LBB4_36:
+	.loc	3 188 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:188:3
+	b	.LBB4_37
+.LBB4_37:
+.Ltmp114:
+	.loc	3 188 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:188:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #6]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #6]
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_38
+.Ltmp115:
+.LBB4_38:
+	.loc	3 189 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:189:3
+	b	.LBB4_48
+.LBB4_39:
+	.loc	3 192 3                 @ ../MYx/Core/Src/MyDev_Motor.c:192:3
+	b	.LBB4_40
+.LBB4_40:
+.Ltmp116:
+	.loc	3 192 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:192:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_41
+.Ltmp117:
+.LBB4_41:
+	.loc	3 193 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:193:3
+	b	.LBB4_42
+.LBB4_42:
+.Ltmp118:
+	.loc	3 193 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:193:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #2]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #2]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_43
+.Ltmp119:
+.LBB4_43:
+	.loc	3 194 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:194:3
+	b	.LBB4_44
+.LBB4_44:
+.Ltmp120:
+	.loc	3 194 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:194:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #4]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #4]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_45
+.Ltmp121:
+.LBB4_45:
+	.loc	3 195 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:195:3
+	b	.LBB4_46
+.LBB4_46:
+.Ltmp122:
+	.loc	3 195 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:195:3
+	ldr	r0, __arm_cp.4_0
+	ldrh	r1, [r0, #6]
+	mvns	r1, r1
+	ldr	r2, __arm_cp.4_1
+	ldr	r3, [r2, #8]
+	str	r1, [r3, #12]
+	ldrh	r0, [r0, #6]
+	mvns	r0, r0
+	ldr	r1, [r2, #8]
+	str	r0, [r1, #8]
+	b	.LBB4_47
+.Ltmp123:
+.LBB4_47:
+	.loc	3 196 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:196:3
+	b	.LBB4_48
+.Ltmp124:
+.LBB4_48:
+	.loc	3 267 1                 @ ../MYx/Core/Src/MyDev_Motor.c:267:1
+	add	sp, #8
+	bx	lr
+.Ltmp125:
+	.p2align	2
+@ %bb.49:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.4_0:
+	.long	GPIO_Pin
+.Lcpi_end12:
+	.size	__arm_cp.4_0, .Lcpi_end12-__arm_cp.4_0
+__arm_cp.4_1:
+	.long	GPIO_Port
+.Lcpi_end13:
+	.size	__arm_cp.4_1, .Lcpi_end13-__arm_cp.4_1
+.Lfunc_end4:
+	.size	MyMoto_STPDriver, .Lfunc_end4-MyMoto_STPDriver
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPStartEx       @ -- Begin function MyMoto_STPStartEx
+	.globl	MyMoto_STPStartEx
+	.p2align	1
+	.type	MyMoto_STPStartEx,%function
+	.code	16                      @ @MyMoto_STPStartEx
+	.thumb_func
+MyMoto_STPStartEx:
+.Lfunc_begin5:
+	.loc	3 270 0 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:270:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	movs	r0, #0
+.Ltmp126:
+	.loc	3 272 2 prologue_end    @ ../MYx/Core/Src/MyDev_Motor.c:272:2
+	bl	MyMoto_STPStartX
+	.loc	3 273 1                 @ ../MYx/Core/Src/MyDev_Motor.c:273:1
+	pop	{r7, pc}
+.Ltmp127:
+.Lfunc_end5:
+	.size	MyMoto_STPStartEx, .Lfunc_end5-MyMoto_STPStartEx
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPStartCCEx     @ -- Begin function MyMoto_STPStartCCEx
+	.globl	MyMoto_STPStartCCEx
+	.p2align	1
+	.type	MyMoto_STPStartCCEx,%function
+	.code	16                      @ @MyMoto_STPStartCCEx
+	.thumb_func
+MyMoto_STPStartCCEx:
+.Lfunc_begin6:
+	.loc	3 276 0                 @ ../MYx/Core/Src/MyDev_Motor.c:276:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.loc	3 278 1 prologue_end    @ ../MYx/Core/Src/MyDev_Motor.c:278:1
+	bx	lr
+.Ltmp128:
+.Lfunc_end6:
+	.size	MyMoto_STPStartCCEx, .Lfunc_end6-MyMoto_STPStartCCEx
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPStartDemo     @ -- Begin function MyMoto_STPStartDemo
+	.globl	MyMoto_STPStartDemo
+	.p2align	1
+	.type	MyMoto_STPStartDemo,%function
+	.code	16                      @ @MyMoto_STPStartDemo
+	.thumb_func
+MyMoto_STPStartDemo:
+.Lfunc_begin7:
+	.loc	3 281 0                 @ ../MYx/Core/Src/MyDev_Motor.c:281:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#16
+	sub	sp, #16
+	.cfi_def_cfa_offset 24
+	movs	r0, #0
+.Ltmp129:
+	.loc	3 283 17 prologue_end   @ ../MYx/Core/Src/MyDev_Motor.c:283:17
+	str	r0, [sp, #4]            @ 4-byte Spill
+	bl	MyCLI_UnsignedCommandArgument
+	.loc	3 283 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:283:8
+	str	r0, [sp, #8]
+.Ltmp130:
+	.loc	3 284 8 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:284:8
+	ldr	r0, [sp, #4]            @ 4-byte Reload
+	str	r0, [sp, #12]
+	.loc	3 284 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:284:6
+	b	.LBB7_1
+.LBB7_1:                                @ =>This Inner Loop Header: Depth=1
+.Ltmp131:
+	.loc	3 284 14                @ ../MYx/Core/Src/MyDev_Motor.c:284:14
+	ldr	r0, [sp, #12]
+	.loc	3 284 18                @ ../MYx/Core/Src/MyDev_Motor.c:284:18
+	ldr	r1, [sp, #8]
+.Ltmp132:
+	.loc	3 284 2                 @ ../MYx/Core/Src/MyDev_Motor.c:284:2
+	cmp	r0, r1
+	bge	.LBB7_4
+	b	.LBB7_2
+.LBB7_2:                                @   in Loop: Header=BB7_1 Depth=1
+.Ltmp133:
+	.loc	3 287 2 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:287:2
+	b	.LBB7_3
+.Ltmp134:
+.LBB7_3:                                @   in Loop: Header=BB7_1 Depth=1
+	.loc	3 284 24                @ ../MYx/Core/Src/MyDev_Motor.c:284:24
+	ldr	r0, [sp, #12]
+	adds	r0, r0, #1
+	str	r0, [sp, #12]
+	.loc	3 284 2 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:284:2
+	b	.LBB7_1
+.Ltmp135:
+.LBB7_4:
+	.loc	3 288 1 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:288:1
+	add	sp, #16
+	pop	{r7, pc}
+.Ltmp136:
+.Lfunc_end7:
+	.size	MyMoto_STPStartDemo, .Lfunc_end7-MyMoto_STPStartDemo
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_STPStart         @ -- Begin function MyMoto_STPStart
+	.globl	MyMoto_STPStart
+	.p2align	2
+	.type	MyMoto_STPStart,%function
+	.code	16                      @ @MyMoto_STPStart
+	.thumb_func
+MyMoto_STPStart:
+.Lfunc_begin8:
+	.loc	3 291 0                 @ ../MYx/Core/Src/MyDev_Motor.c:291:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#40
+	sub	sp, #40
+	.cfi_def_cfa_offset 48
+	mov	r3, r2
+	mov	r4, r1
+	str	r0, [sp, #36]
+	add	r0, sp, #32
+	strb	r1, [r0]
+	add	r1, sp, #28
+	strb	r2, [r1]
+	ldr	r1, __arm_cp.8_0
+.Ltmp137:
+	.loc	3 292 8 prologue_end    @ ../MYx/Core/Src/MyDev_Motor.c:292:8
+	str	r1, [sp, #24]
+	.loc	3 293 38                @ ../MYx/Core/Src/MyDev_Motor.c:293:38
+	ldr	r1, [sp, #36]
+	str	r0, [sp, #12]           @ 4-byte Spill
+	mov	r0, r1
+	str	r3, [sp, #8]            @ 4-byte Spill
+	str	r4, [sp, #4]            @ 4-byte Spill
+	bl	__aeabi_i2f
+	.loc	3 293 44 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:293:44
+	ldr	r1, [sp, #24]
+	.loc	3 293 43                @ ../MYx/Core/Src/MyDev_Motor.c:293:43
+	bl	__aeabi_fdiv
+	.loc	3 293 31                @ ../MYx/Core/Src/MyDev_Motor.c:293:31
+	bl	__aeabi_f2iz
+	.loc	3 293 11                @ ../MYx/Core/Src/MyDev_Motor.c:293:11
+	str	r0, [sp, #16]
+.Ltmp138:
+	.loc	3 296 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:296:6
+	ldr	r0, [sp, #12]           @ 4-byte Reload
+	ldrb	r1, [r0]
+.Ltmp139:
+	.loc	3 296 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:296:6
+	cmp	r1, #0
+	bne	.LBB8_6
+	b	.LBB8_1
+.LBB8_1:
+	.loc	3 0 6                   @ ../MYx/Core/Src/MyDev_Motor.c:0:6
+	movs	r0, #0
+.Ltmp140:
+	.loc	3 298 12 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:298:12
+	str	r0, [sp, #20]
+	.loc	3 298 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:298:8
+	b	.LBB8_2
+.LBB8_2:                                @ =>This Inner Loop Header: Depth=1
+.Ltmp141:
+	.loc	3 298 17                @ ../MYx/Core/Src/MyDev_Motor.c:298:17
+	ldr	r0, [sp, #20]
+	.loc	3 298 23                @ ../MYx/Core/Src/MyDev_Motor.c:298:23
+	ldr	r1, [sp, #16]
+.Ltmp142:
+	.loc	3 298 3                 @ ../MYx/Core/Src/MyDev_Motor.c:298:3
+	cmp	r0, r1
+	bge	.LBB8_5
+	b	.LBB8_3
+.LBB8_3:                                @   in Loop: Header=BB8_2 Depth=1
+.Ltmp143:
+	.loc	3 300 21 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:300:21
+	ldr	r0, [sp, #20]
+	.loc	3 300 24 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:300:24
+	asrs	r1, r0, #31
+	lsrs	r1, r1, #30
+	adds	r1, r0, r1
+	movs	r2, #3
+	bics	r1, r2
+	subs	r0, r0, r1
+	.loc	3 300 4                 @ ../MYx/Core/Src/MyDev_Motor.c:300:4
+	bl	MyMoto_STPDriver
+	add	r0, sp, #28
+	.loc	3 301 4 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:301:4
+	ldrb	r0, [r0]
+	movw	r1, #1000
+	muls	r1, r0, r1
+	mov	r0, r1
+	bl	CLK_SysTickLongDelay
+	.loc	3 302 3                 @ ../MYx/Core/Src/MyDev_Motor.c:302:3
+	b	.LBB8_4
+.Ltmp144:
+.LBB8_4:                                @   in Loop: Header=BB8_2 Depth=1
+	.loc	3 298 45                @ ../MYx/Core/Src/MyDev_Motor.c:298:45
+	ldr	r0, [sp, #20]
+	adds	r0, r0, #1
+	str	r0, [sp, #20]
+	.loc	3 298 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:298:3
+	b	.LBB8_2
+.Ltmp145:
+.LBB8_5:
+	.loc	3 303 2 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:303:2
+	b	.LBB8_11
+.Ltmp146:
+.LBB8_6:
+	.loc	3 306 14                @ ../MYx/Core/Src/MyDev_Motor.c:306:14
+	ldr	r0, [sp, #16]
+	.loc	3 306 12 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:306:12
+	str	r0, [sp, #20]
+	.loc	3 306 8                 @ ../MYx/Core/Src/MyDev_Motor.c:306:8
+	b	.LBB8_7
+.LBB8_7:                                @ =>This Inner Loop Header: Depth=1
+.Ltmp147:
+	.loc	3 306 33                @ ../MYx/Core/Src/MyDev_Motor.c:306:33
+	ldr	r0, [sp, #20]
+.Ltmp148:
+	.loc	3 306 3                 @ ../MYx/Core/Src/MyDev_Motor.c:306:3
+	cmp	r0, #1
+	blt	.LBB8_10
+	b	.LBB8_8
+.LBB8_8:                                @   in Loop: Header=BB8_7 Depth=1
+.Ltmp149:
+	.loc	3 308 21 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:308:21
+	ldr	r0, [sp, #20]
+	.loc	3 308 24 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:308:24
+	asrs	r1, r0, #31
+	lsrs	r1, r1, #30
+	adds	r1, r0, r1
+	movs	r2, #3
+	bics	r1, r2
+	subs	r0, r0, r1
+	.loc	3 308 4                 @ ../MYx/Core/Src/MyDev_Motor.c:308:4
+	bl	MyMoto_STPDriver
+	add	r0, sp, #28
+	.loc	3 309 4 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:309:4
+	ldrb	r0, [r0]
+	movw	r1, #1000
+	muls	r1, r0, r1
+	mov	r0, r1
+	bl	CLK_SysTickLongDelay
+	.loc	3 310 3                 @ ../MYx/Core/Src/MyDev_Motor.c:310:3
+	b	.LBB8_9
+.Ltmp150:
+.LBB8_9:                                @   in Loop: Header=BB8_7 Depth=1
+	.loc	3 306 45                @ ../MYx/Core/Src/MyDev_Motor.c:306:45
+	ldr	r0, [sp, #20]
+	subs	r0, r0, #1
+	str	r0, [sp, #20]
+	.loc	3 306 3 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:306:3
+	b	.LBB8_7
+.Ltmp151:
+.LBB8_10:
+	.loc	3 0 3                   @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	b	.LBB8_11
+.LBB8_11:
+	movs	r0, #4
+	.loc	3 312 2 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:312:2
+	bl	MyMoto_STPDriver
+	.loc	3 313 1                 @ ../MYx/Core/Src/MyDev_Motor.c:313:1
+	add	sp, #40
+	pop	{r4, pc}
+.Ltmp152:
+	.p2align	2
+@ %bb.12:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.8_0:
+	.long	1043595264              @ 0x3e340000
+.Lcpi_end14:
+	.size	__arm_cp.8_0, .Lcpi_end14-__arm_cp.8_0
+.Lfunc_end8:
+	.size	MyMoto_STPStart, .Lfunc_end8-MyMoto_STPStart
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_CLI_STPMTStart   @ -- Begin function MyMoto_CLI_STPMTStart
+	.globl	MyMoto_CLI_STPMTStart
+	.p2align	2
+	.type	MyMoto_CLI_STPMTStart,%function
+	.code	16                      @ @MyMoto_CLI_STPMTStart
+	.thumb_func
+MyMoto_CLI_STPMTStart:
+.Lfunc_begin9:
+	.loc	3 318 0 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:318:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	movs	r0, #0
+.Ltmp153:
+	.loc	3 319 26 prologue_end   @ ../MYx/Core/Src/MyDev_Motor.c:319:26
+	bl	MyCLI_UnsignedCommandArgument
+	add	r1, sp, #4
+	.loc	3 319 11 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:319:11
+	strb	r0, [r1]
+.Ltmp154:
+	.loc	3 320 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:320:6
+	ldrb	r0, [r1]
+.Ltmp155:
+	.loc	3 320 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:320:6
+	cmp	r0, #2
+	blt	.LBB9_2
+	b	.LBB9_1
+.LBB9_1:
+.Ltmp156:
+	.loc	3 322 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:322:3
+	ldr	r0, __arm_cp.9_0
+	bl	printf
+	.loc	3 323 3                 @ ../MYx/Core/Src/MyDev_Motor.c:323:3
+	b	.LBB9_3
+.Ltmp157:
+.LBB9_2:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	add	r0, sp, #4
+	.loc	3 325 19 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:325:19
+	ldrb	r0, [r0]
+	.loc	3 325 2 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:325:2
+	bl	MyMoto_STPStartX
+	.loc	3 326 1 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:326:1
+	b	.LBB9_3
+.LBB9_3:
+	add	sp, #8
+	pop	{r7, pc}
+.Ltmp158:
+	.p2align	2
+@ %bb.4:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.9_0:
+	.long	.L.str.1
+.Lcpi_end15:
+	.size	__arm_cp.9_0, .Lcpi_end15-__arm_cp.9_0
+.Lfunc_end9:
+	.size	MyMoto_CLI_STPMTStart, .Lfunc_end9-MyMoto_CLI_STPMTStart
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyMoto_CLI_STPMTSet     @ -- Begin function MyMoto_CLI_STPMTSet
+	.globl	MyMoto_CLI_STPMTSet
+	.p2align	2
+	.type	MyMoto_CLI_STPMTSet,%function
+	.code	16                      @ @MyMoto_CLI_STPMTSet
+	.thumb_func
+MyMoto_CLI_STPMTSet:
+.Lfunc_begin10:
+	.loc	3 329 0 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:329:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#24
+	sub	sp, #24
+	.cfi_def_cfa_offset 32
+	movs	r0, #0
+.Ltmp159:
+	.loc	3 330 26 prologue_end   @ ../MYx/Core/Src/MyDev_Motor.c:330:26
+	bl	MyCLI_UnsignedCommandArgument
+	add	r1, sp, #20
+	.loc	3 330 11 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:330:11
+	strb	r0, [r1]
+.Ltmp160:
+	.loc	3 331 6 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:331:6
+	ldrb	r0, [r1]
+.Ltmp161:
+	.loc	3 331 6 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:331:6
+	cmp	r0, #2
+	blt	.LBB10_2
+	b	.LBB10_1
+.LBB10_1:
+.Ltmp162:
+	.loc	3 333 3 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:333:3
+	ldr	r0, __arm_cp.10_2
+	bl	printf
+	.loc	3 334 3                 @ ../MYx/Core/Src/MyDev_Motor.c:334:3
+	b	.LBB10_3
+.Ltmp163:
+.LBB10_2:
+	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:3
+	movs	r0, #1
+	.loc	3 336 20 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:336:20
+	bl	MyCLI_UnsignedCommandArgument
+	add	r1, sp, #20
+	.loc	3 336 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:336:8
+	ldrb	r2, [r1]
+	.loc	3 336 2                 @ ../MYx/Core/Src/MyDev_Motor.c:336:2
+	lsls	r2, r2, #4
+	ldr	r3, __arm_cp.10_0
+	adds	r2, r3, r2
+	.loc	3 336 18                @ ../MYx/Core/Src/MyDev_Motor.c:336:18
+	str	r0, [r2, #12]
+	movs	r0, #2
+	.loc	3 337 34 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:337:34
+	str	r1, [sp, #16]           @ 4-byte Spill
+	str	r3, [sp, #12]           @ 4-byte Spill
+	bl	MyCLI_UnsignedCommandArgument
+	.loc	3 337 8 is_stmt 0       @ ../MYx/Core/Src/MyDev_Motor.c:337:8
+	ldr	r1, [sp, #16]           @ 4-byte Reload
+	ldrb	r2, [r1]
+	.loc	3 337 2                 @ ../MYx/Core/Src/MyDev_Motor.c:337:2
+	lsls	r2, r2, #4
+	ldr	r3, [sp, #12]           @ 4-byte Reload
+	adds	r2, r3, r2
+	.loc	3 337 19                @ ../MYx/Core/Src/MyDev_Motor.c:337:19
+	strb	r0, [r2, #9]
+	movs	r0, #3
+	.loc	3 338 34 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:338:34
+	bl	MyCLI_UnsignedCommandArgument
+	.loc	3 338 67 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:338:67
+	adds	r0, r0, #2
+	.loc	3 338 8                 @ ../MYx/Core/Src/MyDev_Motor.c:338:8
+	ldr	r1, [sp, #16]           @ 4-byte Reload
+	ldrb	r2, [r1]
+	.loc	3 338 2                 @ ../MYx/Core/Src/MyDev_Motor.c:338:2
+	lsls	r2, r2, #4
+	ldr	r3, [sp, #12]           @ 4-byte Reload
+	adds	r2, r3, r2
+	.loc	3 338 18                @ ../MYx/Core/Src/MyDev_Motor.c:338:18
+	strb	r0, [r2, #8]
+	.loc	3 339 54 is_stmt 1      @ ../MYx/Core/Src/MyDev_Motor.c:339:54
+	ldrb	r0, [r1]
+	.loc	3 339 58 is_stmt 0      @ ../MYx/Core/Src/MyDev_Motor.c:339:58
+	lsls	r2, r0, #4
+	adds	r2, r3, r2
+	.loc	3 339 68                @ ../MYx/Core/Src/MyDev_Motor.c:339:68
+	ldr	r4, [r2, #12]
+	.loc	3 339 85                @ ../MYx/Core/Src/MyDev_Motor.c:339:85
+	ldrb	r3, [r2, #9]
+	.loc	3 339 104               @ ../MYx/Core/Src/MyDev_Motor.c:339:104
+	ldrb	r2, [r2, #8]
+	.loc	3 339 109               @ ../MYx/Core/Src/MyDev_Motor.c:339:109
+	subs	r2, r2, #2
+	.loc	3 339 2                 @ ../MYx/Core/Src/MyDev_Motor.c:339:2
+	str	r2, [sp]
+	ldr	r2, __arm_cp.10_1
+	str	r0, [sp, #8]            @ 4-byte Spill
+	mov	r0, r2
+	ldr	r1, [sp, #8]            @ 4-byte Reload
+	mov	r2, r4
+	bl	printf
+	.loc	3 340 1 is_stmt 1       @ ../MYx/Core/Src/MyDev_Motor.c:340:1
+	b	.LBB10_3
+.LBB10_3:
+	add	sp, #24
+	pop	{r4, pc}
+.Ltmp164:
+	.p2align	2
+@ %bb.4:
+	.loc	3 0 1 is_stmt 0         @ ../MYx/Core/Src/MyDev_Motor.c:0:1
+__arm_cp.10_0:
+	.long	STPMT
+.Lcpi_end16:
+	.size	__arm_cp.10_0, .Lcpi_end16-__arm_cp.10_0
+__arm_cp.10_1:
+	.long	.L.str.2
+.Lcpi_end17:
+	.size	__arm_cp.10_1, .Lcpi_end17-__arm_cp.10_1
+__arm_cp.10_2:
+	.long	.L.str.1
+.Lcpi_end18:
+	.size	__arm_cp.10_2, .Lcpi_end18-__arm_cp.10_2
+.Lfunc_end10:
+	.size	MyMoto_CLI_STPMTSet, .Lfunc_end10-MyMoto_CLI_STPMTSet
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.type	STPMT,%object           @ @STPMT
+	.section	.bss.STPMT,"aw",%nobits
+	.p2align	2
+STPMT:
+	.zero	32
+	.size	STPMT, 32
+
+	.type	.L.str,%object          @ @.str
+	.section	.rodata.str1.1,"aMS",%progbits,1
+.L.str:
+	.asciz	"!!!!! Emergency Stop !!!!! \r\n"
+	.size	.L.str, 30
+
+	.type	.L.str.1,%object        @ @.str.1
+.L.str.1:
+	.asciz	"!!!!! STPMT_No Error !!!!! \r\n"
+	.size	.L.str.1, 30
+
+	.type	.L.str.2,%object        @ @.str.2
+.L.str.2:
+	.asciz	"STP No.%d Angle:%d Direct:%d Speed:%d \r\n"
+	.size	.L.str.2, 41
+
+	.section	.debug_str,"MS",%progbits,1
+.Linfo_string0:
+	.asciz	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]" @ string offset=0
+.Linfo_string1:
+	.asciz	"../MYx/Core/Src\\MyDev_Motor.c" @ string offset=55
+.Linfo_string2:
+	.asciz	"C:\\Work\\Keil WorkSpace\\Furbo\\Keil" @ string offset=85
+.Linfo_string3:
+	.asciz	"STPMT"                 @ string offset=119
+.Linfo_string4:
+	.asciz	"IN1"                   @ string offset=125
+.Linfo_string5:
+	.asciz	"Port"                  @ string offset=129
+.Linfo_string6:
+	.asciz	"unsigned char"         @ string offset=134
+.Linfo_string7:
+	.asciz	"GPIO_PA"               @ string offset=148
+.Linfo_string8:
+	.asciz	"GPIO_PB"               @ string offset=156
+.Linfo_string9:
+	.asciz	"GPIO_PC"               @ string offset=164
+.Linfo_string10:
+	.asciz	"GPIO_PD"               @ string offset=172
+.Linfo_string11:
+	.asciz	"GPIO_Num_Port"         @ string offset=180
+.Linfo_string12:
+	.asciz	"GPIO_Port_Index"       @ string offset=194
+.Linfo_string13:
+	.asciz	"Pin"                   @ string offset=210
+.Linfo_string14:
+	.asciz	"GPIO_Pin0"             @ string offset=214
+.Linfo_string15:
+	.asciz	"GPIO_Pin1"             @ string offset=224
+.Linfo_string16:
+	.asciz	"GPIO_Pin2"             @ string offset=234
+.Linfo_string17:
+	.asciz	"GPIO_Pin3"             @ string offset=244
+.Linfo_string18:
+	.asciz	"GPIO_Pin4"             @ string offset=254
+.Linfo_string19:
+	.asciz	"GPIO_Pin5"             @ string offset=264
+.Linfo_string20:
+	.asciz	"GPIO_Pin6"             @ string offset=274
+.Linfo_string21:
+	.asciz	"GPIO_Pin7"             @ string offset=284
+.Linfo_string22:
+	.asciz	"GPIO_Pin8"             @ string offset=294
+.Linfo_string23:
+	.asciz	"GPIO_Pin9"             @ string offset=304
+.Linfo_string24:
+	.asciz	"GPIO_Pin10"            @ string offset=314
+.Linfo_string25:
+	.asciz	"GPIO_Pin11"            @ string offset=325
+.Linfo_string26:
+	.asciz	"GPIO_Pin12"            @ string offset=336
+.Linfo_string27:
+	.asciz	"GPIO_Pin13"            @ string offset=347
+.Linfo_string28:
+	.asciz	"GPIO_Pin14"            @ string offset=358
+.Linfo_string29:
+	.asciz	"GPIO_Pin15"            @ string offset=369
+.Linfo_string30:
+	.asciz	"GPIO_PinALL"           @ string offset=380
+.Linfo_string31:
+	.asciz	"GPIO_Num_Pin"          @ string offset=392
+.Linfo_string32:
+	.asciz	"GPIO_Pin_Index"        @ string offset=405
+.Linfo_string33:
+	.asciz	"STPMT_GPIO"            @ string offset=420
+.Linfo_string34:
+	.asciz	"IN2"                   @ string offset=431
+.Linfo_string35:
+	.asciz	"IN3"                   @ string offset=435
+.Linfo_string36:
+	.asciz	"IN4"                   @ string offset=439
+.Linfo_string37:
+	.asciz	"Speed"                 @ string offset=443
+.Linfo_string38:
+	.asciz	"SS_High"               @ string offset=449
+.Linfo_string39:
+	.asciz	"SS_Low"                @ string offset=457
+.Linfo_string40:
+	.asciz	"SS_Num"                @ string offset=464
+.Linfo_string41:
+	.asciz	"STPMT_Speed"           @ string offset=471
+.Linfo_string42:
+	.asciz	"Direct"                @ string offset=483
+.Linfo_string43:
+	.asciz	"CW"                    @ string offset=490
+.Linfo_string44:
+	.asciz	"CCW"                   @ string offset=493
+.Linfo_string45:
+	.asciz	"MotorDirect_Num"       @ string offset=497
+.Linfo_string46:
+	.asciz	"MotorDirect"           @ string offset=513
+.Linfo_string47:
+	.asciz	"Angle"                 @ string offset=525
+.Linfo_string48:
+	.asciz	"int"                   @ string offset=531
+.Linfo_string49:
+	.asciz	"STPMT_Handle"          @ string offset=535
+.Linfo_string50:
+	.asciz	"__ARRAY_SIZE_TYPE__"   @ string offset=548
+.Linfo_string51:
+	.asciz	"STPMT_1"               @ string offset=568
+.Linfo_string52:
+	.asciz	"STPMT_2"               @ string offset=576
+.Linfo_string53:
+	.asciz	"STPMT_Num"             @ string offset=584
+.Linfo_string54:
+	.asciz	"GPIOPIN_RESET"         @ string offset=594
+.Linfo_string55:
+	.asciz	"GPIOPIN_SET"           @ string offset=608
+.Linfo_string56:
+	.asciz	"STPMT_Phase0"          @ string offset=620
+.Linfo_string57:
+	.asciz	"STPMT_Phase1"          @ string offset=633
+.Linfo_string58:
+	.asciz	"STPMT_Phase2"          @ string offset=646
+.Linfo_string59:
+	.asciz	"STPMT_Phase3"          @ string offset=659
+.Linfo_string60:
+	.asciz	"STPMT_Phase_Num"       @ string offset=672
+.Linfo_string61:
+	.asciz	"float"                 @ string offset=688
+.Linfo_string62:
+	.asciz	"STPMT_No"              @ string offset=694
+.Linfo_string63:
+	.asciz	"CTRL"                  @ string offset=703
+.Linfo_string64:
+	.asciz	"unsigned int"          @ string offset=708
+.Linfo_string65:
+	.asciz	"uint32_t"              @ string offset=721
+.Linfo_string66:
+	.asciz	"LOAD"                  @ string offset=730
+.Linfo_string67:
+	.asciz	"VAL"                   @ string offset=735
+.Linfo_string68:
+	.asciz	"CALIB"                 @ string offset=739
+.Linfo_string69:
+	.asciz	"SysTick_Type"          @ string offset=745
+.Linfo_string70:
+	.asciz	"MyMoto_Init"           @ string offset=758
+.Linfo_string71:
+	.asciz	"MyMoto_STPDriveEx"     @ string offset=770
+.Linfo_string72:
+	.asciz	"MyMoto_STPStartX"      @ string offset=788
+.Linfo_string73:
+	.asciz	"CLK_SysTickLongDelay"  @ string offset=805
+.Linfo_string74:
+	.asciz	"MyMoto_STPDriver"      @ string offset=826
+.Linfo_string75:
+	.asciz	"MyMoto_STPStartEx"     @ string offset=843
+.Linfo_string76:
+	.asciz	"MyMoto_STPStartCCEx"   @ string offset=861
+.Linfo_string77:
+	.asciz	"MyMoto_STPStartDemo"   @ string offset=881
+.Linfo_string78:
+	.asciz	"MyMoto_STPStart"       @ string offset=901
+.Linfo_string79:
+	.asciz	"MyMoto_CLI_STPMTStart" @ string offset=917
+.Linfo_string80:
+	.asciz	"MyMoto_CLI_STPMTSet"   @ string offset=939
+.Linfo_string81:
+	.asciz	"No"                    @ string offset=959
+.Linfo_string82:
+	.asciz	"Phase"                 @ string offset=962
+.Linfo_string83:
+	.asciz	"STPMT_Phase"           @ string offset=968
+.Linfo_string84:
+	.asciz	"AnglePerSequence"      @ string offset=980
+.Linfo_string85:
+	.asciz	"seq"                   @ string offset=997
+.Linfo_string86:
+	.asciz	"NumberOfSequences"     @ string offset=1001
+.Linfo_string87:
+	.asciz	"u32USec"               @ string offset=1019
+.Linfo_string88:
+	.asciz	"u32Delay"              @ string offset=1027
+.Linfo_string89:
+	.asciz	"step"                  @ string offset=1036
+.Linfo_string90:
+	.asciz	"i"                     @ string offset=1041
+.Linfo_string91:
+	.asciz	"j"                     @ string offset=1043
+.Linfo_string92:
+	.asciz	"angle"                 @ string offset=1045
+.Linfo_string93:
+	.asciz	"direction"             @ string offset=1051
+	.section	.debug_abbrev,"",%progbits
+	.byte	1                       @ Abbreviation Code
+	.byte	17                      @ DW_TAG_compile_unit
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	37                      @ DW_AT_producer
+	.byte	14                      @ DW_FORM_strp
+	.byte	19                      @ DW_AT_language
+	.byte	5                       @ DW_FORM_data2
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	16                      @ DW_AT_stmt_list
+	.byte	6                       @ DW_FORM_data4
+	.byte	27                      @ DW_AT_comp_dir
+	.byte	14                      @ DW_FORM_strp
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	2                       @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	3                       @ Abbreviation Code
+	.byte	1                       @ DW_TAG_array_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	4                       @ Abbreviation Code
+	.byte	33                      @ DW_TAG_subrange_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	55                      @ DW_AT_count
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	5                       @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	6                       @ Abbreviation Code
+	.byte	19                      @ DW_TAG_structure_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	7                       @ Abbreviation Code
+	.byte	13                      @ DW_TAG_member
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	56                      @ DW_AT_data_member_location
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	8                       @ Abbreviation Code
+	.byte	4                       @ DW_TAG_enumeration_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	9                       @ Abbreviation Code
+	.byte	40                      @ DW_TAG_enumerator
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	28                      @ DW_AT_const_value
+	.byte	15                      @ DW_FORM_udata
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	10                      @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	11                      @ Abbreviation Code
+	.byte	36                      @ DW_TAG_base_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	62                      @ DW_AT_encoding
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	12                      @ Abbreviation Code
+	.byte	15                      @ DW_TAG_pointer_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	13                      @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	14                      @ Abbreviation Code
+	.byte	19                      @ DW_TAG_structure_type
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	11                      @ DW_AT_byte_size
+	.byte	11                      @ DW_FORM_data1
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	15                      @ Abbreviation Code
+	.byte	13                      @ DW_TAG_member
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	56                      @ DW_AT_data_member_location
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	16                      @ Abbreviation Code
+	.byte	53                      @ DW_TAG_volatile_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	17                      @ Abbreviation Code
+	.byte	38                      @ DW_TAG_const_type
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	18                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	19                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	20                      @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	21                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	22                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	23                      @ Abbreviation Code
+	.byte	5                       @ DW_TAG_formal_parameter
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	24                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	25                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	26                      @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	5                       @ DW_FORM_data2
+	.byte	39                      @ DW_AT_prototyped
+	.byte	12                      @ DW_FORM_flag
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	0                       @ EOM(3)
+	.section	.debug_info,"",%progbits
+.Lcu_begin0:
+	.long	.Ldebug_info_end0-.Ldebug_info_start0 @ Length of Unit
+.Ldebug_info_start0:
+	.short	3                       @ DWARF version number
+	.long	.debug_abbrev           @ Offset Into Abbrev. Section
+	.byte	4                       @ Address Size (in bytes)
+	.byte	1                       @ Abbrev [1] 0xb:0x4a7 DW_TAG_compile_unit
+	.long	.Linfo_string0          @ DW_AT_producer
+	.short	1                       @ DW_AT_language
+	.long	.Linfo_string1          @ DW_AT_name
+	.long	.Lline_table_start0     @ DW_AT_stmt_list
+	.long	.Linfo_string2          @ DW_AT_comp_dir
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end10            @ DW_AT_high_pc
+	.byte	2                       @ Abbrev [2] 0x26:0x11 DW_TAG_variable
+	.long	.Linfo_string3          @ DW_AT_name
+	.long	55                      @ DW_AT_type
+	.byte	3                       @ DW_AT_decl_file
+	.byte	15                      @ DW_AT_decl_line
+	.byte	5                       @ DW_AT_location
+	.byte	3
+	.long	STPMT
+	.byte	3                       @ Abbrev [3] 0x37:0xc DW_TAG_array_type
+	.long	67                      @ DW_AT_type
+	.byte	4                       @ Abbrev [4] 0x3c:0x6 DW_TAG_subrange_type
+	.long	475                     @ DW_AT_type
+	.byte	2                       @ DW_AT_count
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x43:0xb DW_TAG_typedef
+	.long	78                      @ DW_AT_type
+	.long	.Linfo_string49         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	69                      @ DW_AT_decl_line
+	.byte	6                       @ Abbrev [6] 0x4e:0x59 DW_TAG_structure_type
+	.byte	16                      @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	60                      @ DW_AT_decl_line
+	.byte	7                       @ Abbrev [7] 0x52:0xc DW_TAG_member
+	.long	.Linfo_string4          @ DW_AT_name
+	.long	167                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	62                      @ DW_AT_decl_line
+	.byte	0                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0x5e:0xc DW_TAG_member
+	.long	.Linfo_string34         @ DW_AT_name
+	.long	167                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	63                      @ DW_AT_decl_line
+	.byte	2                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0x6a:0xc DW_TAG_member
+	.long	.Linfo_string35         @ DW_AT_name
+	.long	167                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	64                      @ DW_AT_decl_line
+	.byte	4                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0x76:0xc DW_TAG_member
+	.long	.Linfo_string36         @ DW_AT_name
+	.long	167                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	65                      @ DW_AT_decl_line
+	.byte	6                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0x82:0xc DW_TAG_member
+	.long	.Linfo_string37         @ DW_AT_name
+	.long	392                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	66                      @ DW_AT_decl_line
+	.byte	8                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0x8e:0xc DW_TAG_member
+	.long	.Linfo_string42         @ DW_AT_name
+	.long	430                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	67                      @ DW_AT_decl_line
+	.byte	9                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0x9a:0xc DW_TAG_member
+	.long	.Linfo_string47         @ DW_AT_name
+	.long	468                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	68                      @ DW_AT_decl_line
+	.byte	12                      @ DW_AT_data_member_location
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0xa7:0xb DW_TAG_typedef
+	.long	178                     @ DW_AT_type
+	.long	.Linfo_string33         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	58                      @ DW_AT_decl_line
+	.byte	6                       @ Abbrev [6] 0xb2:0x1d DW_TAG_structure_type
+	.byte	2                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	54                      @ DW_AT_decl_line
+	.byte	7                       @ Abbrev [7] 0xb6:0xc DW_TAG_member
+	.long	.Linfo_string5          @ DW_AT_name
+	.long	207                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	56                      @ DW_AT_decl_line
+	.byte	0                       @ DW_AT_data_member_location
+	.byte	7                       @ Abbrev [7] 0xc2:0xc DW_TAG_member
+	.long	.Linfo_string13         @ DW_AT_name
+	.long	264                     @ DW_AT_type
+	.byte	2                       @ DW_AT_decl_file
+	.byte	57                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_data_member_location
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0xcf:0xb DW_TAG_typedef
+	.long	218                     @ DW_AT_type
+	.long	.Linfo_string12         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	20                      @ DW_AT_decl_line
+	.byte	8                       @ Abbrev [8] 0xda:0x27 DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	1                       @ DW_AT_decl_file
+	.byte	13                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0xe2:0x6 DW_TAG_enumerator
+	.long	.Linfo_string7          @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0xe8:0x6 DW_TAG_enumerator
+	.long	.Linfo_string8          @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0xee:0x6 DW_TAG_enumerator
+	.long	.Linfo_string9          @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0xf4:0x6 DW_TAG_enumerator
+	.long	.Linfo_string10         @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0xfa:0x6 DW_TAG_enumerator
+	.long	.Linfo_string11         @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	10                      @ Abbrev [10] 0x101:0x7 DW_TAG_base_type
+	.long	.Linfo_string6          @ DW_AT_name
+	.byte	8                       @ DW_AT_encoding
+	.byte	1                       @ DW_AT_byte_size
+	.byte	5                       @ Abbrev [5] 0x108:0xb DW_TAG_typedef
+	.long	275                     @ DW_AT_type
+	.long	.Linfo_string32         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	43                      @ DW_AT_decl_line
+	.byte	8                       @ Abbrev [8] 0x113:0x75 DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	1                       @ DW_AT_decl_file
+	.byte	22                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0x11b:0x6 DW_TAG_enumerator
+	.long	.Linfo_string14         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x121:0x6 DW_TAG_enumerator
+	.long	.Linfo_string15         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x127:0x6 DW_TAG_enumerator
+	.long	.Linfo_string16         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x12d:0x6 DW_TAG_enumerator
+	.long	.Linfo_string17         @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x133:0x6 DW_TAG_enumerator
+	.long	.Linfo_string18         @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x139:0x6 DW_TAG_enumerator
+	.long	.Linfo_string19         @ DW_AT_name
+	.byte	5                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x13f:0x6 DW_TAG_enumerator
+	.long	.Linfo_string20         @ DW_AT_name
+	.byte	6                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x145:0x6 DW_TAG_enumerator
+	.long	.Linfo_string21         @ DW_AT_name
+	.byte	7                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x14b:0x6 DW_TAG_enumerator
+	.long	.Linfo_string22         @ DW_AT_name
+	.byte	8                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x151:0x6 DW_TAG_enumerator
+	.long	.Linfo_string23         @ DW_AT_name
+	.byte	9                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x157:0x6 DW_TAG_enumerator
+	.long	.Linfo_string24         @ DW_AT_name
+	.byte	10                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x15d:0x6 DW_TAG_enumerator
+	.long	.Linfo_string25         @ DW_AT_name
+	.byte	11                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x163:0x6 DW_TAG_enumerator
+	.long	.Linfo_string26         @ DW_AT_name
+	.byte	12                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x169:0x6 DW_TAG_enumerator
+	.long	.Linfo_string27         @ DW_AT_name
+	.byte	13                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x16f:0x6 DW_TAG_enumerator
+	.long	.Linfo_string28         @ DW_AT_name
+	.byte	14                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x175:0x6 DW_TAG_enumerator
+	.long	.Linfo_string29         @ DW_AT_name
+	.byte	15                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x17b:0x6 DW_TAG_enumerator
+	.long	.Linfo_string30         @ DW_AT_name
+	.byte	16                      @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x181:0x6 DW_TAG_enumerator
+	.long	.Linfo_string31         @ DW_AT_name
+	.byte	17                      @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x188:0xb DW_TAG_typedef
+	.long	403                     @ DW_AT_type
+	.long	.Linfo_string41         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	29                      @ DW_AT_decl_line
+	.byte	8                       @ Abbrev [8] 0x193:0x1b DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	24                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0x19b:0x6 DW_TAG_enumerator
+	.long	.Linfo_string38         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x1a1:0x6 DW_TAG_enumerator
+	.long	.Linfo_string39         @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x1a7:0x6 DW_TAG_enumerator
+	.long	.Linfo_string40         @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x1ae:0xb DW_TAG_typedef
+	.long	441                     @ DW_AT_type
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	36                      @ DW_AT_decl_line
+	.byte	8                       @ Abbrev [8] 0x1b9:0x1b DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	31                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0x1c1:0x6 DW_TAG_enumerator
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x1c7:0x6 DW_TAG_enumerator
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x1cd:0x6 DW_TAG_enumerator
+	.long	.Linfo_string45         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	10                      @ Abbrev [10] 0x1d4:0x7 DW_TAG_base_type
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	5                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	11                      @ Abbrev [11] 0x1db:0x7 DW_TAG_base_type
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	8                       @ DW_AT_byte_size
+	.byte	7                       @ DW_AT_encoding
+	.byte	8                       @ Abbrev [8] 0x1e2:0x1b DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	38                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0x1ea:0x6 DW_TAG_enumerator
+	.long	.Linfo_string51         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x1f0:0x6 DW_TAG_enumerator
+	.long	.Linfo_string52         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x1f6:0x6 DW_TAG_enumerator
+	.long	.Linfo_string53         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x1fd:0x15 DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	1                       @ DW_AT_decl_file
+	.byte	45                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0x205:0x6 DW_TAG_enumerator
+	.long	.Linfo_string54         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x20b:0x6 DW_TAG_enumerator
+	.long	.Linfo_string55         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	8                       @ Abbrev [8] 0x212:0x27 DW_TAG_enumeration_type
+	.long	257                     @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	2                       @ DW_AT_decl_file
+	.byte	45                      @ DW_AT_decl_line
+	.byte	9                       @ Abbrev [9] 0x21a:0x6 DW_TAG_enumerator
+	.long	.Linfo_string56         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x220:0x6 DW_TAG_enumerator
+	.long	.Linfo_string57         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x226:0x6 DW_TAG_enumerator
+	.long	.Linfo_string58         @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x22c:0x6 DW_TAG_enumerator
+	.long	.Linfo_string59         @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	9                       @ Abbrev [9] 0x232:0x6 DW_TAG_enumerator
+	.long	.Linfo_string60         @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	10                      @ Abbrev [10] 0x239:0x7 DW_TAG_base_type
+	.long	.Linfo_string61         @ DW_AT_name
+	.byte	4                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	5                       @ Abbrev [5] 0x240:0xb DW_TAG_typedef
+	.long	482                     @ DW_AT_type
+	.long	.Linfo_string62         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	43                      @ DW_AT_decl_line
+	.byte	12                      @ Abbrev [12] 0x24b:0x5 DW_TAG_pointer_type
+	.long	592                     @ DW_AT_type
+	.byte	13                      @ Abbrev [13] 0x250:0xc DW_TAG_typedef
+	.long	604                     @ DW_AT_type
+	.long	.Linfo_string69         @ DW_AT_name
+	.byte	5                       @ DW_AT_decl_file
+	.short	561                     @ DW_AT_decl_line
+	.byte	14                      @ Abbrev [14] 0x25c:0x3a DW_TAG_structure_type
+	.byte	16                      @ DW_AT_byte_size
+	.byte	5                       @ DW_AT_decl_file
+	.short	555                     @ DW_AT_decl_line
+	.byte	15                      @ Abbrev [15] 0x261:0xd DW_TAG_member
+	.long	.Linfo_string63         @ DW_AT_name
+	.long	662                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	557                     @ DW_AT_decl_line
+	.byte	0                       @ DW_AT_data_member_location
+	.byte	15                      @ Abbrev [15] 0x26e:0xd DW_TAG_member
+	.long	.Linfo_string66         @ DW_AT_name
+	.long	662                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	558                     @ DW_AT_decl_line
+	.byte	4                       @ DW_AT_data_member_location
+	.byte	15                      @ Abbrev [15] 0x27b:0xd DW_TAG_member
+	.long	.Linfo_string67         @ DW_AT_name
+	.long	662                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	559                     @ DW_AT_decl_line
+	.byte	8                       @ DW_AT_data_member_location
+	.byte	15                      @ Abbrev [15] 0x288:0xd DW_TAG_member
+	.long	.Linfo_string68         @ DW_AT_name
+	.long	685                     @ DW_AT_type
+	.byte	5                       @ DW_AT_decl_file
+	.short	560                     @ DW_AT_decl_line
+	.byte	12                      @ DW_AT_data_member_location
+	.byte	0                       @ End Of Children Mark
+	.byte	16                      @ Abbrev [16] 0x296:0x5 DW_TAG_volatile_type
+	.long	667                     @ DW_AT_type
+	.byte	5                       @ Abbrev [5] 0x29b:0xb DW_TAG_typedef
+	.long	678                     @ DW_AT_type
+	.long	.Linfo_string65         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	64                      @ DW_AT_decl_line
+	.byte	10                      @ Abbrev [10] 0x2a6:0x7 DW_TAG_base_type
+	.long	.Linfo_string64         @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	4                       @ DW_AT_byte_size
+	.byte	17                      @ Abbrev [17] 0x2ad:0x5 DW_TAG_const_type
+	.long	662                     @ DW_AT_type
+	.byte	18                      @ Abbrev [18] 0x2b2:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin0           @ DW_AT_low_pc
+	.long	.Lfunc_end0             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string70         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	19                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	19                      @ Abbrev [19] 0x2c4:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin1           @ DW_AT_low_pc
+	.long	.Lfunc_end1             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string71         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	77                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	20                      @ Abbrev [20] 0x2d7:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string81         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	77                      @ DW_AT_decl_line
+	.long	576                     @ DW_AT_type
+	.byte	20                      @ Abbrev [20] 0x2e5:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string82         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	77                      @ DW_AT_decl_line
+	.long	1190                    @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	19                      @ Abbrev [19] 0x2f4:0x4c DW_TAG_subprogram
+	.long	.Lfunc_begin2           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string72         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	118                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	20                      @ Abbrev [20] 0x307:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	36
+	.long	.Linfo_string81         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	118                     @ DW_AT_decl_line
+	.long	576                     @ DW_AT_type
+	.byte	21                      @ Abbrev [21] 0x315:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	32
+	.long	.Linfo_string84         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	120                     @ DW_AT_decl_line
+	.long	569                     @ DW_AT_type
+	.byte	21                      @ Abbrev [21] 0x323:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string85         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	121                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	21                      @ Abbrev [21] 0x331:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string86         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	121                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	22                      @ Abbrev [22] 0x340:0x32 DW_TAG_subprogram
+	.long	.Lfunc_begin3           @ DW_AT_low_pc
+	.long	.Lfunc_end3             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string73         @ DW_AT_name
+	.byte	6                       @ DW_AT_decl_file
+	.short	581                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	23                      @ Abbrev [23] 0x353:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string87         @ DW_AT_name
+	.byte	6                       @ DW_AT_decl_file
+	.short	581                     @ DW_AT_decl_line
+	.long	667                     @ DW_AT_type
+	.byte	24                      @ Abbrev [24] 0x362:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	0
+	.long	.Linfo_string88         @ DW_AT_name
+	.byte	6                       @ DW_AT_decl_file
+	.short	583                     @ DW_AT_decl_line
+	.long	667                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	19                      @ Abbrev [19] 0x372:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin4           @ DW_AT_low_pc
+	.long	.Lfunc_end4             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string74         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	158                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	20                      @ Abbrev [20] 0x385:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string89         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	158                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	25                      @ Abbrev [25] 0x394:0x14 DW_TAG_subprogram
+	.long	.Lfunc_begin5           @ DW_AT_low_pc
+	.long	.Lfunc_end5             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string75         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	269                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	25                      @ Abbrev [25] 0x3a8:0x14 DW_TAG_subprogram
+	.long	.Lfunc_begin6           @ DW_AT_low_pc
+	.long	.Lfunc_end6             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string76         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	275                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	26                      @ Abbrev [26] 0x3bc:0x33 DW_TAG_subprogram
+	.long	.Lfunc_begin7           @ DW_AT_low_pc
+	.long	.Lfunc_end7             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string77         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	280                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	24                      @ Abbrev [24] 0x3d0:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string90         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	283                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	24                      @ Abbrev [24] 0x3df:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string91         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	283                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	26                      @ Abbrev [26] 0x3ef:0x6f DW_TAG_subprogram
+	.long	.Lfunc_begin8           @ DW_AT_low_pc
+	.long	.Lfunc_end8             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string78         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	290                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	23                      @ Abbrev [23] 0x403:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	36
+	.long	.Linfo_string92         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	290                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	23                      @ Abbrev [23] 0x412:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	32
+	.long	.Linfo_string93         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	290                     @ DW_AT_decl_line
+	.long	430                     @ DW_AT_type
+	.byte	23                      @ Abbrev [23] 0x421:0xf DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	28
+	.long	.Linfo_string37         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	290                     @ DW_AT_decl_line
+	.long	392                     @ DW_AT_type
+	.byte	24                      @ Abbrev [24] 0x430:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	24
+	.long	.Linfo_string84         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	292                     @ DW_AT_decl_line
+	.long	569                     @ DW_AT_type
+	.byte	24                      @ Abbrev [24] 0x43f:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string85         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	293                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	24                      @ Abbrev [24] 0x44e:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	16
+	.long	.Linfo_string86         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	293                     @ DW_AT_decl_line
+	.long	468                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	26                      @ Abbrev [26] 0x45e:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin9           @ DW_AT_low_pc
+	.long	.Lfunc_end9             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string79         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	317                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	24                      @ Abbrev [24] 0x472:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string81         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	319                     @ DW_AT_decl_line
+	.long	576                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	26                      @ Abbrev [26] 0x482:0x24 DW_TAG_subprogram
+	.long	.Lfunc_begin10          @ DW_AT_low_pc
+	.long	.Lfunc_end10            @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string80         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	328                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	24                      @ Abbrev [24] 0x496:0xf DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	20
+	.long	.Linfo_string81         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.short	330                     @ DW_AT_decl_line
+	.long	576                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	5                       @ Abbrev [5] 0x4a6:0xb DW_TAG_typedef
+	.long	530                     @ DW_AT_type
+	.long	.Linfo_string83         @ DW_AT_name
+	.byte	2                       @ DW_AT_decl_file
+	.byte	52                      @ DW_AT_decl_line
+	.byte	0                       @ End Of Children Mark
+.Ldebug_info_end0:
+	.ident	"Component: ARM Compiler 6.14 Tool: armclang [5db06c00]"
+	.section	".note.GNU-stack","",%progbits
+	.eabi_attribute	30, 6	@ Tag_ABI_optimization_goals
+	.ARM_attribute	16, 1	@ Tag_AV_eba
+	.section	.debug_line,"",%progbits
+.Lline_table_start0:
