@@ -81,8 +81,7 @@ int main()
     UART_Open(UART0, 115200);
 	MyUart_Init();
 	MyGPIO_Init();
-
-	MyGPIO_PinBitSet(My_Test1_Port,My_Test1_Pin);
+	MyMoto_Init();
 	printf("\nStart Main loop\n");
     while (1)
 	{
