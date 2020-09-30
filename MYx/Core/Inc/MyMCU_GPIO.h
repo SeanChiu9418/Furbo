@@ -67,8 +67,14 @@ typedef enum
 #define My_Test3_Pin 	GPIO_Pin9
 
 // Port/Group_B
+#define STPMT2_ENC_Port	GPIO_PB		// the Encode of STPMT1 for detecting the RPM
+#define STPMT2_ENC_Pin 	GPIO_Pin2
 #define My_Test1_Port	GPIO_PB
 #define My_Test1_Pin 	GPIO_Pin3
+#define DCMT_ENC_Port	GPIO_PB		// the Encode of DCMT for detecting the RPM
+#define DCMT_ENC_Pin 	GPIO_Pin4
+#define STPMT1_ENC_Port	GPIO_PB		// the Encode of STPMT1 for detecting the RPM
+#define STPMT1_ENC_Pin 	GPIO_Pin5
 #define PIR_SI_Port 	GPIO_PB
 #define PIR_SI_Pin 		GPIO_Pin6
 #define PIR_WU_Port 	GPIO_PB	
@@ -201,25 +207,17 @@ extern uint16_t GPIO_Pin[GPIO_Num_Pin];
 										}while(0)
 
 
-// Config GPIO to RISING interrupt
-#define MyGPIO_Conf2IT_RISING(A,B) 		do { 											\
-											GPIO_InitTypeDef GPIO_InitStruct = {0};		\
-											GPIO_InitStruct.Pin = B;					\
-											GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;	\
-											GPIO_InitStruct.Pull = GPIO_NOPULL;			\
-											HAL_GPIO_Init(A, &GPIO_InitStruct);			\
-										} while(0)
 
 #elif defined(MCU_Nuvoton)
 
-// Config GPIO to RISING interrupt
-#define MyGPIO_Conf2IT_RISING(A,B) 		GPIO_EnableInt(PB, 4, GPIO_INT_RISING);
+
 #endif
 
 void MyGPIO_Init();
 void MyGPIO_Conf2Output(GPIO_Port_Index Port, GPIO_Pin_Index Pin);
 void MyGPIO_Conf2Input(GPIO_Port_Index Port, GPIO_Pin_Index Pin);
-
+void MyGPIO_Conf2INT_RISING(GPIO_Port_Index Port, GPIO_Pin_Index Pin);
+void MyGPIO_DeBounce();
 #ifdef MyFunc_CLI
 										
 #define GPIO_COMMAND_TABLE \
@@ -235,6 +233,7 @@ void MyGPIO_CLI_WritePin();
 void MyGPIO_CLI_ReadPin();
 void MyGPIO_CLI_Set2InputMode();
 void MyGPIO_CLI_Set2OutputMode();
+void MyGPIO_IRQHandler();
 #endif
 
 #endif /* INC_MYMCU_GPIO_H_ */

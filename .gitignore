@@ -1,6 +1,12 @@
+# Other
+*.i
+*.lst
+/Keil/Objects/Furbo.build_log.htm
+/Keil/Furbo.uvguix.SeanChiu
+
 # Prerequisites
 *.d
-*.i
+
 # Object files
 *.o
 *.ko

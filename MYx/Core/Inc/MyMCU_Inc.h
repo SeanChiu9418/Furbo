@@ -41,9 +41,5 @@
 #include "MyMCU_SPI.h"
 #endif
 
-#ifdef MyFunc_CLI
- #include "MyFunc_CLI.h"
-#endif
-
 
 #endif /* INC_MYMCU_INC_H_ */

@@ -15,6 +15,7 @@
 ".\objects\mymcu_sys.o"
 ".\objects\mymcu_uart.o"
 ".\objects\mydev_motor.o"
+".\objects\myfunc_tossing.o"
 --library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --symbols
 --info sizes --info totals
 --list ".\Listings\Furbo.map" -o .\Objects\Furbo.axf

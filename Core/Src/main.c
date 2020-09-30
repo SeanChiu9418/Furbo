@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "NuMicro.h"
 #include "My_Config.h"
+#include "MyFunc_Inc.h"
 #define RXBUFSIZE   1024
 
 /*---------------------------------------------------------------------------------------------------------*/
@@ -81,7 +82,8 @@ int main()
     UART_Open(UART0, 115200);
 	MyUart_Init();
 	MyGPIO_Init();
-	MyMoto_Init();
+	//MyMoto_Init();
+	MyTossing_Init();
 	printf("\nStart Main loop\n");
     while (1)
 	{
@@ -117,7 +119,7 @@ int main()
 			MyGPIO_PinBitReset(My_Test2_Port,My_Test2_Pin);
 		}
 		
-		My_Delay(500);	
+		My_Delay(500);		
 	*/
 	}
 }
@@ -130,5 +132,17 @@ void UART0_IRQHandler(void)
 	MyUart_IRQHandler();
 }
 
-
+/**
+ * @brief       GPIO PB IRQ
+ *
+ * @param       None
+ *
+ * @return      None
+ *
+ * @details     The PB default IRQ, declared in startup_M251.s.
+ */
+void GPB_IRQHandler(void)
+{
+	MyGPIO_IRQHandler();
+}
 

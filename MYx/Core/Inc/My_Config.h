@@ -36,6 +36,8 @@
 /* ########################## My Function Selection ############################## */
 #define MyFunc_SelfTest
 #define MyFunc_CLI
+#define MyFunc_Tossing
+
 
 /* ########################## Selected Item Enable ############################## */
 

@@ -4,7 +4,7 @@
  *  Created on: Jul 6, 2020
  *      Author: SeanChiu
  */
-
+#include <stdio.h>
 #include "MyMCU_GPIO.h"
 
 #ifdef MCU_STM32	
@@ -60,6 +60,20 @@ void MyGPIO_Init()
 #endif	
 
 }
+
+void MyGPIO_Conf2INT_RISING(GPIO_Port_Index Port, GPIO_Pin_Index Pin)	// Config GPIO in Interrupt Rising Mode
+{
+#ifdef MCU_STM32	
+	
+#elif defined(MCU_Nuvoton)
+
+    GPIO_SetMode(GPIO_Port[Port], GPIO_Pin[Pin], GPIO_MODE_INPUT);
+    GPIO_EnableInt(GPIO_Port[Port], Pin, GPIO_INT_RISING);
+	
+#endif	
+	
+}
+
 
 
 
@@ -131,6 +145,22 @@ void MyGPIO_WritePin(GPIO_Port_Index Port, GPIO_Pin_Index Pin, GPIOPin_State Sta
 #endif
 }
 
+void MyGPIO_DeBounce()
+{
+#ifdef MCU_STM32	
+	
+#elif defined(MCU_Nuvoton)	
+	
+    /* Enable interrupt de-bounce function and select de-bounce sampling cycle time is 1024 clocks of LIRC clock */
+    GPIO_SET_DEBOUNCE_TIME(GPIO_DBCTL_DBCLKSRC_LIRC, GPIO_DBCTL_DBCLKSEL_1024);
+    GPIO_ENABLE_DEBOUNCE(GPIO_Port[STPMT1_ENC_Port], GPIO_Pin[STPMT1_ENC_Pin]);
+    GPIO_ENABLE_DEBOUNCE(GPIO_Port[STPMT2_ENC_Port], GPIO_Pin[STPMT2_ENC_Pin]);
+    GPIO_ENABLE_DEBOUNCE(GPIO_Port[DCMT_ENC_Port], GPIO_Pin[DCMT_ENC_Pin]);	
+	
+#endif	
+}
+	
+
 #ifdef MyFunc_SelfTest
 void MyGPIO_SelfTest()
 {
@@ -158,6 +188,42 @@ void MyGPIO_SelfTest()
 	}
 }
 #endif
+
+void MyGPIO_IRQHandler()
+{
+	//printf("UART0->INTSTS = %d \n",UART0->INTSTS);
+#ifdef MCU_STM32
+#elif defined(MCU_Nuvoton)
+
+    /* To check if PB.2 interrupt occurred */
+    if (GPIO_GET_INT_FLAG(PB, BIT2))
+    {
+        GPIO_CLR_INT_FLAG(PB, BIT2);
+        printf("PB.2 INT occurred.\n");
+    }
+    else if(GPIO_GET_INT_FLAG(PB, BIT5))
+    {
+        GPIO_CLR_INT_FLAG(PB, BIT5);
+        printf("PB.5 INT occurred.\n");
+    }
+    else if(GPIO_GET_INT_FLAG(PB, BIT4))
+    {
+        GPIO_CLR_INT_FLAG(PB, BIT4);
+        printf("PB.4 INT occurred.\n");
+    }
+    else
+    {
+        /* Un-expected interrupt. Just clear all PB interrupts */
+        PB->INTSRC = PB->INTSRC;
+        printf("Un-expected interrupts.\n");
+    }	
+	
+#endif
+
+}
+
+
+
 
 #ifdef MyFunc_CLI
 void MyGPIO_CLI_WritePin()

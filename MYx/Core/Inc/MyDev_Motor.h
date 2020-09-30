@@ -23,7 +23,7 @@ typedef enum
 
 typedef enum
 {
-	SS_High = 2,
+	SS_High = 1,
 	SS_Low,
 	SS_Num
 }STPMT_Speed;

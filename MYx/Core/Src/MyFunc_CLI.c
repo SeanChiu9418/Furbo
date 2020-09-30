@@ -4,7 +4,7 @@
  *  Created on: Jul 10, 2020
  *      Author: SeanChiu
  */
-
+#include <stdio.h>
 #include <string.h>
 #include "MyFunc_CLI.h"
 #include "MyFunc_CLI_Commands.h"
@@ -84,8 +84,8 @@ const char * CommandErrorNames[] =
   };
 void MyCLI_CommandErrorHandler(CommandStatus status)
 {
-	My_printf((char *)CommandErrorNames[status]);
-  //printf("%s\r\n", CommandErrorNames[status]);
+	//My_printf((char *)CommandErrorNames[status]);
+    printf("%s\r\n", CommandErrorNames[status]);
 }
 
 void MyCLI_CommandReaderInit(void)
@@ -475,7 +475,7 @@ uint8_t MyCLI_ProcessCmdInput ()	// Deal with CMD
 
     //currIndex = 0;
     return MyCLI_ProcessCommandString(buff, len);
-    //My_printf(buff);
+    //printf(buff);
 
   }
   else
@@ -497,11 +497,11 @@ void MyCLI_UpdateCMD(char *str)
 	if (CMD_Status == CMD_Null)
 	{
 		strcpy(CMD,str);
-		//My_printf(CMD);
+		//printf(CMD);
 		CMD_Status = CMD_Ready;
 	}
 	else
-		My_printf("@ In Busy");
+		printf("@ In Busy");
 }
 /*
 void MyCLI_GetCMD(char *str)
@@ -514,7 +514,7 @@ void MyCLI_GetCMD(char *str)
 	}
 	else if (length > CMD_Len)
 	{
-		My_printf("@ CMD Too Long");
+		printf("@ CMD Too Long");
 		CMD_Status = CMD_Null;
 	}
 	else
