@@ -27,6 +27,10 @@
  #include "MyDev_Motor.h"
 #endif
 
+#ifdef Dev_MotorEncoder
+ #include "MyDev_MotorEncoder.h"
+#endif
+
 #ifdef Dev_MIC_VM3011
 #include "MyDev_MIC_VM3011.h"
 #endif

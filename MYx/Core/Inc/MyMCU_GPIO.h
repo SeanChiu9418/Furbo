@@ -132,7 +132,7 @@ extern uint16_t GPIO_Pin[GPIO_Num_Pin];
 
 #elif defined(MCU_Nuvoton)
 
-#if 0
+#if 1
 #define MyGPIO_PinBitSet(A,B)		( GPIO_PIN_DATA((A),(B)) = 1 )
 #define MyGPIO_PinBitReset(A,B)		( GPIO_PIN_DATA((A),(B)) = 0 )
 #define MyGPIO_PinInputValue(A,B)	( GPIO_PIN_DATA((A),(B)) )

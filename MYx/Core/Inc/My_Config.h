@@ -25,12 +25,14 @@
 #define MCU_UART
 //#define MCU_I2C
 //#define MCU_SPI
+#define MCU_Timer
 
 /* ########################## Device Selection ############################## */
 //#define Dev_PIR_1598
 //#define Dev_SubG_S2LP
 //#define Dev_LED
 #define Dev_Motor
+#define Dev_MotorEncoder
 //#define Dev_MIC_VM3011
 
 /* ########################## My Function Selection ############################## */

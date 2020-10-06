@@ -3,6 +3,8 @@
 *.lst
 /Keil/Objects/Furbo.build_log.htm
 /Keil/Furbo.uvguix.SeanChiu
+/Keil/*.*
+/Keil/Objects/*.*
 
 # Prerequisites
 *.d

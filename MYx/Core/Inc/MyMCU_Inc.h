@@ -25,6 +25,10 @@
 #include "MyMCU_GPIO.h"
 #endif
 
+#ifdef MCU_Timer
+#include "MyMCU_Timer.h"
+#endif
+
 #ifdef MCU_UART
 #include "MyMCU_UART.h"
 #endif

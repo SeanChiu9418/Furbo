@@ -50,10 +50,10 @@ void MyGPIO_Init()
 
 	//GPIO_SetMode(PB, BIT3, GPIO_MODE_OUTPUT);
 	//GPIO_SetMode(PC, BIT0, GPIO_MODE_OUTPUT);
-	MyGPIO_Conf2Output(SOC_Reset_Port,SOC_Reset_Pin);
-	//MyGPIO_Conf2Output(My_Test2_Port,My_Test2_Pin);
-	MyGPIO_PinBitReset(SOC_Reset_Port,SOC_Reset_Pin);
-	//MyGPIO_PinBitReset(My_Test2_Port,My_Test2_Pin);
+	MyGPIO_Conf2Output(My_Test1_Port,My_Test1_Pin);
+	MyGPIO_Conf2Output(My_Test2_Port,My_Test2_Pin);
+	MyGPIO_PinBitReset(My_Test1_Port,My_Test1_Pin);
+	MyGPIO_PinBitReset(My_Test2_Port,My_Test2_Pin);
 	//MyGPIO_Conf2Input(My_Test3_Port,My_Test3_Pin);
 	
 
@@ -152,7 +152,7 @@ void MyGPIO_DeBounce()
 #elif defined(MCU_Nuvoton)	
 	
     /* Enable interrupt de-bounce function and select de-bounce sampling cycle time is 1024 clocks of LIRC clock */
-    GPIO_SET_DEBOUNCE_TIME(GPIO_DBCTL_DBCLKSRC_LIRC, GPIO_DBCTL_DBCLKSEL_1024);
+    GPIO_SET_DEBOUNCE_TIME(GPIO_DBCTL_DBCLKSRC_LIRC, GPIO_DBCTL_DBCLKSEL_1);
     GPIO_ENABLE_DEBOUNCE(GPIO_Port[STPMT1_ENC_Port], GPIO_Pin[STPMT1_ENC_Pin]);
     GPIO_ENABLE_DEBOUNCE(GPIO_Port[STPMT2_ENC_Port], GPIO_Pin[STPMT2_ENC_Pin]);
     GPIO_ENABLE_DEBOUNCE(GPIO_Port[DCMT_ENC_Port], GPIO_Pin[DCMT_ENC_Pin]);	
@@ -193,10 +193,10 @@ void MyGPIO_IRQHandler()
 {
 	//printf("UART0->INTSTS = %d \n",UART0->INTSTS);
 #ifdef MCU_STM32
-#elif defined(MCU_Nuvoton)
+#elif defined(MCU_Nuvoton)	
 
     /* To check if PB.2 interrupt occurred */
-    if (GPIO_GET_INT_FLAG(PB, BIT2))
+	if (GPIO_GET_INT_FLAG(PB, BIT2))
     {
         GPIO_CLR_INT_FLAG(PB, BIT2);
         printf("PB.2 INT occurred.\n");
@@ -206,10 +206,11 @@ void MyGPIO_IRQHandler()
         GPIO_CLR_INT_FLAG(PB, BIT5);
         printf("PB.5 INT occurred.\n");
     }
-    else if(GPIO_GET_INT_FLAG(PB, BIT4))
-    {
-        GPIO_CLR_INT_FLAG(PB, BIT4);
-        printf("PB.4 INT occurred.\n");
+    else if(GPIO_GET_INT_FLAG(GPIO_Port[DCMT_ENC_Port], GPIO_Pin[DCMT_ENC_Pin]))
+    {		
+        printf("PB.4 INT occurred CNT = %d.\r\n", Timer_Port[DCMT_Timer]->CNT);
+		Timer_Port[DCMT_Timer]->CNT = 0;
+        GPIO_CLR_INT_FLAG(PB, BIT4);		
     }
     else
     {
@@ -217,7 +218,7 @@ void MyGPIO_IRQHandler()
         PB->INTSRC = PB->INTSRC;
         printf("Un-expected interrupts.\n");
     }	
-	
+
 #endif
 
 }

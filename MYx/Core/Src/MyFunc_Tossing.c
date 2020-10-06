@@ -11,23 +11,17 @@
 void MyTossing_Init()
 {
 	MyMoto_Init();
-
+	MyMTENC_Init();
+	
+    /*-----------------------------------------------------------------------------------------------------	*/
+    /* Timer Init                                                                       					*/
+    /*-----------------------------------------------------------------------------------------------------	*/
+	//MyTimer_Init(STPMT_Timer,Counter_Mode,1);
+	//MyTimer_Enable(STPMT_Timer);
     /*-----------------------------------------------------------------------------------------------------*/
     /* GPIO Interrupt Function Test                                                                        */
     /*-----------------------------------------------------------------------------------------------------*/
 
-    /* Configure PB.5 as Input mode and enable interrupt by rising edge trigger */
-	MyGPIO_Conf2INT_RISING(STPMT1_ENC_Port,STPMT1_ENC_Pin);
 
-    /* Configure PB.4 as Input mode and enable interrupt by rising edge trigger */
-	MyGPIO_Conf2INT_RISING(DCMT_ENC_Port,DCMT_ENC_Pin);
-	
-    /* Configure PB.2 as Input mode and enable interrupt by rising edge trigger */
-	MyGPIO_Conf2INT_RISING(STPMT2_ENC_Port,STPMT2_ENC_Pin);
-
-	MyNVIC_EnableIRQ(GPB_IRQn);
-	
-	/* Enable interrupt de-bounce function*/
-	MyGPIO_DeBounce();
 	
 }

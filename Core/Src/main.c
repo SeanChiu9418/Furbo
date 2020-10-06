@@ -85,18 +85,22 @@ int main()
 	//MyMoto_Init();
 	MyTossing_Init();
 	printf("\nStart Main loop\n");
+	
+	
     while (1)
 	{
-		if(MyCLI_ProcessCmdInput())
+		//if(MyCLI_ProcessCmdInput())
 		{
 			//if (interactive)
 			//{
-				printf(">");
+				//printf(">");
 			//}
 		}		
 		//printf("\nInput: ");
-		//MyGPIO_PinBitSet(My_Test1_Port,My_Test1_Pin);	
-		//My_Delay(1000);
+		MyGPIO_PinBitSet(My_Test1_Port,My_Test1_Pin);	
+		My_Delay(2);
+		MyGPIO_PinBitReset(My_Test1_Port,My_Test1_Pin);	
+		My_Delay(2);
 /*
 		My_Delay(1);
 		if (MyGPIO_PinInputValue(My_Test3_Port,My_Test3_Pin))
@@ -146,3 +150,13 @@ void GPB_IRQHandler(void)
 	MyGPIO_IRQHandler();
 }
 
+void TMR0_IRQHandler(void)
+{
+	MyTimer0_IRQHandler();
+}
+
+
+void TMR1_IRQHandler(void)
+{
+	MyTimer1_IRQHandler();
+}
