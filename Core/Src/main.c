@@ -82,25 +82,20 @@ int main()
     UART_Open(UART0, 115200);
 	MyUart_Init();
 	MyGPIO_Init();
-	//MyMoto_Init();
 	MyTossing_Init();
 	printf("\nStart Main loop\n");
 	
 	
     while (1)
 	{
-		//if(MyCLI_ProcessCmdInput())
+		if(MyCLI_ProcessCmdInput())
 		{
 			//if (interactive)
 			//{
-				//printf(">");
+				printf(">");
 			//}
 		}		
 		//printf("\nInput: ");
-		MyGPIO_PinBitSet(My_Test1_Port,My_Test1_Pin);	
-		My_Delay(2);
-		MyGPIO_PinBitReset(My_Test1_Port,My_Test1_Pin);	
-		My_Delay(2);
 /*
 		My_Delay(1);
 		if (MyGPIO_PinInputValue(My_Test3_Port,My_Test3_Pin))
