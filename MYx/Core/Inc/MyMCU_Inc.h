@@ -29,6 +29,10 @@
 #include "MyMCU_Timer.h"
 #endif
 
+#ifdef MCU_PWM
+#include "MyMCU_PWM.h"
+#endif
+
 #ifdef MCU_UART
 #include "MyMCU_UART.h"
 #endif

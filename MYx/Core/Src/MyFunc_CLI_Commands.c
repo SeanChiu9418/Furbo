@@ -35,6 +35,10 @@ CommandEntry CommandTable[] = {
   Motor_CLI_TABLE,
 #endif
   
+#ifdef MCU_PWM  
+  PWM_CLI_TABLE,
+#endif
+
   { NULL, NULL, NULL, NULL } // NULL action makes this a terminator
 };
 

@@ -26,6 +26,7 @@
 //#define MCU_I2C
 //#define MCU_SPI
 #define MCU_Timer
+#define MCU_PWM
 
 /* ########################## Device Selection ############################## */
 //#define Dev_PIR_1598

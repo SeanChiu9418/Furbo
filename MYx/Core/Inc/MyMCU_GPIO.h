@@ -67,6 +67,10 @@ typedef enum
 #define My_Test3_Pin 	GPIO_Pin9
 
 // Port/Group_B
+#define PWM0_CH4_Port 	GPIO_PB		// PWM output for DC Motor
+#define PWM0_CH4_Pin 	GPIO_Pin0
+#define PWM0_CH5_Port	GPIO_PB		// PWM output for DC Motor
+#define PWM0_CH5_Pin	GPIO_Pin1
 #define STPMT2_ENC_Port	GPIO_PB		// the Encode of STPMT1 for detecting the RPM
 #define STPMT2_ENC_Pin 	GPIO_Pin2
 #define My_Test1_Port	GPIO_PB

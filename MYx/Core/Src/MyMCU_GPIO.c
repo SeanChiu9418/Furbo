@@ -162,6 +162,7 @@ void MyGPIO_DeBounce()
 	
 
 #ifdef MyFunc_SelfTest
+
 void MyGPIO_SelfTest()
 {
 	while(1)
@@ -187,6 +188,7 @@ void MyGPIO_SelfTest()
 		}
 	}
 }
+
 #endif
 
 void MyGPIO_IRQHandler()
@@ -195,29 +197,7 @@ void MyGPIO_IRQHandler()
 #ifdef MCU_STM32
 #elif defined(MCU_Nuvoton)	
 
-    /* To check if PB.2 interrupt occurred */
-	if (GPIO_GET_INT_FLAG(PB, BIT2))
-    {
-        GPIO_CLR_INT_FLAG(PB, BIT2);
-        printf("PB.2 INT occurred.\n");
-    }
-    else if(GPIO_GET_INT_FLAG(PB, BIT5))
-    {
-        GPIO_CLR_INT_FLAG(PB, BIT5);
-        printf("PB.5 INT occurred.\n");
-    }
-    else if(GPIO_GET_INT_FLAG(GPIO_Port[DCMT_ENC_Port], GPIO_Pin[DCMT_ENC_Pin]))
-    {		
-        printf("PB.4 INT occurred CNT = %d.\r\n", Timer_Port[DCMT_Timer]->CNT);
-		Timer_Port[DCMT_Timer]->CNT = 0;
-        GPIO_CLR_INT_FLAG(PB, BIT4);		
-    }
-    else
-    {
-        /* Un-expected interrupt. Just clear all PB interrupts */
-        PB->INTSRC = PB->INTSRC;
-        printf("Un-expected interrupts.\n");
-    }	
+
 
 #endif
 

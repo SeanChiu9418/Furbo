@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include "NuMicro.h"
 #include "My_Config.h"
+#include "MyMCU_Inc.h"
+#include "MyDev_Inc.h"
 #include "MyFunc_Inc.h"
 #define RXBUFSIZE   1024
 
@@ -85,6 +87,10 @@ int main()
 	MyTossing_Init();
 	printf("\nStart Main loop\n");
 	
+	MyPWM_Config(PWM_0,20000, 50);
+	MyPWM_Eanble(PWM_0);
+	MyPWM_Start(PWM_0);
+	
 	
     while (1)
 	{
@@ -142,7 +148,28 @@ void UART0_IRQHandler(void)
  */
 void GPB_IRQHandler(void)
 {
-	MyGPIO_IRQHandler();
+	if (GPIO_GET_INT_FLAG(PB, BIT2))
+    {
+        GPIO_CLR_INT_FLAG(PB, BIT2);
+        printf("PB.2 INT occurred.\n");
+    }
+    else if(GPIO_GET_INT_FLAG(PB, BIT5))
+    {
+        GPIO_CLR_INT_FLAG(PB, BIT5);
+        printf("PB.5 INT occurred.\n");
+    }
+    else if(GPIO_GET_INT_FLAG(GPIO_Port[DCMT_ENC_Port], GPIO_Pin[DCMT_ENC_Pin]))
+    {		
+        printf("PB.4 INT occurred CNT = %d.\r\n", Timer_Port[MTENC[ENC_DCMT]]->CNT);
+		Timer_Port[MTENC[ENC_DCMT]]->CNT = 0;
+        GPIO_CLR_INT_FLAG(PB, BIT4);		
+    }
+    else
+    {
+        /* Un-expected interrupt. Just clear all PB interrupts */
+        PB->INTSRC = PB->INTSRC;
+        printf("Un-expected interrupts.\n");
+    }	
 }
 
 void TMR0_IRQHandler(void)

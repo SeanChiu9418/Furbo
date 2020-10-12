@@ -41,13 +41,13 @@ extern uint32_t Timer_Module[Timer_Num];
 	
 #elif defined(MCU_Nuvoton)
 
-#define MyTimer_Start(A) TIMER_Start(Timer_Port[(A)])	// ENABLE Timer
+#define MyTimer_Start(A) 	TIMER_Start(Timer_Port[(A)])	// ENABLE Timer
+#define MyTimer_Stop(A) 	TIMER_Stop(Timer_Port[(A)])	// ENABLE Timer
 
 #endif
 /* ########################## Timer Function Define List ############################## */
 
-#define STPMT1_Timer Timer_0
-#define DCMT_Timer Timer_1
+
 
 #ifdef MyFunc_SelfTest
 void MyTimer_TestInit(Timer_Index Index);
