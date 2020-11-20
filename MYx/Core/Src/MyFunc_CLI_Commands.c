@@ -14,6 +14,7 @@
 
 CommandEntry CommandTable[] = {
   { "help", helpAction, "", "List commands"},
+  { "FW_Version", FW_Version, "", "Show FW Version"},
   { "reboot", MyCLI_RebootAction, "", "Reboot device"},
   //{ "dfu", dfuAction, "", "put the device in dfu mode (cli disabled)"},
   //{ "interactive", interactiveAction, "u", "Set interactive mode"},
@@ -39,6 +40,10 @@ CommandEntry CommandTable[] = {
   PWM_CLI_TABLE,
 #endif
 
+#ifdef Dev_LED
+  LED_CLI_TABLE,
+#endif
+  
   { NULL, NULL, NULL, NULL } // NULL action makes this a terminator
 };
 
@@ -52,6 +57,11 @@ void helpAction(void)
       printf ("%s %s %s\r\n\r\n", cmd->name, cmd->argumentTypes, cmd->description);
     }
   }
+}
+
+void FW_Version(void)
+{
+      printf ("FW_VERSION: "FW_VERSION"\r\n");
 }
 
 void MyCLI_RebootAction(void)

@@ -27,24 +27,34 @@ void MyGPIO_Init()
 #ifdef MCU_STM32	
 
 	/* GPIO Ports Clock Enable */
+	  MyGPIO_PortA_Enable();
 	  MyGPIO_PortB_Enable();
 	  MyGPIO_PortC_Enable();
 	  //MyGPIO_PortD_Enable();
 
 	  /*Configure GPIO pin Output Level */
+	  // GPIOA, GPIO_PIN_15 -- WIFI_Enable Pin
 	  // GPIOB, GPIO_PIN_3 -- My_Test1_Pin
+	  // GPIOB, GPIO_PIN_9 -- MIC_Switch Pin
 	  // GPIOC, GPIO_PIN_10 -- My_Test2_Pin
 
+	  MyGPIO_WritePin(WIFI_ENB_Port, WIFI_ENB_Pin,GPIO_PIN_RESET);
+	  MyGPIO_WritePin(MIC_SW_Port, MIC_SW_Pin,GPIO_PIN_RESET);
 	  MyGPIO_WritePin(My_Test1_Port, My_Test1_Pin,GPIO_PIN_RESET);
 	  MyGPIO_WritePin(LED_G_Port, LED_G_Pin,GPIO_PIN_RESET);
 
-	  /*Configure GPIO pin : My_Test1_Pin & My_Test2_Pin*/
+	  /*Configure GPIO pin : My_Test1_Pin & My_Test2_Pin & WIFI_Enable_Pin & MIC_Switch_Pin*/
+	  MyGPIO_Conf2Output(WIFI_ENB_Port, WIFI_ENB_Pin);
+	  MyGPIO_Conf2Output(MIC_SW_Port, MIC_SW_Pin);
 	  MyGPIO_Conf2Output(My_Test1_Port, My_Test1_Pin);
 	  MyGPIO_Conf2Output(LED_G_Port, LED_G_Pin);
 
 	  /*Configure GPIO pin : Button_B1_Pin */
 	  MyGPIO_Conf2Input(Button_B1_Port,Button_B1_Pin);
 	  MyGPIO_Conf2Input(My_Test2_Port, My_Test2_Pin);
+
+	  MyGPIO_WritePin(WIFI_ENB_Port, WIFI_ENB_Pin,GPIO_PIN_RESET);
+	  MyGPIO_WritePin(MIC_SW_Port, MIC_SW_Pin,GPIO_PIN_SET);
 	
 #elif defined(MCU_Nuvoton)
 

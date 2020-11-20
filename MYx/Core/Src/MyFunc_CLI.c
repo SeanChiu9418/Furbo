@@ -179,18 +179,24 @@ static void MyCLI_CallCommandAction(void)
   // Lookup the command.
   while (true) {
     commandFinger = MyCLI_CommandLookup(commandFinger, tokenNum);
-    if (commandFinger != NULL) {
+    if (commandFinger != NULL)
+    {
       tokenNum += 1;
-      if (commandFinger->argumentTypes[0] == 'n') {
+      if (commandFinger->argumentTypes[0] == 'n')
+      {
         // Nested commands are implemented by overloading the action
         // field of a command with a pointer to another table of
         // commands.
         commandFinger = (CommandEntry *)(void *)(commandFinger->action);
-      } else {
+      }
+      else
+      {
         commandState.argOffset = tokenNum;
         break;
       }
-    } else {
+    }
+    else
+    {
       commandState.error = CMD_ERR_NO_SUCH_COMMAND;
       goto kickout;
     }

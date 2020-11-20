@@ -63,8 +63,16 @@ typedef enum
 #define LED_G_Pin 		GPIO_Pin5
 #define S2LP_SDN_Port 	GPIO_PA
 #define S2LP_SDN_Pin 	GPIO_Pin8
-#define My_Test3_Port 	GPIO_PA
-#define My_Test3_Pin 	GPIO_Pin9
+#define UART1_TX_Port 	GPIO_PA
+#define UART1_TX_Pin 	GPIO_Pin9
+#define UART1_RX_Port 	GPIO_PA
+#define UART1_RX_Pin 	GPIO_Pin10
+#define I2C_SCL_Port 	GPIO_PA
+#define I2C_SCL_Pin 	GPIO_Pin11
+#define I2C_SDA_Port 	GPIO_PA
+#define I2C_SDA_Pin 	GPIO_Pin12
+#define WIFI_ENB_Port 	GPIO_PA		//Wifi Enable
+#define WIFI_ENB_Pin 	GPIO_Pin15
 
 // Port/Group_B
 #define PWM0_CH4_Port 	GPIO_PB		// PWM output for DC Motor
@@ -83,6 +91,8 @@ typedef enum
 #define PIR_SI_Pin 		GPIO_Pin6
 #define PIR_WU_Port 	GPIO_PB	
 #define PIR_WU_Pin 		GPIO_Pin7
+#define MIC_SW_Port 	GPIO_PB		//MIC_Switch
+#define MIC_SW_Pin 		GPIO_Pin9
 
 // Port/Group_C
 #define My_Test2_Port	GPIO_PC		

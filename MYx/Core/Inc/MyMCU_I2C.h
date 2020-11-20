@@ -21,4 +21,5 @@ typedef enum
 void MyI2C_Init();
 void MyI2C_SelfTest();
 void MyI2C_Test();
+char MyI2C_Write(short SlaveID, short address, short value, I2CType Type);
 #endif /* CORE_INC_MYMCU_I2C_H_ */

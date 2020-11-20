@@ -24,4 +24,5 @@ extern CommandEntry CommandTable[];
 //uint32_t MyCLI_UnsignedCommandArgument(uint8_t argNum);
 void MyCLI_RebootAction(void);
 void helpAction(void);
+void FW_Version(void);
 #endif /* INC_MYFUNC_CLI_COMMANDS_H_ */

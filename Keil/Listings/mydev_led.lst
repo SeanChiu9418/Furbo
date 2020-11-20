@@ -20,6 +20,162 @@
 	.file	"MyDev_LED.c"
 	.file	1 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Inc\\MyDev_LED.h"
 	.file	2 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Inc/MyMCU_GPIO.h"
+	.file	3 "C:\\" "Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stdint.h"
+	.hidden	MyLED_Init              @ -- Begin function MyLED_Init
+	.globl	MyLED_Init
+	.p2align	1
+	.type	MyLED_Init,%function
+	.code	16                      @ @MyLED_Init
+	.thumb_func
+MyLED_Init:
+.Lfunc_begin0:
+	.file	4 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Src/MyDev_LED.c"
+	.loc	4 11 0                  @ ../MYx/Core/Src/MyDev_LED.c:11:0
+	.fnstart
+	.cfi_sections .debug_frame
+	.cfi_startproc
+@ %bb.0:
+	.loc	4 15 1 prologue_end     @ ../MYx/Core/Src/MyDev_LED.c:15:1
+	bx	lr
+.Ltmp0:
+.Lfunc_end0:
+	.size	MyLED_Init, .Lfunc_end0-MyLED_Init
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyLED_Off               @ -- Begin function MyLED_Off
+	.globl	MyLED_Off
+	.p2align	1
+	.type	MyLED_Off,%function
+	.code	16                      @ @MyLED_Off
+	.thumb_func
+MyLED_Off:
+.Lfunc_begin1:
+	.loc	4 18 0                  @ ../MYx/Core/Src/MyDev_LED.c:18:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.loc	4 22 1 prologue_end     @ ../MYx/Core/Src/MyDev_LED.c:22:1
+	bx	lr
+.Ltmp1:
+.Lfunc_end1:
+	.size	MyLED_Off, .Lfunc_end1-MyLED_Off
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyLED_OnOff             @ -- Begin function MyLED_OnOff
+	.globl	MyLED_OnOff
+	.p2align	2
+	.type	MyLED_OnOff,%function
+	.code	16                      @ @MyLED_OnOff
+	.thumb_func
+MyLED_OnOff:
+.Lfunc_begin2:
+	.loc	4 24 0                  @ ../MYx/Core/Src/MyDev_LED.c:24:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r4, lr}
+	push	{r4, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r4, -8
+	.pad	#16
+	sub	sp, #16
+	.cfi_def_cfa_offset 24
+	mov	r2, r1
+	mov	r3, r0
+	add	r4, sp, #12
+	strb	r0, [r4]
+	add	r0, sp, #8
+	strb	r1, [r0]
+.Ltmp2:
+	.loc	4 25 5 prologue_end     @ ../MYx/Core/Src/MyDev_LED.c:25:5
+	ldrb	r0, [r0]
+.Ltmp3:
+	.loc	4 25 5 is_stmt 0        @ ../MYx/Core/Src/MyDev_LED.c:25:5
+	cmp	r0, #1
+	bne	.LBB2_14
+	b	.LBB2_1
+.LBB2_1:
+	.loc	4 0 5                   @ ../MYx/Core/Src/MyDev_LED.c:0:5
+	add	r0, sp, #12
+.Ltmp4:
+	.loc	4 26 11 is_stmt 1       @ ../MYx/Core/Src/MyDev_LED.c:26:11
+	ldrb	r0, [r0]
+	.loc	4 26 3 is_stmt 0        @ ../MYx/Core/Src/MyDev_LED.c:26:3
+	cmp	r0, #7
+	str	r0, [sp, #4]            @ 4-byte Spill
+	bhi	.LBB2_12
+@ %bb.2:
+	.loc	4 0 3                   @ ../MYx/Core/Src/MyDev_LED.c:0:3
+	ldr	r0, [sp, #4]            @ 4-byte Reload
+	lsls	r1, r0, #2
+	adr	r2, .LJTI2_0
+	adds	r1, r2, r1
+	mov	pc, r1
+@ %bb.3:
+	.p2align	2
+.LJTI2_0:
+	b.w	.LBB2_4
+	b.w	.LBB2_5
+	b.w	.LBB2_6
+	b.w	.LBB2_8
+	b.w	.LBB2_7
+	b.w	.LBB2_9
+	b.w	.LBB2_10
+	b.w	.LBB2_11
+.LBB2_4:
+.Ltmp5:
+	.loc	4 32 4 is_stmt 1        @ ../MYx/Core/Src/MyDev_LED.c:32:4
+	b	.LBB2_13
+.LBB2_5:
+	.loc	4 38 4                  @ ../MYx/Core/Src/MyDev_LED.c:38:4
+	b	.LBB2_13
+.LBB2_6:
+	.loc	4 44 4                  @ ../MYx/Core/Src/MyDev_LED.c:44:4
+	b	.LBB2_13
+.LBB2_7:
+	.loc	4 50 4                  @ ../MYx/Core/Src/MyDev_LED.c:50:4
+	b	.LBB2_13
+.LBB2_8:
+	.loc	4 56 4                  @ ../MYx/Core/Src/MyDev_LED.c:56:4
+	b	.LBB2_13
+.LBB2_9:
+	.loc	4 62 4                  @ ../MYx/Core/Src/MyDev_LED.c:62:4
+	b	.LBB2_13
+.LBB2_10:
+	.loc	4 68 4                  @ ../MYx/Core/Src/MyDev_LED.c:68:4
+	b	.LBB2_13
+.LBB2_11:
+	b	.LBB2_12
+.LBB2_12:
+	.loc	4 72 4                  @ ../MYx/Core/Src/MyDev_LED.c:72:4
+	bl	MyLED_Off
+	.loc	4 73 4                  @ ../MYx/Core/Src/MyDev_LED.c:73:4
+	b	.LBB2_13
+.LBB2_13:
+	.loc	4 74 3                  @ ../MYx/Core/Src/MyDev_LED.c:74:3
+	b	.LBB2_15
+.Ltmp6:
+.LBB2_14:
+	.loc	4 76 3                  @ ../MYx/Core/Src/MyDev_LED.c:76:3
+	bl	MyLED_Off
+	b	.LBB2_15
+.Ltmp7:
+.LBB2_15:
+	.loc	4 77 1                  @ ../MYx/Core/Src/MyDev_LED.c:77:1
+	add	sp, #16
+	pop	{r4, pc}
+.Ltmp8:
+.Lfunc_end2:
+	.size	MyLED_OnOff, .Lfunc_end2-MyLED_OnOff
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
 	.hidden	MyLED_Green             @ -- Begin function MyLED_Green
 	.globl	MyLED_Green
 	.p2align	1
@@ -27,11 +183,9 @@
 	.code	16                      @ @MyLED_Green
 	.thumb_func
 MyLED_Green:
-.Lfunc_begin0:
-	.file	3 "C:\\Work\\Keil WorkSpace\\Furbo\\Keil" "../MYx/Core/Src/MyDev_LED.c"
-	.loc	3 12 0                  @ ../MYx/Core/Src/MyDev_LED.c:12:0
+.Lfunc_begin3:
+	.loc	4 80 0                  @ ../MYx/Core/Src/MyDev_LED.c:80:0
 	.fnstart
-	.cfi_sections .debug_frame
 	.cfi_startproc
 @ %bb.0:
 	.save	{r7, lr}
@@ -45,40 +199,125 @@ MyLED_Green:
 	mov	r1, r0
 	add	r2, sp, #4
 	strb	r0, [r2]
-.Ltmp0:
-	.loc	3 13 6 prologue_end     @ ../MYx/Core/Src/MyDev_LED.c:13:6
-	ldrb	r0, [r2]
-.Ltmp1:
-	.loc	3 13 6 is_stmt 0        @ ../MYx/Core/Src/MyDev_LED.c:13:6
-	cmp	r0, #0
-	bne	.LBB0_2
-	b	.LBB0_1
-.LBB0_1:
-	.loc	3 0 6                   @ ../MYx/Core/Src/MyDev_LED.c:0:6
-	movs	r1, #5
+.Ltmp9:
+	.loc	4 81 39 prologue_end    @ ../MYx/Core/Src/MyDev_LED.c:81:39
+	ldrb	r2, [r2]
 	movs	r0, #0
-.Ltmp2:
-	.loc	3 14 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_LED.c:14:3
-	str	r0, [sp]                @ 4-byte Spill
-	ldr	r2, [sp]                @ 4-byte Reload
+	movs	r3, #5
+	.loc	4 81 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_LED.c:81:2
+	str	r1, [sp]                @ 4-byte Spill
+	mov	r1, r3
 	bl	MyGPIO_WritePin
-	b	.LBB0_3
-.LBB0_2:
-	.loc	3 0 3 is_stmt 0         @ ../MYx/Core/Src/MyDev_LED.c:0:3
-	movs	r0, #0
-	movs	r1, #5
-	movs	r2, #1
-	.loc	3 16 3 is_stmt 1        @ ../MYx/Core/Src/MyDev_LED.c:16:3
-	bl	MyGPIO_WritePin
-	b	.LBB0_3
-.Ltmp3:
-.LBB0_3:
-	.loc	3 17 1                  @ ../MYx/Core/Src/MyDev_LED.c:17:1
+	.loc	4 82 1 is_stmt 1        @ ../MYx/Core/Src/MyDev_LED.c:82:1
 	add	sp, #8
 	pop	{r7, pc}
-.Ltmp4:
-.Lfunc_end0:
-	.size	MyLED_Green, .Lfunc_end0-MyLED_Green
+.Ltmp10:
+.Lfunc_end3:
+	.size	MyLED_Green, .Lfunc_end3-MyLED_Green
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyLED_CLI_On            @ -- Begin function MyLED_CLI_On
+	.globl	MyLED_CLI_On
+	.p2align	1
+	.type	MyLED_CLI_On,%function
+	.code	16                      @ @MyLED_CLI_On
+	.thumb_func
+MyLED_CLI_On:
+.Lfunc_begin4:
+	.loc	4 89 0                  @ ../MYx/Core/Src/MyDev_LED.c:89:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	movs	r0, #0
+.Ltmp11:
+	.loc	4 92 20 prologue_end    @ ../MYx/Core/Src/MyDev_LED.c:92:20
+	bl	MyCLI_UnsignedCommandArgument
+	add	r1, sp, #4
+	.loc	4 92 8 is_stmt 0        @ ../MYx/Core/Src/MyDev_LED.c:92:8
+	strb	r0, [r1]
+	.loc	4 93 14 is_stmt 1       @ ../MYx/Core/Src/MyDev_LED.c:93:14
+	ldrb	r0, [r1]
+	movs	r1, #1
+	.loc	4 93 2 is_stmt 0        @ ../MYx/Core/Src/MyDev_LED.c:93:2
+	bl	MyLED_OnOff
+	.loc	4 94 1 is_stmt 1        @ ../MYx/Core/Src/MyDev_LED.c:94:1
+	add	sp, #8
+	pop	{r7, pc}
+.Ltmp12:
+.Lfunc_end4:
+	.size	MyLED_CLI_On, .Lfunc_end4-MyLED_CLI_On
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyLED_CLI_SetBrightness @ -- Begin function MyLED_CLI_SetBrightness
+	.globl	MyLED_CLI_SetBrightness
+	.p2align	1
+	.type	MyLED_CLI_SetBrightness,%function
+	.code	16                      @ @MyLED_CLI_SetBrightness
+	.thumb_func
+MyLED_CLI_SetBrightness:
+.Lfunc_begin5:
+	.loc	4 97 0                  @ ../MYx/Core/Src/MyDev_LED.c:97:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.save	{r7, lr}
+	push	{r7, lr}
+	.cfi_def_cfa_offset 8
+	.cfi_offset lr, -4
+	.cfi_offset r7, -8
+	.pad	#8
+	sub	sp, #8
+	.cfi_def_cfa_offset 16
+	movs	r0, #0
+.Ltmp13:
+	.loc	4 99 25 prologue_end    @ ../MYx/Core/Src/MyDev_LED.c:99:25
+	bl	MyCLI_UnsignedCommandArgument
+	add	r1, sp, #4
+	.loc	4 99 13 is_stmt 0       @ ../MYx/Core/Src/MyDev_LED.c:99:13
+	strh	r0, [r1]
+	.loc	4 100 27 is_stmt 1      @ ../MYx/Core/Src/MyDev_LED.c:100:27
+	ldrh	r0, [r1]
+	.loc	4 100 2 is_stmt 0       @ ../MYx/Core/Src/MyDev_LED.c:100:2
+	bl	MyLED_KTD2027_SetCurrent
+	.loc	4 101 1 is_stmt 1       @ ../MYx/Core/Src/MyDev_LED.c:101:1
+	add	sp, #8
+	pop	{r7, pc}
+.Ltmp14:
+.Lfunc_end5:
+	.size	MyLED_CLI_SetBrightness, .Lfunc_end5-MyLED_CLI_SetBrightness
+	.cfi_endproc
+	.cantunwind
+	.fnend
+                                        @ -- End function
+	.hidden	MyLED_CLI_Test          @ -- Begin function MyLED_CLI_Test
+	.globl	MyLED_CLI_Test
+	.p2align	1
+	.type	MyLED_CLI_Test,%function
+	.code	16                      @ @MyLED_CLI_Test
+	.thumb_func
+MyLED_CLI_Test:
+.Lfunc_begin6:
+	.loc	4 104 0                 @ ../MYx/Core/Src/MyDev_LED.c:104:0
+	.fnstart
+	.cfi_startproc
+@ %bb.0:
+	.loc	4 128 1 prologue_end    @ ../MYx/Core/Src/MyDev_LED.c:128:1
+	bx	lr
+.Ltmp15:
+.Lfunc_end6:
+	.size	MyLED_CLI_Test, .Lfunc_end6-MyLED_CLI_Test
 	.cfi_endproc
 	.cantunwind
 	.fnend
@@ -93,65 +332,99 @@ MyLED_Green:
 .Linfo_string3:
 	.asciz	"unsigned char"         @ string offset=117
 .Linfo_string4:
-	.asciz	"LED_Off"               @ string offset=131
+	.asciz	"LED_White"             @ string offset=131
 .Linfo_string5:
-	.asciz	"LED_On"                @ string offset=139
+	.asciz	"LED_Red"               @ string offset=141
 .Linfo_string6:
-	.asciz	"GPIO_PA"               @ string offset=146
+	.asciz	"LED_Green"             @ string offset=149
 .Linfo_string7:
-	.asciz	"GPIO_PB"               @ string offset=154
+	.asciz	"LED_Blue"              @ string offset=159
 .Linfo_string8:
-	.asciz	"GPIO_PC"               @ string offset=162
+	.asciz	"LED_Yellow"            @ string offset=168
 .Linfo_string9:
-	.asciz	"GPIO_PD"               @ string offset=170
+	.asciz	"LED_Purple"            @ string offset=179
 .Linfo_string10:
-	.asciz	"GPIO_Num_Port"         @ string offset=178
+	.asciz	"LED_BlueGreen"         @ string offset=190
 .Linfo_string11:
-	.asciz	"GPIO_Pin0"             @ string offset=192
+	.asciz	"LED_Color_Num"         @ string offset=204
 .Linfo_string12:
-	.asciz	"GPIO_Pin1"             @ string offset=202
+	.asciz	"LED_Off"               @ string offset=218
 .Linfo_string13:
-	.asciz	"GPIO_Pin2"             @ string offset=212
+	.asciz	"LED_On"                @ string offset=226
 .Linfo_string14:
-	.asciz	"GPIO_Pin3"             @ string offset=222
+	.asciz	"GPIO_PA"               @ string offset=233
 .Linfo_string15:
-	.asciz	"GPIO_Pin4"             @ string offset=232
+	.asciz	"GPIO_PB"               @ string offset=241
 .Linfo_string16:
-	.asciz	"GPIO_Pin5"             @ string offset=242
+	.asciz	"GPIO_PC"               @ string offset=249
 .Linfo_string17:
-	.asciz	"GPIO_Pin6"             @ string offset=252
+	.asciz	"GPIO_PD"               @ string offset=257
 .Linfo_string18:
-	.asciz	"GPIO_Pin7"             @ string offset=262
+	.asciz	"GPIO_Num_Port"         @ string offset=265
 .Linfo_string19:
-	.asciz	"GPIO_Pin8"             @ string offset=272
+	.asciz	"GPIO_Pin0"             @ string offset=279
 .Linfo_string20:
-	.asciz	"GPIO_Pin9"             @ string offset=282
+	.asciz	"GPIO_Pin1"             @ string offset=289
 .Linfo_string21:
-	.asciz	"GPIO_Pin10"            @ string offset=292
+	.asciz	"GPIO_Pin2"             @ string offset=299
 .Linfo_string22:
-	.asciz	"GPIO_Pin11"            @ string offset=303
+	.asciz	"GPIO_Pin3"             @ string offset=309
 .Linfo_string23:
-	.asciz	"GPIO_Pin12"            @ string offset=314
+	.asciz	"GPIO_Pin4"             @ string offset=319
 .Linfo_string24:
-	.asciz	"GPIO_Pin13"            @ string offset=325
+	.asciz	"GPIO_Pin5"             @ string offset=329
 .Linfo_string25:
-	.asciz	"GPIO_Pin14"            @ string offset=336
+	.asciz	"GPIO_Pin6"             @ string offset=339
 .Linfo_string26:
-	.asciz	"GPIO_Pin15"            @ string offset=347
+	.asciz	"GPIO_Pin7"             @ string offset=349
 .Linfo_string27:
-	.asciz	"GPIO_PinALL"           @ string offset=358
+	.asciz	"GPIO_Pin8"             @ string offset=359
 .Linfo_string28:
-	.asciz	"GPIO_Num_Pin"          @ string offset=370
+	.asciz	"GPIO_Pin9"             @ string offset=369
 .Linfo_string29:
-	.asciz	"GPIOPIN_RESET"         @ string offset=383
+	.asciz	"GPIO_Pin10"            @ string offset=379
 .Linfo_string30:
-	.asciz	"GPIOPIN_SET"           @ string offset=397
+	.asciz	"GPIO_Pin11"            @ string offset=390
 .Linfo_string31:
-	.asciz	"MyLED_Green"           @ string offset=409
+	.asciz	"GPIO_Pin12"            @ string offset=401
 .Linfo_string32:
-	.asciz	"OnOff"                 @ string offset=421
+	.asciz	"GPIO_Pin13"            @ string offset=412
 .Linfo_string33:
-	.asciz	"LEDOnOff"              @ string offset=427
+	.asciz	"GPIO_Pin14"            @ string offset=423
+.Linfo_string34:
+	.asciz	"GPIO_Pin15"            @ string offset=434
+.Linfo_string35:
+	.asciz	"GPIO_PinALL"           @ string offset=445
+.Linfo_string36:
+	.asciz	"GPIO_Num_Pin"          @ string offset=457
+.Linfo_string37:
+	.asciz	"LEDColor"              @ string offset=470
+.Linfo_string38:
+	.asciz	"unsigned short"        @ string offset=479
+.Linfo_string39:
+	.asciz	"uint16_t"              @ string offset=494
+.Linfo_string40:
+	.asciz	"MyLED_Init"            @ string offset=503
+.Linfo_string41:
+	.asciz	"MyLED_Off"             @ string offset=514
+.Linfo_string42:
+	.asciz	"MyLED_OnOff"           @ string offset=524
+.Linfo_string43:
+	.asciz	"MyLED_Green"           @ string offset=536
+.Linfo_string44:
+	.asciz	"MyLED_CLI_On"          @ string offset=548
+.Linfo_string45:
+	.asciz	"MyLED_CLI_SetBrightness" @ string offset=561
+.Linfo_string46:
+	.asciz	"MyLED_CLI_Test"        @ string offset=585
+.Linfo_string47:
+	.asciz	"Color"                 @ string offset=600
+.Linfo_string48:
+	.asciz	"OnOff"                 @ string offset=606
+.Linfo_string49:
+	.asciz	"LEDOnOff"              @ string offset=612
+.Linfo_string50:
+	.asciz	"Brightness"            @ string offset=621
 	.section	.debug_abbrev,"",%progbits
 	.byte	1                       @ Abbreviation Code
 	.byte	17                      @ DW_TAG_compile_unit
@@ -206,6 +479,38 @@ MyLED_Green:
 	.byte	0                       @ EOM(1)
 	.byte	0                       @ EOM(2)
 	.byte	5                       @ Abbreviation Code
+	.byte	22                      @ DW_TAG_typedef
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	6                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	7                       @ Abbreviation Code
 	.byte	46                      @ DW_TAG_subprogram
 	.byte	1                       @ DW_CHILDREN_yes
 	.byte	17                      @ DW_AT_low_pc
@@ -226,7 +531,7 @@ MyLED_Green:
 	.byte	12                      @ DW_FORM_flag
 	.byte	0                       @ EOM(1)
 	.byte	0                       @ EOM(2)
-	.byte	6                       @ Abbreviation Code
+	.byte	8                       @ Abbreviation Code
 	.byte	5                       @ DW_TAG_formal_parameter
 	.byte	0                       @ DW_CHILDREN_no
 	.byte	2                       @ DW_AT_location
@@ -241,17 +546,38 @@ MyLED_Green:
 	.byte	19                      @ DW_FORM_ref4
 	.byte	0                       @ EOM(1)
 	.byte	0                       @ EOM(2)
-	.byte	7                       @ Abbreviation Code
-	.byte	22                      @ DW_TAG_typedef
-	.byte	0                       @ DW_CHILDREN_no
-	.byte	73                      @ DW_AT_type
-	.byte	19                      @ DW_FORM_ref4
+	.byte	9                       @ Abbreviation Code
+	.byte	46                      @ DW_TAG_subprogram
+	.byte	1                       @ DW_CHILDREN_yes
+	.byte	17                      @ DW_AT_low_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	18                      @ DW_AT_high_pc
+	.byte	1                       @ DW_FORM_addr
+	.byte	64                      @ DW_AT_frame_base
+	.byte	10                      @ DW_FORM_block1
 	.byte	3                       @ DW_AT_name
 	.byte	14                      @ DW_FORM_strp
 	.byte	58                      @ DW_AT_decl_file
 	.byte	11                      @ DW_FORM_data1
 	.byte	59                      @ DW_AT_decl_line
 	.byte	11                      @ DW_FORM_data1
+	.byte	63                      @ DW_AT_external
+	.byte	12                      @ DW_FORM_flag
+	.byte	0                       @ EOM(1)
+	.byte	0                       @ EOM(2)
+	.byte	10                      @ Abbreviation Code
+	.byte	52                      @ DW_TAG_variable
+	.byte	0                       @ DW_CHILDREN_no
+	.byte	2                       @ DW_AT_location
+	.byte	10                      @ DW_FORM_block1
+	.byte	3                       @ DW_AT_name
+	.byte	14                      @ DW_FORM_strp
+	.byte	58                      @ DW_AT_decl_file
+	.byte	11                      @ DW_FORM_data1
+	.byte	59                      @ DW_AT_decl_line
+	.byte	11                      @ DW_FORM_data1
+	.byte	73                      @ DW_AT_type
+	.byte	19                      @ DW_FORM_ref4
 	.byte	0                       @ EOM(1)
 	.byte	0                       @ EOM(2)
 	.byte	0                       @ EOM(3)
@@ -262,145 +588,267 @@ MyLED_Green:
 	.short	3                       @ DWARF version number
 	.long	.debug_abbrev           @ Offset Into Abbrev. Section
 	.byte	4                       @ Address Size (in bytes)
-	.byte	1                       @ Abbrev [1] 0xb:0x116 DW_TAG_compile_unit
+	.byte	1                       @ Abbrev [1] 0xb:0x1ff DW_TAG_compile_unit
 	.long	.Linfo_string0          @ DW_AT_producer
 	.short	1                       @ DW_AT_language
 	.long	.Linfo_string1          @ DW_AT_name
 	.long	.Lline_table_start0     @ DW_AT_stmt_list
 	.long	.Linfo_string2          @ DW_AT_comp_dir
 	.long	.Lfunc_begin0           @ DW_AT_low_pc
-	.long	.Lfunc_end0             @ DW_AT_high_pc
-	.byte	2                       @ Abbrev [2] 0x26:0x15 DW_TAG_enumeration_type
-	.long	59                      @ DW_AT_type
+	.long	.Lfunc_end6             @ DW_AT_high_pc
+	.byte	2                       @ Abbrev [2] 0x26:0x39 DW_TAG_enumeration_type
+	.long	95                      @ DW_AT_type
 	.byte	1                       @ DW_AT_byte_size
 	.byte	1                       @ DW_AT_decl_file
-	.byte	15                      @ DW_AT_decl_line
+	.byte	22                      @ DW_AT_decl_line
 	.byte	3                       @ Abbrev [3] 0x2e:0x6 DW_TAG_enumerator
 	.long	.Linfo_string4          @ DW_AT_name
 	.byte	0                       @ DW_AT_const_value
 	.byte	3                       @ Abbrev [3] 0x34:0x6 DW_TAG_enumerator
 	.long	.Linfo_string5          @ DW_AT_name
 	.byte	1                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x3a:0x6 DW_TAG_enumerator
+	.long	.Linfo_string6          @ DW_AT_name
+	.byte	2                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x40:0x6 DW_TAG_enumerator
+	.long	.Linfo_string7          @ DW_AT_name
+	.byte	3                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x46:0x6 DW_TAG_enumerator
+	.long	.Linfo_string8          @ DW_AT_name
+	.byte	4                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x4c:0x6 DW_TAG_enumerator
+	.long	.Linfo_string9          @ DW_AT_name
+	.byte	5                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x52:0x6 DW_TAG_enumerator
+	.long	.Linfo_string10         @ DW_AT_name
+	.byte	6                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x58:0x6 DW_TAG_enumerator
+	.long	.Linfo_string11         @ DW_AT_name
+	.byte	7                       @ DW_AT_const_value
 	.byte	0                       @ End Of Children Mark
-	.byte	4                       @ Abbrev [4] 0x3b:0x7 DW_TAG_base_type
+	.byte	4                       @ Abbrev [4] 0x5f:0x7 DW_TAG_base_type
 	.long	.Linfo_string3          @ DW_AT_name
 	.byte	8                       @ DW_AT_encoding
 	.byte	1                       @ DW_AT_byte_size
-	.byte	2                       @ Abbrev [2] 0x42:0x27 DW_TAG_enumeration_type
-	.long	59                      @ DW_AT_type
+	.byte	2                       @ Abbrev [2] 0x66:0x15 DW_TAG_enumeration_type
+	.long	95                      @ DW_AT_type
+	.byte	1                       @ DW_AT_byte_size
+	.byte	1                       @ DW_AT_decl_file
+	.byte	15                      @ DW_AT_decl_line
+	.byte	3                       @ Abbrev [3] 0x6e:0x6 DW_TAG_enumerator
+	.long	.Linfo_string12         @ DW_AT_name
+	.byte	0                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x74:0x6 DW_TAG_enumerator
+	.long	.Linfo_string13         @ DW_AT_name
+	.byte	1                       @ DW_AT_const_value
+	.byte	0                       @ End Of Children Mark
+	.byte	2                       @ Abbrev [2] 0x7b:0x27 DW_TAG_enumeration_type
+	.long	95                      @ DW_AT_type
 	.byte	1                       @ DW_AT_byte_size
 	.byte	2                       @ DW_AT_decl_file
 	.byte	13                      @ DW_AT_decl_line
-	.byte	3                       @ Abbrev [3] 0x4a:0x6 DW_TAG_enumerator
-	.long	.Linfo_string6          @ DW_AT_name
+	.byte	3                       @ Abbrev [3] 0x83:0x6 DW_TAG_enumerator
+	.long	.Linfo_string14         @ DW_AT_name
 	.byte	0                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x50:0x6 DW_TAG_enumerator
-	.long	.Linfo_string7          @ DW_AT_name
+	.byte	3                       @ Abbrev [3] 0x89:0x6 DW_TAG_enumerator
+	.long	.Linfo_string15         @ DW_AT_name
 	.byte	1                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x56:0x6 DW_TAG_enumerator
-	.long	.Linfo_string8          @ DW_AT_name
+	.byte	3                       @ Abbrev [3] 0x8f:0x6 DW_TAG_enumerator
+	.long	.Linfo_string16         @ DW_AT_name
 	.byte	2                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x5c:0x6 DW_TAG_enumerator
-	.long	.Linfo_string9          @ DW_AT_name
+	.byte	3                       @ Abbrev [3] 0x95:0x6 DW_TAG_enumerator
+	.long	.Linfo_string17         @ DW_AT_name
 	.byte	3                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x62:0x6 DW_TAG_enumerator
-	.long	.Linfo_string10         @ DW_AT_name
+	.byte	3                       @ Abbrev [3] 0x9b:0x6 DW_TAG_enumerator
+	.long	.Linfo_string18         @ DW_AT_name
 	.byte	4                       @ DW_AT_const_value
 	.byte	0                       @ End Of Children Mark
-	.byte	2                       @ Abbrev [2] 0x69:0x75 DW_TAG_enumeration_type
-	.long	59                      @ DW_AT_type
+	.byte	2                       @ Abbrev [2] 0xa2:0x75 DW_TAG_enumeration_type
+	.long	95                      @ DW_AT_type
 	.byte	1                       @ DW_AT_byte_size
 	.byte	2                       @ DW_AT_decl_file
 	.byte	22                      @ DW_AT_decl_line
-	.byte	3                       @ Abbrev [3] 0x71:0x6 DW_TAG_enumerator
-	.long	.Linfo_string11         @ DW_AT_name
-	.byte	0                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x77:0x6 DW_TAG_enumerator
-	.long	.Linfo_string12         @ DW_AT_name
-	.byte	1                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x7d:0x6 DW_TAG_enumerator
-	.long	.Linfo_string13         @ DW_AT_name
-	.byte	2                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x83:0x6 DW_TAG_enumerator
-	.long	.Linfo_string14         @ DW_AT_name
-	.byte	3                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x89:0x6 DW_TAG_enumerator
-	.long	.Linfo_string15         @ DW_AT_name
-	.byte	4                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x8f:0x6 DW_TAG_enumerator
-	.long	.Linfo_string16         @ DW_AT_name
-	.byte	5                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x95:0x6 DW_TAG_enumerator
-	.long	.Linfo_string17         @ DW_AT_name
-	.byte	6                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0x9b:0x6 DW_TAG_enumerator
-	.long	.Linfo_string18         @ DW_AT_name
-	.byte	7                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xa1:0x6 DW_TAG_enumerator
+	.byte	3                       @ Abbrev [3] 0xaa:0x6 DW_TAG_enumerator
 	.long	.Linfo_string19         @ DW_AT_name
-	.byte	8                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xa7:0x6 DW_TAG_enumerator
+	.byte	0                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xb0:0x6 DW_TAG_enumerator
 	.long	.Linfo_string20         @ DW_AT_name
-	.byte	9                       @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xad:0x6 DW_TAG_enumerator
+	.byte	1                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xb6:0x6 DW_TAG_enumerator
 	.long	.Linfo_string21         @ DW_AT_name
-	.byte	10                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xb3:0x6 DW_TAG_enumerator
+	.byte	2                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xbc:0x6 DW_TAG_enumerator
 	.long	.Linfo_string22         @ DW_AT_name
-	.byte	11                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xb9:0x6 DW_TAG_enumerator
+	.byte	3                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xc2:0x6 DW_TAG_enumerator
 	.long	.Linfo_string23         @ DW_AT_name
-	.byte	12                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xbf:0x6 DW_TAG_enumerator
+	.byte	4                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xc8:0x6 DW_TAG_enumerator
 	.long	.Linfo_string24         @ DW_AT_name
-	.byte	13                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xc5:0x6 DW_TAG_enumerator
+	.byte	5                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xce:0x6 DW_TAG_enumerator
 	.long	.Linfo_string25         @ DW_AT_name
-	.byte	14                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xcb:0x6 DW_TAG_enumerator
+	.byte	6                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xd4:0x6 DW_TAG_enumerator
 	.long	.Linfo_string26         @ DW_AT_name
-	.byte	15                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xd1:0x6 DW_TAG_enumerator
+	.byte	7                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xda:0x6 DW_TAG_enumerator
 	.long	.Linfo_string27         @ DW_AT_name
-	.byte	16                      @ DW_AT_const_value
-	.byte	3                       @ Abbrev [3] 0xd7:0x6 DW_TAG_enumerator
+	.byte	8                       @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xe0:0x6 DW_TAG_enumerator
 	.long	.Linfo_string28         @ DW_AT_name
-	.byte	17                      @ DW_AT_const_value
-	.byte	0                       @ End Of Children Mark
-	.byte	2                       @ Abbrev [2] 0xde:0x15 DW_TAG_enumeration_type
-	.long	59                      @ DW_AT_type
-	.byte	1                       @ DW_AT_byte_size
-	.byte	2                       @ DW_AT_decl_file
-	.byte	45                      @ DW_AT_decl_line
+	.byte	9                       @ DW_AT_const_value
 	.byte	3                       @ Abbrev [3] 0xe6:0x6 DW_TAG_enumerator
 	.long	.Linfo_string29         @ DW_AT_name
-	.byte	0                       @ DW_AT_const_value
+	.byte	10                      @ DW_AT_const_value
 	.byte	3                       @ Abbrev [3] 0xec:0x6 DW_TAG_enumerator
 	.long	.Linfo_string30         @ DW_AT_name
-	.byte	1                       @ DW_AT_const_value
+	.byte	11                      @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xf2:0x6 DW_TAG_enumerator
+	.long	.Linfo_string31         @ DW_AT_name
+	.byte	12                      @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xf8:0x6 DW_TAG_enumerator
+	.long	.Linfo_string32         @ DW_AT_name
+	.byte	13                      @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0xfe:0x6 DW_TAG_enumerator
+	.long	.Linfo_string33         @ DW_AT_name
+	.byte	14                      @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x104:0x6 DW_TAG_enumerator
+	.long	.Linfo_string34         @ DW_AT_name
+	.byte	15                      @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x10a:0x6 DW_TAG_enumerator
+	.long	.Linfo_string35         @ DW_AT_name
+	.byte	16                      @ DW_AT_const_value
+	.byte	3                       @ Abbrev [3] 0x110:0x6 DW_TAG_enumerator
+	.long	.Linfo_string36         @ DW_AT_name
+	.byte	17                      @ DW_AT_const_value
 	.byte	0                       @ End Of Children Mark
-	.byte	5                       @ Abbrev [5] 0xf3:0x22 DW_TAG_subprogram
+	.byte	5                       @ Abbrev [5] 0x117:0xb DW_TAG_typedef
+	.long	38                      @ DW_AT_type
+	.long	.Linfo_string37         @ DW_AT_name
+	.byte	1                       @ DW_AT_decl_file
+	.byte	32                      @ DW_AT_decl_line
+	.byte	5                       @ Abbrev [5] 0x122:0xb DW_TAG_typedef
+	.long	301                     @ DW_AT_type
+	.long	.Linfo_string39         @ DW_AT_name
+	.byte	3                       @ DW_AT_decl_file
+	.byte	63                      @ DW_AT_decl_line
+	.byte	4                       @ Abbrev [4] 0x12d:0x7 DW_TAG_base_type
+	.long	.Linfo_string38         @ DW_AT_name
+	.byte	7                       @ DW_AT_encoding
+	.byte	2                       @ DW_AT_byte_size
+	.byte	6                       @ Abbrev [6] 0x134:0x12 DW_TAG_subprogram
 	.long	.Lfunc_begin0           @ DW_AT_low_pc
 	.long	.Lfunc_end0             @ DW_AT_high_pc
 	.byte	1                       @ DW_AT_frame_base
 	.byte	93
-	.long	.Linfo_string31         @ DW_AT_name
-	.byte	3                       @ DW_AT_decl_file
-	.byte	11                      @ DW_AT_decl_line
+	.long	.Linfo_string40         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	10                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	6                       @ Abbrev [6] 0x146:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin1           @ DW_AT_low_pc
+	.long	.Lfunc_end1             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string41         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	17                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	7                       @ Abbrev [7] 0x158:0x30 DW_TAG_subprogram
+	.long	.Lfunc_begin2           @ DW_AT_low_pc
+	.long	.Lfunc_end2             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string42         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	23                      @ DW_AT_decl_line
 	.byte	1                       @ DW_AT_prototyped
 	.byte	1                       @ DW_AT_external
-	.byte	6                       @ Abbrev [6] 0x106:0xe DW_TAG_formal_parameter
+	.byte	8                       @ Abbrev [8] 0x16b:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	12
+	.long	.Linfo_string47         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	23                      @ DW_AT_decl_line
+	.long	279                     @ DW_AT_type
+	.byte	8                       @ Abbrev [8] 0x179:0xe DW_TAG_formal_parameter
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	8
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	23                      @ DW_AT_decl_line
+	.long	510                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	7                       @ Abbrev [7] 0x188:0x22 DW_TAG_subprogram
+	.long	.Lfunc_begin3           @ DW_AT_low_pc
+	.long	.Lfunc_end3             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string43         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	79                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_prototyped
+	.byte	1                       @ DW_AT_external
+	.byte	8                       @ Abbrev [8] 0x19b:0xe DW_TAG_formal_parameter
 	.byte	2                       @ DW_AT_location
 	.byte	145
 	.byte	4
-	.long	.Linfo_string32         @ DW_AT_name
-	.byte	3                       @ DW_AT_decl_file
-	.byte	11                      @ DW_AT_decl_line
-	.long	277                     @ DW_AT_type
+	.long	.Linfo_string48         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	79                      @ DW_AT_decl_line
+	.long	510                     @ DW_AT_type
 	.byte	0                       @ End Of Children Mark
-	.byte	7                       @ Abbrev [7] 0x115:0xb DW_TAG_typedef
-	.long	38                      @ DW_AT_type
-	.long	.Linfo_string33         @ DW_AT_name
+	.byte	9                       @ Abbrev [9] 0x1aa:0x21 DW_TAG_subprogram
+	.long	.Lfunc_begin4           @ DW_AT_low_pc
+	.long	.Lfunc_end4             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string44         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	88                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	10                      @ Abbrev [10] 0x1bc:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string47         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	90                      @ DW_AT_decl_line
+	.long	279                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	9                       @ Abbrev [9] 0x1cb:0x21 DW_TAG_subprogram
+	.long	.Lfunc_begin5           @ DW_AT_low_pc
+	.long	.Lfunc_end5             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string45         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	96                      @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	10                      @ Abbrev [10] 0x1dd:0xe DW_TAG_variable
+	.byte	2                       @ DW_AT_location
+	.byte	145
+	.byte	4
+	.long	.Linfo_string50         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	98                      @ DW_AT_decl_line
+	.long	290                     @ DW_AT_type
+	.byte	0                       @ End Of Children Mark
+	.byte	6                       @ Abbrev [6] 0x1ec:0x12 DW_TAG_subprogram
+	.long	.Lfunc_begin6           @ DW_AT_low_pc
+	.long	.Lfunc_end6             @ DW_AT_high_pc
+	.byte	1                       @ DW_AT_frame_base
+	.byte	93
+	.long	.Linfo_string46         @ DW_AT_name
+	.byte	4                       @ DW_AT_decl_file
+	.byte	103                     @ DW_AT_decl_line
+	.byte	1                       @ DW_AT_external
+	.byte	5                       @ Abbrev [5] 0x1fe:0xb DW_TAG_typedef
+	.long	102                     @ DW_AT_type
+	.long	.Linfo_string49         @ DW_AT_name
 	.byte	1                       @ DW_AT_decl_file
 	.byte	19                      @ DW_AT_decl_line
 	.byte	0                       @ End Of Children Mark

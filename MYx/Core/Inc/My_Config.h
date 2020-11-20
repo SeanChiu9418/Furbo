@@ -8,7 +8,7 @@
 #ifndef INC_MY_CONFIG_H_
 #define INC_MY_CONFIG_H_
 
-#define FW_VERSION      "0.0.3 "
+#define FW_VERSION      "0.0.4 "
 
 /* ########################## Project Selection ############################## */
 #define Samplisafe
@@ -23,7 +23,7 @@
 #define MCU_GPIO
 #define MCU_SYS	// MCU Internal SYS Function like Delay, Clock...
 #define MCU_UART
-//#define MCU_I2C
+#define MCU_I2C
 //#define MCU_SPI
 #define MCU_Timer
 #define MCU_PWM
@@ -32,6 +32,7 @@
 //#define Dev_PIR_1598
 //#define Dev_SubG_S2LP
 //#define Dev_LED
+//#define Dev_LED_KTD2027
 #define Dev_Motor
 #define Dev_MotorEncoder
 //#define Dev_MIC_VM3011
