@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "My_Config.h"
+#include "MyFunc_Inc.h"
 #include "MyFunc_CLI.h"
 #include "MyFunc_CLI_Commands.h"
 
@@ -44,6 +45,9 @@ CommandEntry CommandTable[] = {
   LED_CLI_TABLE,
 #endif
   
+#ifdef MyFunc_Tossing
+  Tossing_CLI_TABLE,
+#endif
   { NULL, NULL, NULL, NULL } // NULL action makes this a terminator
 };
 

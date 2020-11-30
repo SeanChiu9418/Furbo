@@ -48,6 +48,33 @@ typedef enum
   GPIOPIN_SET
 }GPIOPin_State;
 	
+typedef enum
+{
+	GPIO_INT0 = 0,
+	GPIO_INT1,
+	GPIO_INT2,
+	GPIO_Num_INT
+}GPIO_INT_Index;
+
+typedef enum
+{
+	INT_RISING = 0,
+	INT_FALLING,
+	INT_BOTH_EDGE ,
+	INT_HIGH,
+	INT_LOW,
+	INT_Num_Type
+}GPIO_INT_Type;
+	
+
+struct GPIO_INT_DEF
+{
+	GPIO_Port_Index Port;
+	GPIO_Pin_Index Pin;
+	GPIO_INT_Type Type;
+};
+
+
 /* ########################## Device Pin Define List ############################## */
 
 // Port/Group_A
@@ -67,18 +94,20 @@ typedef enum
 #define UART1_TX_Pin 	GPIO_Pin9
 #define UART1_RX_Port 	GPIO_PA
 #define UART1_RX_Pin 	GPIO_Pin10
-#define I2C_SCL_Port 	GPIO_PA
-#define I2C_SCL_Pin 	GPIO_Pin11
+#define DCMT_EN_Port 	GPIO_PA		// For DC Motor Enable 
+#define DCMT_EN_Pin 	GPIO_Pin11	
+//#define I2C_SCL_Port 	GPIO_PA
+//#define I2C_SCL_Pin 	GPIO_Pin11
 #define I2C_SDA_Port 	GPIO_PA
 #define I2C_SDA_Pin 	GPIO_Pin12
 #define WIFI_ENB_Port 	GPIO_PA		//Wifi Enable
 #define WIFI_ENB_Pin 	GPIO_Pin15
 
 // Port/Group_B
-#define PWM0_CH4_Port 	GPIO_PB		// PWM output for DC Motor
-#define PWM0_CH4_Pin 	GPIO_Pin0
-#define PWM0_CH5_Port	GPIO_PB		// PWM output for DC Motor
-#define PWM0_CH5_Pin	GPIO_Pin1
+#define DCMT_INT1_Port 	GPIO_PB		// PWM0_CH5 output for DC Motor
+#define DCMT_INT1_Pin 	GPIO_Pin0
+#define DCMT_INT2_Port	GPIO_PB		// PWM0_CH4 output for DC Motor
+#define DCMT_INT2_Pin	GPIO_Pin1
 #define STPMT2_ENC_Port	GPIO_PB		// the Encode of STPMT1 for detecting the RPM
 #define STPMT2_ENC_Pin 	GPIO_Pin2
 #define My_Test1_Port	GPIO_PB
@@ -122,10 +151,11 @@ extern uint16_t GPIO_Pin[GPIO_Num_Pin];
 #elif defined(MCU_Nuvoton)
 
 extern GPIO_T *GPIO_Port[GPIO_Num_Port];
-extern uint16_t GPIO_Pin[GPIO_Num_Pin];
+extern uint32_t GPIO_Pin[GPIO_Num_Pin];
 
 #endif
 
+extern struct GPIO_INT_DEF GPIO_INT[GPIO_Num_INT];
 
 // GPIO ENABLE/DISABLE
 #ifdef MCU_STM32

@@ -10,6 +10,9 @@
 
 #include "MyMCU_Inc.h"
 
+#define DC_INT1_PWM PWM_0
+#define DC_INT2_PWM PWM_1
+
 typedef enum
 {
 	CLI_Motor_Init = 0,
@@ -69,24 +72,34 @@ typedef struct
 } STPMT_Handle;
 
 void MyMoto_Init();
-void MyMoto_SetSTP_Ang(int Ang);
-void MyMoto_SetSTPSpeed(STPMT_Speed Speed);
+void MyMoto_STPStop(STPMT_No no);
+void MyMoto_STPSet(STPMT_No no, int angle, MotorDirect direct,STPMT_Speed speed);
 void MyMoto_STPStart(int angle, MotorDirect direction, STPMT_Speed Speed);
 void MyMoto_STPStartEx(void);
 void MyMoto_STPStartCCEx(void);
-void MyMoto_CLI_STPStart(void);
 void MyMoto_STPStartDemo(void);
+void MyMoto_DC_Standby();
+void MyMoto_DC_Forward();
+void MyMoto_DC_Reverse();
+void MyMoto_DC_Brake();
+#ifdef MyFunc_CLI
+
+void MyMoto_CLI_STPStop(void);
+void MyMoto_CLI_STPStart(void);
 void MyMoto_CLI_STPMTSet(void);
 void MyMoto_CLI_STPMTStart(void);
 
-#ifdef MyFunc_CLI
 #define Motor_CLI_TABLE \
 { "~~~~~ Motor_CLI_TABLE Start ~~~~~", MyMoto_Init, "" , "" },  \
-{ "MT_I",      MyMoto_Init, "" , "	: Motor GPIO/Angle(360d)/Speed(High)/Direct(CW) init" },  \
-{ "MT",      MyMoto_CLI_STPMTStart,	"u" , "	: Motor (Number) start. \r\n	MT Number \r\n	Number 0:Motor_1 1:Motor_2 \r\n	ex:\"MT 0" },\
-{ "MTC",      MyMoto_STPStartCCEx,	"" , "	: Motor start CCW With existed Angle, Direct, Speed setting" },\
-{ "MT_S",      MyMoto_CLI_STPMTSet, "uvuu", "	: Set Stepper Motor (Number), (Angle), (Direction), (Speed). \r\n	MT_S Number Angle Direction Speed \r\n	Number 0:Motor_1 1:Motor_2 \r\n	Angle: 0~360 degree \r\n	Direction 0:CW 1:CCW \r\n	Speed 0:High 1:Low \r\n	ex: \"MT_S 0 360 0 0\" " },\
-{ "MT_D",      MyMoto_STPStartDemo,	"u" , "	: Motor Demo (N) times start \r\n	MT_D Times \r\n	ex: \"MT_D 5\""},\
+{ "MT_I",	MyMoto_Init,	"" , "	: Motor GPIO/Angle(360d)/Speed(High)/Direct(CW) init" },  \
+{ "MT_SP",	MyMoto_CLI_STPStop,	"u"	,	"	: Stepper Motor (Number) stop. 	\r\n	Number 0:Motor_1 1:Motor_2 \r\n	ex:\"MT_E 0\"" },\
+{ "MT",		MyMoto_CLI_STPMTStart,	"u" , 	"	: Stepper Motor (Number) start. \r\n	Number 0:Motor_1 1:Motor_2 \r\n	ex:\"MT 0\"" },\
+{ "MTC",	MyMoto_STPStartCCEx,	"" 	, 	"	: Stepper Motor start CCW With existed Angle, Direct, Speed setting" },\
+{ "MT_S",	MyMoto_CLI_STPMTSet, 	"uvuu", "	: Set Stepper Motor (Number), (Angle), (Direction), (Speed). \r\n	MT_S Number Angle Direction Speed \r\n	Number 0:Motor_1 1:Motor_2 \r\n	Angle: 0~360 degree \r\n	Direction 0:CW 1:CCW \r\n	Speed 0:High 1:Low \r\n	ex: \"MT_S 0 360 0 0\" " },\
+{ "MT_D",	MyMoto_STPStartDemo,	"u" , "		: Motor Demo (N) times start \r\n	MT_D Times \r\n	ex: \"MT_D 5\""},\
+{ "MTDC_FW",	MyMoto_DC_Forward,	"" , "	: DC Motor Forward"},\
+{ "MTDC_RV",	MyMoto_DC_Reverse,	"" , "	: DC Motor Reverse"},\
+{ "MTDC_BK",	MyMoto_DC_Brake,	"" , "	: DC Motor Brake"},\
 { "~~~~~ Motor_CLI_TABLE End ~~~~~", MyMoto_Init, "", "" }
 
 //{ "MT_S",      MyMoto_CLI_STPStart, "vuu", "Motor start & Set Speed, Angle, Direct setting. ex: \"Motor_Start Angle Direct Speed\"\r\n Angle: 0~360 degree \r\n Direct 0:CW 1:CCW \r\n Speed 0:High 1:Low" },\

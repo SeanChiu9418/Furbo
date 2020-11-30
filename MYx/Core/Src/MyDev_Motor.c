@@ -16,6 +16,45 @@ static STPMT_Handle STPMT[STPMT_Num];
 
 #define MyMotor_Delay(A) My_Delay(A)
 
+
+void MyMoto_DC_Forward()
+{
+	printf("~~~~~ MyMoto_DC_Forward  ~~~~~ \r\n");
+	MyGPIO_WritePin(DCMT_EN_Port, DCMT_EN_Pin, GPIOPIN_SET);
+	
+	MyPWM_StartOutput(DC_INT1_PWM);
+	//MyGPIO_WritePin(DCMT_INT1_Port, DCMT_INT1_Pin, GPIOPIN_SET);	
+	
+	MyPWM_StopOutput(DC_INT2_PWM);
+	//MyGPIO_WritePin(DCMT_INT2_Port, DCMT_INT2_Pin, GPIOPIN_RESET);
+}
+
+
+void MyMoto_DC_Reverse()
+{	
+	printf("~~~~~ MyMoto_DC_Reverse  ~~~~~ \r\n");
+	MyGPIO_WritePin(DCMT_EN_Port, DCMT_EN_Pin, GPIOPIN_SET);
+	
+	MyPWM_StopOutput(DC_INT1_PWM);
+	//MyGPIO_WritePin(DCMT_INT1_Port, DCMT_INT1_Pin, GPIOPIN_RESET);
+	
+	MyPWM_StartOutput(DC_INT2_PWM);
+	//MyGPIO_WritePin(DCMT_INT2_Port, DCMT_INT2_Pin, GPIOPIN_SET);
+}
+
+void MyMoto_DC_Brake()
+{	
+	printf("~~~~~ MyMoto_DC_Brake  ~~~~~ \r\n");
+	MyGPIO_WritePin(DCMT_EN_Port, DCMT_EN_Pin, GPIOPIN_SET);
+	
+	MyPWM_StopOutput(DC_INT1_PWM);
+	//MyGPIO_WritePin(DCMT_INT1_Port, DCMT_INT1_Pin, GPIOPIN_SET);
+	
+	MyPWM_StopOutput(DC_INT2_PWM);
+	//MyGPIO_WritePin(DCMT_INT2_Port, DCMT_INT2_Pin, GPIOPIN_SET);
+	
+}
+
 void MyMoto_Init()
 {	
 	
@@ -56,7 +95,11 @@ void MyMoto_Init()
 	MyGPIO_WritePin(STPMT_IN1_Port, STPMT_IN1_Pin, GPIOPIN_RESET);
 	MyGPIO_WritePin(STPMT_IN2_Port, STPMT_IN2_Pin, GPIOPIN_RESET);
 	MyGPIO_WritePin(STPMT_IN3_Port, STPMT_IN3_Pin, GPIOPIN_RESET);
-	MyGPIO_WritePin(STPMT_IN4_Port, STPMT_IN4_Pin, GPIOPIN_RESET);
+	MyGPIO_WritePin(STPMT_IN4_Port, STPMT_IN4_Pin, GPIOPIN_RESET);	
+	
+	MyGPIO_WritePin(DCMT_EN_Port, DCMT_EN_Pin, GPIOPIN_RESET);	// for DC Motor Enable Pin
+	//MyGPIO_WritePin(DCMT_INT1_Port, DCMT_INT1_Pin, GPIOPIN_RESET);	// for DC Motor INT1 Pin (PWM0_CH4)
+	//MyGPIO_WritePin(DCMT_INT2_Port, DCMT_INT2_Pin, GPIOPIN_RESET);	// for DC Motor INT1 Pin (PWM0_CH5)
 
 	/*Configure GPIO pins : STPMT_IN1_Pin STPMT_IN2_Pin STPMT_IN3_Pin STPMT_IN4_Pin  */
 	MyGPIO_Conf2Output(STPMT1_IN1_Port, STPMT1_IN1_Pin);
@@ -68,42 +111,51 @@ void MyMoto_Init()
 	MyGPIO_Conf2Output(STPMT_IN3_Port, STPMT_IN3_Pin);
 	MyGPIO_Conf2Output(STPMT_IN4_Port, STPMT_IN4_Pin);
 
+	MyGPIO_Conf2Output(DCMT_EN_Port, DCMT_EN_Pin);	// for DC Motor Enable Pin
+	//MyGPIO_Conf2Output(DCMT_INT1_Port, DCMT_INT1_Pin);	// for DC Motor INT1 Pin (PWM0_CH4)
+	//MyGPIO_Conf2Output(DCMT_INT2_Port, DCMT_INT2_Pin);	// for DC Motor INT1 Pin (PWM0_CH5)
+	
+	MyPWM_Init();
+	MyPWM_Config(DC_INT1_PWM, 20000, 90);
+	MyPWM_Config(DC_INT2_PWM, 20000, 90);	
+	MyPWM_Eanble(DC_INT1_PWM);	
+	MyPWM_Eanble(DC_INT2_PWM);
+	//MyPWM_Start(DC_INT1_PWM);
+	//MyPWM_Start(DC_INT2_PWM);
 }
 
-//void MyMoto_SetSTPSpeed(int rpm)  // Set rpm--> max 13, min 1,,,  went to 14 rev/min
-//{
-	//MyMoto_Delay(60000000/StepsPerRev/rpm);
-//}
+
 void MyMoto_STPDriveEx(STPMT_No No, STPMT_Phase Phase)
 {
 	switch (Phase)
 	{
 	case STPMT_Phase0:
+		MyGPIO_PinBitReset(STPMT[No].IN1.Port, STPMT[No].IN1.Pin);
+		MyGPIO_PinBitReset(STPMT[No].IN2.Port, STPMT[No].IN2.Pin);
+		MyGPIO_PinBitSet(STPMT[No].IN3.Port, STPMT[No].IN3.Pin);
+		MyGPIO_PinBitSet(STPMT[No].IN4.Port, STPMT[No].IN4.Pin);
+		
+		break;
+
+	case STPMT_Phase1:
+		MyGPIO_PinBitSet(STPMT[No].IN1.Port, STPMT[No].IN1.Pin);
+		MyGPIO_PinBitReset(STPMT[No].IN2.Port, STPMT[No].IN2.Pin);
+		MyGPIO_PinBitReset(STPMT[No].IN3.Port, STPMT[No].IN3.Pin);
+		MyGPIO_PinBitSet(STPMT[No].IN4.Port, STPMT[No].IN4.Pin);
+		break;
+
+	case STPMT_Phase2:
 		MyGPIO_PinBitSet(STPMT[No].IN1.Port, STPMT[No].IN1.Pin);
 		MyGPIO_PinBitSet(STPMT[No].IN2.Port, STPMT[No].IN2.Port);
 		MyGPIO_PinBitReset(STPMT[No].IN3.Port, STPMT[No].IN3.Pin);
 		MyGPIO_PinBitReset(STPMT[No].IN4.Port, STPMT[No].IN4.Pin);
 		break;
 
-	case STPMT_Phase1:
+	case STPMT_Phase3:
 		MyGPIO_PinBitReset(STPMT[No].IN1.Port, STPMT[No].IN1.Pin);
 		MyGPIO_PinBitSet(STPMT[No].IN2.Port, STPMT[No].IN2.Pin);
 		MyGPIO_PinBitSet(STPMT[No].IN3.Port, STPMT[No].IN3.Pin);
 		MyGPIO_PinBitReset(STPMT[No].IN4.Port, STPMT[No].IN4.Pin);
-		break;
-
-	case STPMT_Phase2:
-		MyGPIO_PinBitReset(STPMT[No].IN1.Port, STPMT[No].IN1.Pin);
-		MyGPIO_PinBitReset(STPMT[No].IN2.Port, STPMT[No].IN2.Pin);
-		MyGPIO_PinBitSet(STPMT[No].IN3.Port, STPMT[No].IN3.Pin);
-		MyGPIO_PinBitSet(STPMT[No].IN4.Port, STPMT[No].IN4.Pin);
-		break;
-
-	case STPMT_Phase3:
-		MyGPIO_PinBitSet(STPMT[No].IN1.Port, STPMT[No].IN1.Pin);
-		MyGPIO_PinBitReset(STPMT[No].IN2.Port, STPMT[No].IN2.Pin);
-		MyGPIO_PinBitReset(STPMT[No].IN3.Port, STPMT[No].IN3.Pin);
-		MyGPIO_PinBitSet(STPMT[No].IN4.Port, STPMT[No].IN4.Pin);
 		break;
 
 	default:
@@ -115,46 +167,7 @@ void MyMoto_STPDriveEx(STPMT_No No, STPMT_Phase Phase)
 	}
 }
 
-void MyMoto_STPStartX(STPMT_No No)
-{
-	float AnglePerSequence = (float)360 / StepsPerRev;  // 360 = 4096 sequences
-	int seq, NumberOfSequences = (int) (STPMT[No].Angle/AnglePerSequence);
-
-	if (STPMT[No].Direct == CW)	// for clockwise
-	{
-		for (seq = 0; seq < NumberOfSequences; seq++)
-		{
-			if (STPMT[No].Angle == 0)	// Emergency Stop
-			{
-				printf("!!!!! Emergency Stop !!!!! \r\n");
-				break;
-			}
-			else
-			{
-				MyMoto_STPDriveEx(No,seq%STPMT_Phase_Num);
-				MyMotor_Delay(STPMT[No].Speed);
-			}
-		}
-	}
-	else	// for anti-clockwise
-	{
-		for (seq = NumberOfSequences; seq > 0; seq--)
-		{
-			if (STPMT[No].Angle == 0)	// Emergency Stop
-			{	
-				printf("!!!!! Emergency Stop !!!!! \r\n");
-				break;
-			}
-			else
-			{
-				MyMoto_STPDriveEx(No,seq%STPMT_Phase_Num);
-				MyMotor_Delay(STPMT[No].Speed);
-			}
-		}
-	}
-	MyMoto_STPDriveEx(No,STPMT_Phase_Num);	// close motor	
-}
-
+/*
 void MyMoto_STPDriver(int step)	
 {
 #if 1
@@ -265,26 +278,62 @@ void MyMoto_STPDriver(int step)
 	}
 #endif
 }
+*/
 
+void MyMoto_STPStartX(STPMT_No No)
+{
+	float AnglePerSequence = (float)360 / StepsPerRev;  // 360 = 4096 sequences
+	int seq, NumberOfSequences = (int) (STPMT[No].Angle/AnglePerSequence);
+
+	if (STPMT[No].Direct == CW)	// for clockwise
+	{
+		for (seq = 0; seq < NumberOfSequences; seq++)
+		{
+			if (STPMT[No].Angle == 0)	// Emergency Stop
+			{
+				printf("~~~~ STPMT Stop ~~~~ \r\n");
+				break;
+			}
+			else
+			{
+				MyMoto_STPDriveEx(No,seq%STPMT_Phase_Num);
+				MyMotor_Delay(STPMT[No].Speed);
+				My_DelayUs(600) ;
+			}
+		}
+	}
+	else	// for anti-clockwise
+	{
+		for (seq = NumberOfSequences; seq > 0; seq--)
+		{
+			if (STPMT[No].Angle == 0)	// Emergency Stop
+			{	
+				printf("~~~~ STPMT Stop ~~~~~ \r\n");
+				break;
+			}
+			else
+			{
+				MyMoto_STPDriveEx(No,seq%STPMT_Phase_Num);
+				MyMotor_Delay(STPMT[No].Speed);
+				My_DelayUs(600) ;
+			}
+		}
+	}
+	MyMoto_STPDriveEx(No,STPMT_Phase_Num);	// close motor	
+}
+
+void MyMoto_STPSet(STPMT_No no, int angle, MotorDirect direct,STPMT_Speed speed)
+{
+	STPMT[no].Angle = angle;
+	STPMT[no].Direct = direct;
+	STPMT[no].Speed = speed;	
+}
+
+/*
 void MyMoto_STPStartEx(void)
 {
 	//MyMoto_STPStart(STP_Ang,Motor_Dir,STP_Speed);
 	MyMoto_STPStartX(STPMT_1);
-}
-
-void MyMoto_STPStartCCEx(void)
-{
-
-}
-
-void MyMoto_STPStartDemo(void)
-{
-	
-	int i,j = (int)MyCLI_UnsignedCommandArgument(0);
-	for(i = 0 ; i < j ; i ++)
-	{
-		//MyMoto_STPStart(STP_Ang,Motor_Dir,STP_Speed);
-	}
 }
 
 void MyMoto_STPStart(int angle, MotorDirect direction, STPMT_Speed Speed)
@@ -311,6 +360,28 @@ void MyMoto_STPStart(int angle, MotorDirect direction, STPMT_Speed Speed)
 	}
 	MyMoto_STPDriver(4);	// close motor
 }
+*/
+
+void MyMoto_STPStartCCEx(void)
+{
+
+}
+
+void MyMoto_STPStartDemo(void)
+{
+	
+	int i,j = (int)MyCLI_UnsignedCommandArgument(0);
+	for(i = 0 ; i < j ; i ++)
+	{
+		//MyMoto_STPStart(STP_Ang,Motor_Dir,STP_Speed);
+	}
+}
+
+void MyMoto_STPStop(STPMT_No no)
+{
+	STPMT[no].Angle = 0;
+}
+
 
 #ifdef MyFunc_CLI
 
@@ -327,16 +398,29 @@ void MyMoto_CLI_STPMTStart(void)
 
 void MyMoto_CLI_STPMTSet(void)
 {
-	STPMT_No No = (STPMT_No)MyCLI_UnsignedCommandArgument(0);
-	if (No >= STPMT_Num)
+	STPMT_No no = (STPMT_No)MyCLI_UnsignedCommandArgument(0);
+	if (no >= STPMT_Num)
 	{
 		printf("!!!!! STPMT_No Error !!!!! \r\n");
 		return;
 	}
-	STPMT[No].Angle = MyCLI_UnsignedCommandArgument(1);
-	STPMT[No].Direct = (MotorDirect)MyCLI_UnsignedCommandArgument(2);
-	STPMT[No].Speed = (STPMT_Speed)(MyCLI_UnsignedCommandArgument(3) + SS_High);	// "+ SS_High" is for MAPPING
-	printf("STP No.%d Angle:%d Direct:%d Speed:%d \r\n",No, STPMT[No].Angle, STPMT[No].Direct, (STPMT[No].Speed-SS_High));		
+	int angle = MyCLI_UnsignedCommandArgument(1);
+	MotorDirect direct = (MotorDirect)MyCLI_UnsignedCommandArgument(2);
+	STPMT_Speed speed = (STPMT_Speed)(MyCLI_UnsignedCommandArgument(3));	
+	MyMoto_STPSet(no, angle, direct, speed + SS_High);	// "+ SS_High" is for MAPPING
+	printf("STP No.%d Angle:%d Direct:%d Speed:%d \r\n",no, angle,direct, speed);		
+}
+
+void MyMoto_CLI_STPStop(void)
+{
+	STPMT_No no = (STPMT_No)MyCLI_UnsignedCommandArgument(0);
+	if (no >= STPMT_Num)
+	{
+		printf("!!!!! STPMT_No Error !!!!! \r\n");
+		return;
+	}
+	printf("~~~~~~~ MyMoto_CLI_STPStop ~~~~~~ \r\n");
+	MyMoto_STPStop(no);
 }
 
 #endif

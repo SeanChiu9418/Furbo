@@ -8,7 +8,7 @@
 #include "MyMCU_PWM.h"
 
 uint32_t PWM_Channel[PMM_Num]={5,4};	// PWM_0 = PWM_CH5 in NUVOTON, PWM_1 = PWM_CH4 in NUVOTON
-uint32_t PWM_MASK[PMM_Num] = {PWM_CH_5_MASK,PWM_CH_5_MASK};
+uint32_t PWM_MASK[PMM_Num] = {PWM_CH_5_MASK,PWM_CH_4_MASK};
 
 void MyPWM_Init()
 {
@@ -38,25 +38,24 @@ void MyPWM_Config(PWM_Index CH, uint32_t Freq, uint16_t Duty)
 	PWM_ConfigOutputChannel(PWM0, PWM_Channel[CH], Freq, Duty);
 }
 
-void MyPWM_Eanble(PWM_Index CH)
-{
-	PWM_EnableOutput(PWM0, PWM_MASK[CH]);
-}
-
-void MyPWM_Disable(PWM_Index CH)
-{
-	
-    PWM_DisableOutput(PWM0, PWM_MASK[CH]);
-}
-
-void MyPWM_Start(PWM_Index CH)
+void MyPWM_Eanble(PWM_Index CH)		// Nuvoton's PWM Start is Enable 
 {
 	PWM_Start(PWM0, PWM_MASK[CH]);
 }
 
-void MyPWM_Stop(PWM_Index CH)
-{
+void MyPWM_Disable(PWM_Index CH)
+{	
 	PWM_Stop(PWM0, PWM_MASK[CH]);
+}
+
+void MyPWM_StartOutput(PWM_Index CH)	// Nuvoton's PWM Enable is Start Output 
+{
+	PWM_EnableOutput(PWM0, PWM_MASK[CH]);
+}
+
+void MyPWM_StopOutput(PWM_Index CH)
+{
+    PWM_DisableOutput(PWM0, PWM_MASK[CH]);
 }
 
 #ifdef MyFunc_CLI

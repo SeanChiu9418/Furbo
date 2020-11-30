@@ -62,9 +62,9 @@ MyI2C_Write:
 	.cfi_offset r6, -12
 	.cfi_offset r5, -16
 	.cfi_offset r4, -20
-	.pad	#32
-	sub	sp, #32
-	.cfi_def_cfa_offset 52
+	.pad	#28
+	sub	sp, #28
+	.cfi_def_cfa_offset 48
 	mov	r4, r3
 	mov	r5, r2
 	mov	r6, r1
@@ -83,11 +83,10 @@ MyI2C_Write:
 	strh	r2, [r1]
 	add	r1, sp, #12
 	strb	r3, [r1]
-	add	r1, sp, #28
+	movs	r0, #0
 .Ltmp1:
-	.loc	2 87 1 prologue_end     @ ../MYx/Core/Src/MyMCU_I2C.c:87:1
-	ldrb	r0, [r1]
-	add	sp, #32
+	.loc	2 87 2 prologue_end     @ ../MYx/Core/Src/MyMCU_I2C.c:87:2
+	add	sp, #28
 	pop	{r4, r5, r6, r7, pc}
 .Ltmp2:
 .Lfunc_end1:
@@ -104,7 +103,7 @@ MyI2C_Write:
 	.thumb_func
 MyI2C_Read:
 .Lfunc_begin2:
-	.loc	2 90 0                  @ ../MYx/Core/Src/MyMCU_I2C.c:90:0
+	.loc	2 91 0                  @ ../MYx/Core/Src/MyMCU_I2C.c:91:0
 	.fnstart
 	.cfi_startproc
 @ %bb.0:
@@ -116,9 +115,9 @@ MyI2C_Read:
 	.cfi_offset r6, -12
 	.cfi_offset r5, -16
 	.cfi_offset r4, -20
-	.pad	#20
-	sub	sp, #20
-	.cfi_def_cfa_offset 40
+	.pad	#16
+	sub	sp, #16
+	.cfi_def_cfa_offset 36
 	mov	r4, r3
 	mov	r5, r1
 	mov	r6, r0
@@ -129,11 +128,10 @@ MyI2C_Read:
 	str	r2, [sp, #4]
 	mov	r0, sp
 	strb	r3, [r0]
-	add	r0, sp, #16
+	movs	r0, #0
 .Ltmp3:
-	.loc	2 138 1 prologue_end    @ ../MYx/Core/Src/MyMCU_I2C.c:138:1
-	ldrb	r0, [r0]
-	add	sp, #20
+	.loc	2 139 2 prologue_end    @ ../MYx/Core/Src/MyMCU_I2C.c:139:2
+	add	sp, #16
 	pop	{r4, r5, r6, r7, pc}
 .Ltmp4:
 .Lfunc_end2:
@@ -150,7 +148,7 @@ MyI2C_Read:
 	.thumb_func
 MyI2C_SelfTest:
 .Lfunc_begin3:
-	.loc	2 141 0                 @ ../MYx/Core/Src/MyMCU_I2C.c:141:0
+	.loc	2 143 0                 @ ../MYx/Core/Src/MyMCU_I2C.c:143:0
 	.fnstart
 	.cfi_startproc
 @ %bb.0:
@@ -165,37 +163,37 @@ MyI2C_SelfTest:
 	add	r0, sp, #20
 	movs	r1, #192
 .Ltmp5:
-	.loc	2 142 8 prologue_end    @ ../MYx/Core/Src/MyMCU_I2C.c:142:8
+	.loc	2 144 8 prologue_end    @ ../MYx/Core/Src/MyMCU_I2C.c:144:8
 	strh	r1, [r0]
 	add	r1, sp, #16
 	movs	r2, #1
-	.loc	2 142 24 is_stmt 0      @ ../MYx/Core/Src/MyMCU_I2C.c:142:24
+	.loc	2 144 24 is_stmt 0      @ ../MYx/Core/Src/MyMCU_I2C.c:144:24
 	strh	r2, [r1]
 	add	r3, sp, #8
-	.loc	2 143 10 is_stmt 1      @ ../MYx/Core/Src/MyMCU_I2C.c:143:10
+	.loc	2 145 10 is_stmt 1      @ ../MYx/Core/Src/MyMCU_I2C.c:145:10
 	strb	r2, [r3]
-	.loc	2 144 13                @ ../MYx/Core/Src/MyMCU_I2C.c:144:13
+	.loc	2 146 13                @ ../MYx/Core/Src/MyMCU_I2C.c:146:13
 	ldrh	r0, [r0]
 	sxth	r0, r0
-	.loc	2 144 22 is_stmt 0      @ ../MYx/Core/Src/MyMCU_I2C.c:144:22
+	.loc	2 146 22 is_stmt 0      @ ../MYx/Core/Src/MyMCU_I2C.c:146:22
 	ldrh	r1, [r1]
 	sxth	r1, r1
-	.loc	2 144 39                @ ../MYx/Core/Src/MyMCU_I2C.c:144:39
+	.loc	2 146 39                @ ../MYx/Core/Src/MyMCU_I2C.c:146:39
 	ldrb	r3, [r3]
 	add	r2, sp, #12
-	.loc	2 144 2                 @ ../MYx/Core/Src/MyMCU_I2C.c:144:2
+	.loc	2 146 2                 @ ../MYx/Core/Src/MyMCU_I2C.c:146:2
 	str	r2, [sp, #4]            @ 4-byte Spill
 	bl	MyI2C_Read
-	.loc	2 145 37 is_stmt 1      @ ../MYx/Core/Src/MyMCU_I2C.c:145:37
+	.loc	2 147 37 is_stmt 1      @ ../MYx/Core/Src/MyMCU_I2C.c:147:37
 	ldr	r1, [sp, #4]            @ 4-byte Reload
 	ldrh	r2, [r1]
 	sxth	r1, r2
-	.loc	2 145 2 is_stmt 0       @ ../MYx/Core/Src/MyMCU_I2C.c:145:2
+	.loc	2 147 2 is_stmt 0       @ ../MYx/Core/Src/MyMCU_I2C.c:147:2
 	ldr	r2, __arm_cp.3_0
 	str	r0, [sp]                @ 4-byte Spill
 	mov	r0, r2
 	bl	printf
-	.loc	2 147 1 is_stmt 1       @ ../MYx/Core/Src/MyMCU_I2C.c:147:1
+	.loc	2 149 1 is_stmt 1       @ ../MYx/Core/Src/MyMCU_I2C.c:149:1
 	add	sp, #24
 	pop	{r7, pc}
 .Ltmp6:
@@ -220,11 +218,11 @@ __arm_cp.3_0:
 	.thumb_func
 MyI2C_Test:
 .Lfunc_begin4:
-	.loc	2 151 0 is_stmt 1       @ ../MYx/Core/Src/MyMCU_I2C.c:151:0
+	.loc	2 153 0 is_stmt 1       @ ../MYx/Core/Src/MyMCU_I2C.c:153:0
 	.fnstart
 	.cfi_startproc
 @ %bb.0:
-	.loc	2 172 1 prologue_end    @ ../MYx/Core/Src/MyMCU_I2C.c:172:1
+	.loc	2 174 1 prologue_end    @ ../MYx/Core/Src/MyMCU_I2C.c:174:1
 	bx	lr
 .Ltmp7:
 .Lfunc_end4:
@@ -544,7 +542,7 @@ MyI2C_Test:
 	.byte	93
 	.long	.Linfo_string11         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	89                      @ DW_AT_decl_line
+	.byte	90                      @ DW_AT_decl_line
 	.byte	1                       @ DW_AT_prototyped
 	.long	349                     @ DW_AT_type
 	.byte	1                       @ DW_AT_external
@@ -554,7 +552,7 @@ MyI2C_Test:
 	.byte	12
 	.long	.Linfo_string14         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	89                      @ DW_AT_decl_line
+	.byte	90                      @ DW_AT_decl_line
 	.long	356                     @ DW_AT_type
 	.byte	7                       @ Abbrev [7] 0xd5:0xe DW_TAG_formal_parameter
 	.byte	2                       @ DW_AT_location
@@ -562,7 +560,7 @@ MyI2C_Test:
 	.byte	8
 	.long	.Linfo_string16         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	89                      @ DW_AT_decl_line
+	.byte	90                      @ DW_AT_decl_line
 	.long	356                     @ DW_AT_type
 	.byte	7                       @ Abbrev [7] 0xe3:0xe DW_TAG_formal_parameter
 	.byte	2                       @ DW_AT_location
@@ -570,7 +568,7 @@ MyI2C_Test:
 	.byte	4
 	.long	.Linfo_string17         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	89                      @ DW_AT_decl_line
+	.byte	90                      @ DW_AT_decl_line
 	.long	374                     @ DW_AT_type
 	.byte	7                       @ Abbrev [7] 0xf1:0xe DW_TAG_formal_parameter
 	.byte	2                       @ DW_AT_location
@@ -578,7 +576,7 @@ MyI2C_Test:
 	.byte	0
 	.long	.Linfo_string18         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	89                      @ DW_AT_decl_line
+	.byte	90                      @ DW_AT_decl_line
 	.long	363                     @ DW_AT_type
 	.byte	0                       @ End Of Children Mark
 	.byte	8                       @ Abbrev [8] 0x100:0x4b DW_TAG_subprogram
@@ -588,7 +586,7 @@ MyI2C_Test:
 	.byte	93
 	.long	.Linfo_string12         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	140                     @ DW_AT_decl_line
+	.byte	142                     @ DW_AT_decl_line
 	.byte	1                       @ DW_AT_external
 	.byte	9                       @ Abbrev [9] 0x112:0xe DW_TAG_variable
 	.byte	2                       @ DW_AT_location
@@ -596,7 +594,7 @@ MyI2C_Test:
 	.byte	20
 	.long	.Linfo_string14         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	142                     @ DW_AT_decl_line
+	.byte	144                     @ DW_AT_decl_line
 	.long	356                     @ DW_AT_type
 	.byte	9                       @ Abbrev [9] 0x120:0xe DW_TAG_variable
 	.byte	2                       @ DW_AT_location
@@ -604,7 +602,7 @@ MyI2C_Test:
 	.byte	16
 	.long	.Linfo_string16         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	142                     @ DW_AT_decl_line
+	.byte	144                     @ DW_AT_decl_line
 	.long	356                     @ DW_AT_type
 	.byte	9                       @ Abbrev [9] 0x12e:0xe DW_TAG_variable
 	.byte	2                       @ DW_AT_location
@@ -612,7 +610,7 @@ MyI2C_Test:
 	.byte	12
 	.long	.Linfo_string20         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	142                     @ DW_AT_decl_line
+	.byte	144                     @ DW_AT_decl_line
 	.long	356                     @ DW_AT_type
 	.byte	9                       @ Abbrev [9] 0x13c:0xe DW_TAG_variable
 	.byte	2                       @ DW_AT_location
@@ -620,7 +618,7 @@ MyI2C_Test:
 	.byte	8
 	.long	.Linfo_string18         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	143                     @ DW_AT_decl_line
+	.byte	145                     @ DW_AT_decl_line
 	.long	363                     @ DW_AT_type
 	.byte	0                       @ End Of Children Mark
 	.byte	5                       @ Abbrev [5] 0x14b:0x12 DW_TAG_subprogram
@@ -630,7 +628,7 @@ MyI2C_Test:
 	.byte	93
 	.long	.Linfo_string13         @ DW_AT_name
 	.byte	2                       @ DW_AT_decl_file
-	.byte	150                     @ DW_AT_decl_line
+	.byte	152                     @ DW_AT_decl_line
 	.byte	1                       @ DW_AT_external
 	.byte	4                       @ Abbrev [4] 0x15d:0x7 DW_TAG_base_type
 	.long	.Linfo_string10         @ DW_AT_name

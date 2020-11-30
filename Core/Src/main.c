@@ -19,6 +19,7 @@
 /* Global variables                                                                                        */
 /*---------------------------------------------------------------------------------------------------------*/
 uint8_t g_au8RecData[RXBUFSIZE]  = {0};
+uint32_t x;
 
 volatile uint32_t g_u32ComRbytes = 0;
 volatile uint32_t g_u32ComRhead  = 0;
@@ -84,12 +85,13 @@ int main()
     UART_Open(UART0, 115200);
 	MyUart_Init();
 	MyGPIO_Init();
-	MyTossing_Init();
 	printf("\nStart Main loop\n");
-	
-	MyPWM_Config(PWM_0,20000, 50);
-	MyPWM_Eanble(PWM_0);
-	MyPWM_Start(PWM_0);
+	MyTossing_Init();
+	MyTossing_BlankingHome();
+	//MyPWM_Init();
+	//MyPWM_Config(DC_INT1_PWM,20000, 10);
+	//MyPWM_Eanble(DC_INT1_PWM);
+	//MyPWM_Start(DC_INT1_PWM);
 	
 	
     while (1)
@@ -156,13 +158,17 @@ void GPB_IRQHandler(void)
     else if(GPIO_GET_INT_FLAG(PB, BIT5))
     {
         GPIO_CLR_INT_FLAG(PB, BIT5);
-        printf("PB.5 INT occurred.\n");
+		MyMTENC_NVIC_STPMT1();
+        //printf("~~~~~PB.5 INT occurred. ~~~~~\n");
     }
     else if(GPIO_GET_INT_FLAG(GPIO_Port[DCMT_ENC_Port], GPIO_Pin[DCMT_ENC_Pin]))
     {		
-        printf("PB.4 INT occurred CNT = %d.\r\n", Timer_Port[MTENC[ENC_DCMT]]->CNT);
-		Timer_Port[MTENC[ENC_DCMT]]->CNT = 0;
-        GPIO_CLR_INT_FLAG(PB, BIT4);		
+		//static uint32_t Cnt
+        //printf("PB.4 INT occurred CNT = %d.\r\n", Timer_Port[MTENC[ENC_Throw]]->CNT);
+		x = Timer_Port[MTENC[ENC_Throw]]->CNT;
+		Timer_Port[MTENC[ENC_Throw]]->CNT = 0;
+        GPIO_CLR_INT_FLAG(PB, BIT4);
+		MyMTENC_NVIC_DCMT(x);		
     }
     else
     {

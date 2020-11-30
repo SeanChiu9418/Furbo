@@ -28,8 +28,9 @@ void MyTimer0_IRQHandler()
 	
 void MyTimer1_IRQHandler()
 {
-	printf("MyTimer1_IRQHandler\r\n");
+	//printf("MyTimer1_IRQHandler\r\n");
     // clear timer interrupt flag	
+	MyMTENC_NVIC_DCTimeOut();
     TIMER_ClearIntFlag(TIMER1);	
 }
 

@@ -37,14 +37,6 @@ void MyPWM_CLI_Stop(void);
 { "PWM_Start",	MyPWM_CLI_Start, "u", " PWM Channel Start\r\n PWM Channel 0:PWM0 ~ 1:PMW1 \r\n Ex: PWM_Start 0"},\
 { "PWM_Stop",	MyPWM_CLI_Stop, "", " PWM Channel Stop\r\n PWM Channel 0:PWM0 ~ 1:PMW1 \r\n Ex: PWM_Stop 0"},\
 { "~~~~~ PWM_CLI_TABLE End ~~~~~", MyPWM_Init, "", "" }
-
-
-void MyGPIO_Init();
-void MyGPIO_CLI_WritePin();
-void MyGPIO_CLI_ReadPin();
-void MyGPIO_CLI_Set2InputMode();
-void MyGPIO_CLI_Set2OutputMode();
-void MyGPIO_IRQHandler();
 #endif
 
 #endif /* CORE_INC_MYMCU_PWM_H_ */

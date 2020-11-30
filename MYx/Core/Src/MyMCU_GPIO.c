@@ -16,10 +16,12 @@
 #elif defined(MCU_Nuvoton)
 
 	GPIO_T *GPIO_Port[GPIO_Num_Port] = {PA,PB,PC,PD};
-	uint16_t GPIO_Pin[GPIO_Num_Pin] = {BIT0, BIT1, BIT2, BIT3, BIT4, BIT5, BIT6, BIT7, 
+	uint32_t GPIO_Pin[GPIO_Num_Pin] = {BIT0, BIT1, BIT2, BIT3, BIT4, BIT5, BIT6, BIT7, 
 									BIT8, BIT9, BIT10, BIT11, BIT12, BIT13, BIT14, BIT15,};	
+	uint32_t GPIO_Type[INT_Num_Type] = {GPIO_INT_RISING, GPIO_INT_FALLING, GPIO_INT_BOTH_EDGE, GPIO_INT_HIGH, GPIO_INT_LOW};
 #endif	
 
+struct GPIO_INT_DEF GPIO_INT[GPIO_Num_INT];
 
 void MyGPIO_Init()
 {
@@ -65,11 +67,33 @@ void MyGPIO_Init()
 	MyGPIO_PinBitReset(My_Test1_Port,My_Test1_Pin);
 	MyGPIO_PinBitReset(My_Test2_Port,My_Test2_Pin);
 	//MyGPIO_Conf2Input(My_Test3_Port,My_Test3_Pin);
-	
 
 #endif	
 
 }
+
+void MyGPIO_SetINTType(GPIO_INT_Index index,GPIO_INT_Type type)
+{
+	GPIO_INT[index].Type = type;
+}
+
+void MyGPIO_DisableINT(GPIO_INT_Index index)
+{
+	GPIO_DisableInt(GPIO_Port[GPIO_INT[index].Port], GPIO_INT[index].Pin);
+}
+
+void MyGPIO_EnableINT(GPIO_INT_Index index)
+{
+#ifdef MCU_STM32	
+	
+#elif defined(MCU_Nuvoton)
+
+    GPIO_SetMode(GPIO_Port[GPIO_INT[index].Port], GPIO_Pin[GPIO_INT[index].Pin], GPIO_MODE_INPUT);
+    GPIO_EnableInt(GPIO_Port[GPIO_INT[index].Port], GPIO_INT[index].Pin, GPIO_Type[GPIO_INT[index].Type]);
+	
+#endif	
+}
+
 
 void MyGPIO_Conf2INT_RISING(GPIO_Port_Index Port, GPIO_Pin_Index Pin)	// Config GPIO in Interrupt Rising Mode
 {
@@ -236,7 +260,8 @@ void MyGPIO_CLI_ReadPin()
 
 	result = MyGPIO_ReadPin(Port,Pin);
 
-	My_printf(int2str(result));
+	printf("GPIO Port:%d Pin:%d = %d",Port,Pin,result);
+	//My_printf(int2str(result));
 
 }
 

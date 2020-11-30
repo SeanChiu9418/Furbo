@@ -84,6 +84,7 @@ char MyI2C_Write(short SlaveID, short address, short value, I2CType Type)
     }
 	return true;
 #endif	
+	return 0;
 }
 
 char MyI2C_Read(short SlaveID, short address, short * value, I2CType Type)
@@ -135,6 +136,7 @@ char MyI2C_Read(short SlaveID, short address, short * value, I2CType Type)
 
 	return true;
 #endif		
+	return 0;
 }
 
 void MyI2C_SelfTest()

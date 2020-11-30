@@ -8,7 +8,7 @@
 #ifndef INC_MY_CONFIG_H_
 #define INC_MY_CONFIG_H_
 
-#define FW_VERSION      "0.0.4 "
+#define FW_VERSION      "0.1.0 "
 
 /* ########################## Project Selection ############################## */
 #define Samplisafe
