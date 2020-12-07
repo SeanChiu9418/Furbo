@@ -87,7 +87,7 @@ int main()
 	MyGPIO_Init();
 	printf("\nStart Main loop\n");
 	MyTossing_Init();
-	MyTossing_BlankingHome();
+	//MyTossing_BlankingHome();
 	//MyPWM_Init();
 	//MyPWM_Config(DC_INT1_PWM,20000, 10);
 	//MyPWM_Eanble(DC_INT1_PWM);
